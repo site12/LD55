@@ -2,18 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-
-uid="uid://bi7a7csl4jvdt"
-
-path="res://.godot/imported/Icon.png-da3ffb58b8a1a0eb60872b7bfbdfe5b4.ctex"
+uid="uid://bgvamtxhwlmne"
+path="res://.godot/imported/icon.svg-8193eb3d66a1b5143b8bb4c28c1dc139.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/tbloader/tb-gameconfig/Icon.png"
-dest_files=["res://.godot/imported/Icon.png-da3ffb58b8a1a0eb60872b7bfbdfe5b4.ctex"]
+source_file="res://Assets/icon.svg"
+dest_files=["res://.godot/imported/icon.svg-8193eb3d66a1b5143b8bb4c28c1dc139.ctex"]
 
 [params]
 
@@ -34,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false
