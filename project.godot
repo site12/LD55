@@ -17,3 +17,13 @@ config/icon="res://Assets/icon.svg"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/tbloader/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://Scenes/Dev/": "gray",
+"res://Scenes/Player/": "yellow",
+"res://Scripts/Dev/": "gray",
+"res://Scripts/Player/": "yellow",
+"res://addons/": "gray"
+}
