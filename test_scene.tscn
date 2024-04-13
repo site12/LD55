@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dyjdkn0yjbpaa"]
+[gd_scene load_steps=5 format=3 uid="uid://dyjdkn0yjbpaa"]
 
+[ext_resource type="Script" path="res://test_scene.gd" id="1_1a7ls"]
 [ext_resource type="PackedScene" uid="uid://cg3eacvgu84jj" path="res://player.tscn" id="1_pd3ce"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_6j2l4"]
@@ -8,6 +9,7 @@
 data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
 
 [node name="TestScene" type="Node3D"]
+script = ExtResource("1_1a7ls")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(7.94492, 0, 0, 0, 7.94492, 0, 0, 0, 7.94492, 0, 0, 0)

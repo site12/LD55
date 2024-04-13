@@ -1,9 +1,10 @@
 extends CharacterBody3D
 
-
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
+var mouse_sens = 0.3
+var camera_anglev = 0
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -26,3 +27,11 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
+func _input(event) -> void:
+	if event is InputEventMouseMotion:
+		$Camera.rotate_y(deg_2_rad( - event.relative.x * mouse_sens))
+		var changev = -event.relative.y * mouse_sens
+		if camera_anglev + changev > - 50 and camera_anglev + changev < 50:
+			camera_anglev += changev
+			$Camera.rotate_x(deg_2_rad(changev))
