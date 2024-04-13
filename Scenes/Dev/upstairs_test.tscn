@@ -98,3 +98,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -18)
 
 [node name="upstairs_floor4" parent="SubViewportContainer/SubViewport/upstairs/floors" instance=ExtResource("3_w1c0k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -18)
+
+[node name="upstairs_floor5" parent="SubViewportContainer/SubViewport/upstairs/floors" instance=ExtResource("3_w1c0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -18)
+
+[node name="upstairs_floor6" parent="SubViewportContainer/SubViewport/upstairs/floors" instance=ExtResource("3_w1c0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+
+[node name="upstairs_floor7" parent="SubViewportContainer/SubViewport/upstairs/floors" instance=ExtResource("3_w1c0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 18)
+
+[node name="upstairs_floor8" parent="SubViewportContainer/SubViewport/upstairs/floors" instance=ExtResource("3_w1c0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18)
+
+[node name="upstairs_floor9" parent="SubViewportContainer/SubViewport/upstairs/floors" instance=ExtResource("3_w1c0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 18)
