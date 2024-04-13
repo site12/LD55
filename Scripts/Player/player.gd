@@ -5,22 +5,12 @@ const JUMP_VELOCITY = 4.5
 
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
+var distortion: float = 1.0
 @onready var neck := $Neck
 @onready var camera := $Neck/Camera3d
+@onready var shader = get_tree().root.get_node("CanvasLayer/PostProcessing").get_material()
 
 func looking_at_mannequin() -> bool:
-	# var global_position = get_parent().get_node("mannequin")
-	var threshold = .5
-	# if rotation in range(global_position.angle_to(get_parent().get_node("mannequin").global_position) - threshold, global_position.angle_to(get_parent().get_node("mannequin").global_position) + threshold):
-	# 	print("true")
-	# 	return true
-	# else:
-	# 	print("false")
-	# 	return false
-	# print("angle:")
-	# print(global_position.signed_angle_to(get_parent().get_node("mannequin").global_position))
-	# print("rotation:")
-	# print($Neck.rotation.y)
 	return get_parent().get_node("mannequin").get_node("VisibleOnScreenNotifier3D").is_on_screen()
 
 func can_move() -> bool:
@@ -36,6 +26,12 @@ func _unhandled_input(event: InputEvent) -> void:
 			neck.rotate_y( - event.relative.x * 0.01)
 			camera.rotate_x( - event.relative.y * 0.01)
 			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad( - 30), deg_to_rad(60))
+
+func _process(delta: float) -> void:
+	distortion = clamp(10.0 - global_position.distance_to(get_parent().get_node("mannequin").global_position), 1.0, 10.0)
+	shader.set_shader_parameter("distortion", distortion)
+	shader.set_shader_parameter("low_distortion", remap(distortion, 1., 10., 1., 2.))
+	shader.set_shader_parameter("high_distortion", remap(distortion, 1., 10., 1., 100.))
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.

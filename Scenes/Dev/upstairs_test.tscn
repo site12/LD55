@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://3mp8wrlyapj"]
+[gd_scene load_steps=12 format=3 uid="uid://3mp8wrlyapj"]
 
 [ext_resource type="Script" path="res://Scripts/Dev/upstairs.gd" id="1_gr8aw"]
 [ext_resource type="PackedScene" uid="uid://cg3eacvgu84jj" path="res://Scenes/Player/player.tscn" id="2_lr4bj"]
 [ext_resource type="PackedScene" uid="uid://co13ap2qnckj3" path="res://Scenes/Dev/upstairs_floor.tscn" id="3_w1c0k"]
+[ext_resource type="Shader" path="res://Assets/vhs_shader_CI_version.gdshader" id="4_ql8bn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sd38u"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -35,6 +36,10 @@ data = PackedVector3Array(-5, -0.9286, -9, -5, -1.9286, -9, 5, -1.9286, -9, -5, 
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ah14v"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jsohu"]
+render_priority = 30
+shader = ExtResource("4_ql8bn")
+
 [node name="CanvasLayer" type="CanvasLayer"]
 layer = -1
 
@@ -44,11 +49,11 @@ texture_filter = 1
 offset_right = 640.0
 offset_bottom = 481.0
 stretch = true
-stretch_shrink = 2
+stretch_shrink = 3
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(320, 240)
+size = Vector2i(213, 160)
 render_target_update_mode = 4
 
 [node name="upstairs" type="Node3D" parent="SubViewportContainer/SubViewport"]
@@ -113,3 +118,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18)
 
 [node name="upstairs_floor9" parent="SubViewportContainer/SubViewport/upstairs/floors" instance=ExtResource("3_w1c0k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 18)
+
+[node name="PostProcessing" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_jsohu")
+offset_right = 640.0
+offset_bottom = 480.0
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
