@@ -8,8 +8,23 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var neck := $Neck
 @onready var camera := $Neck/Camera3d
 
+func looking_at_mannequin() -> bool:
+	# var global_position = get_parent().get_node("mannequin")
+	var threshold = .5
+	# if rotation in range(global_position.angle_to(get_parent().get_node("mannequin").global_position) - threshold, global_position.angle_to(get_parent().get_node("mannequin").global_position) + threshold):
+	# 	print("true")
+	# 	return true
+	# else:
+	# 	print("false")
+	# 	return false
+	# print("angle:")
+	# print(global_position.signed_angle_to(get_parent().get_node("mannequin").global_position))
+	# print("rotation:")
+	# print($Neck.rotation.y)
+	return get_parent().get_node("mannequin").get_node("VisibleOnScreenNotifier3D").is_on_screen()
+
 func can_move() -> bool:
-	return true
+	return !looking_at_mannequin()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
@@ -26,6 +41,7 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
+	# print(can_move())
 	if can_move():
 		# Handle Jump.
 		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
