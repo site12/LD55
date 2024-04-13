@@ -28,10 +28,14 @@ enabled=PackedStringArray("res://addons/tbloader/plugin.cfg")
 [file_customization]
 
 folder_colors={
+"res://Assets/Trees/": "green",
+"res://Assets/Trees/Tree3/": "green",
 "res://Scenes/Dev/": "gray",
 "res://Scenes/Player/": "yellow",
 "res://Scripts/Dev/": "gray",
-"res://Scripts/Player/": "yellow"
+"res://Scripts/Player/": "yellow",
+"res://addons/": "gray"
+
 }
 
 [input]
@@ -55,4 +59,5 @@ right={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"key_label":0,"unicode":100,"location":0,"echo":false,"script":null)
 ]
+
 }
