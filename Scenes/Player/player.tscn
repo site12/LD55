@@ -3,10 +3,14 @@
 [ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_dbbxc"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_m8trs"]
+radius = 0.8
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_uroe2"]
 
 [node name="Player" type="CharacterBody3D"]
+floor_constant_speed = true
+floor_max_angle = 1.309
+floor_snap_length = 0.3
 script = ExtResource("1_dbbxc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
