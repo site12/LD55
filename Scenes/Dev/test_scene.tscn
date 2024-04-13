@@ -37,14 +37,14 @@ script = ExtResource("1_1a7ls")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
 texture_filter = 1
-offset_right = 1024.0
-offset_bottom = 768.0
+offset_right = 640.0
+offset_bottom = 481.0
 stretch = true
 stretch_shrink = 2
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(512, 384)
+size = Vector2i(320, 240)
 render_target_update_mode = 4
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport"]
