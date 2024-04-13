@@ -112,7 +112,7 @@ mesh = SubResource("ArrayMesh_cru6v")
 shape = SubResource("ConcavePolygonShape3D_74v6r")
 
 [node name="Trees" type="Node3D" parent="SubViewportContainer/SubViewport/Tbtest"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5543, -0.979592, 14.5403)
+transform = Transform3D(1, -1.14577e-05, 6.33199e-05, 1.14577e-05, 1, 8.26168e-05, -6.33199e-05, -8.26168e-05, 1, -23.5543, -0.979592, 14.5403)
 
 [node name="Tree3" parent="SubViewportContainer/SubViewport/Tbtest/Trees" instance=ExtResource("2_pyars")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3618, 0, -12.6409)
@@ -406,7 +406,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.9368, -0.979592, 38.4359)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3618, 0, -12.6409)
 
 [node name="Tree4" parent="SubViewportContainer/SubViewport/Tbtest/Trees7" instance=ExtResource("2_pyars")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.94808, -1.26767, -6.65723)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.0641, -1.26767, -25.6033)
 
 [node name="Tree6" parent="SubViewportContainer/SubViewport/Tbtest/Trees7" instance=ExtResource("2_pyars")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0437, 0, -14.7584)
@@ -484,23 +484,16 @@ transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842
 transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 15.5911, -1.26767, -10.0721)
 
 [node name="Player" parent="SubViewportContainer/SubViewport/Tbtest" instance=ExtResource("3_vypwc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.6705, -3.8147e-06, 60.0552)
 
 [node name="house" parent="SubViewportContainer/SubViewport/Tbtest" instance=ExtResource("4_2kegp")]
-transform = Transform3D(0.9413, 0, 0.337572, 0, 1, 0, -0.337572, 0, 0.9413, 37.0088, 3.0656, -2.58987)
+transform = Transform3D(-0.290686, 0, -0.956819, 0, 1, 0, 0.956819, 0, -0.290686, -32.8434, 3.87295, 33.4311)
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="SubViewportContainer/SubViewport/Tbtest"]
-transform = Transform3D(0.902458, 0, -0.430779, 0, 1, 0, 0.430779, 0, 0.902458, 39.86, 2.5479, 0.359966)
+[node name="OmniLight3D2" type="OmniLight3D" parent="SubViewportContainer/SubViewport/Tbtest/house"]
+transform = Transform3D(0.704064, 0, -0.710136, 0, 1, 0, 0.710136, 0, 0.704064, 1.68805, -0.5177, 3.73916)
 light_color = Color(1, 0.772549, 0.576471, 1)
 shadow_enabled = true
 omni_range = 10.3
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="SubViewportContainer/SubViewport/Tbtest"]
-transform = Transform3D(0.902458, 0, -0.430779, 0, 1, 0, 0.430779, 0, 0.902458, 33.935, 1.99179, -8.29436)
-visible = false
-light_color = Color(1, 0.772549, 0.576471, 1)
-light_energy = 0.5
-shadow_enabled = true
-omni_range = 12.0
 
 [node name="PostProcessing" type="ColorRect" parent="."]
 auto_translate_mode = 1
