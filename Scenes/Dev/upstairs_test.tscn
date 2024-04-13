@@ -68,7 +68,6 @@ map_resource = "res://Maps/upstairs.map"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.928571, 0)
 
 [node name="entity_0_geometry" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/upstairs/TBLoader/Default Layer"]
-visible = false
 mesh = SubResource("ArrayMesh_iq5l0")
 
 [node name="entity_0_geometry_col" type="StaticBody3D" parent="SubViewportContainer/SubViewport/upstairs/TBLoader/Default Layer"]
