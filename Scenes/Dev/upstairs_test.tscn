@@ -37,8 +37,10 @@ data = PackedVector3Array(-5, -0.9286, -9, -5, -1.9286, -9, 5, -1.9286, -9, -5, 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ah14v"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jsohu"]
-render_priority = 30
 shader = ExtResource("4_ql8bn")
+shader_parameter/low_distortion = 1.0
+shader_parameter/distortion = 1.0
+shader_parameter/high_distortion = 1.0
 
 [node name="CanvasLayer" type="CanvasLayer"]
 layer = -1
