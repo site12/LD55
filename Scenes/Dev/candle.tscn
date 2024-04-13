@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://fxsorecdshl1"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_qi6iv"]
+
+[node name="candle" type="MeshInstance3D"]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
+mesh = SubResource("CylinderMesh_qi6iv")
