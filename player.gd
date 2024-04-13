@@ -30,8 +30,8 @@ func _physics_process(delta: float) -> void:
 
 func _input(event) -> void:
 	if event is InputEventMouseMotion:
-		$Camera.rotate_y(deg_2_rad( - event.relative.x * mouse_sens))
+		%camera.rotate_y(deg_to_rad( - event.relative.x * mouse_sens))
 		var changev = -event.relative.y * mouse_sens
 		if camera_anglev + changev > - 50 and camera_anglev + changev < 50:
 			camera_anglev += changev
-			$Camera.rotate_x(deg_2_rad(changev))
+			%camera.rotate_x(deg_to_rad(changev))
