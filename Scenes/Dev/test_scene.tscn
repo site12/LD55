@@ -35,25 +35,35 @@ data = PackedVector3Array(-8.8929, -0.3214, -7.7857, -8.8929, -2.3214, -7.7857, 
 [node name="TestScene" type="Node3D"]
 script = ExtResource("1_1a7ls")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+texture_filter = 1
+offset_right = 1024.0
+offset_bottom = 768.0
+stretch = true
+stretch_shrink = 3
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+size = Vector2i(341, 256)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport"]
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 shadow_enabled = true
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="SubViewportContainer/SubViewport"]
 environment = SubResource("Environment_s224c")
 
-[node name="TBLoader" type="TBLoader" parent="."]
+[node name="TBLoader" type="TBLoader" parent="SubViewportContainer/SubViewport"]
 map_resource = "res://Maps/default.map"
 
-[node name="Default Layer" type="Node3D" parent="TBLoader"]
+[node name="Default Layer" type="Node3D" parent="SubViewportContainer/SubViewport/TBLoader"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.89286, 0.321429, -7.21429)
 
-[node name="entity_0_geometry" type="MeshInstance3D" parent="TBLoader/Default Layer"]
+[node name="entity_0_geometry" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/TBLoader/Default Layer"]
 mesh = SubResource("ArrayMesh_jjgbn")
 
-[node name="entity_0_geometry_col" type="StaticBody3D" parent="TBLoader/Default Layer"]
+[node name="entity_0_geometry_col" type="StaticBody3D" parent="SubViewportContainer/SubViewport/TBLoader/Default Layer"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="TBLoader/Default Layer/entity_0_geometry_col"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/TBLoader/Default Layer/entity_0_geometry_col"]
 shape = SubResource("ConcavePolygonShape3D_by2mr")
 
-[node name="Player" parent="." instance=ExtResource("1_pd3ce")]
+[node name="Player" parent="SubViewportContainer/SubViewport" instance=ExtResource("1_pd3ce")]
