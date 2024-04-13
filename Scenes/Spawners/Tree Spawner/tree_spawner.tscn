@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://boj7tlv5q87my"]
+
+[ext_resource type="Script" path="res://Scenes/Spawners/Tree Spawner/tree_spawner.gd" id="1_htvkg"]
+
+[node name="TreeSpawner" type="Node3D"]
+script = ExtResource("1_htvkg")
