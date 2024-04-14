@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dck51t6nais1v"]
+[gd_scene load_steps=6 format=3 uid="uid://dck51t6nais1v"]
 
 [ext_resource type="Texture2D" uid="uid://bd7pokqx6nauy" path="res://Assets/Trees/Tree3/Trees_03.png" id="1_xoiiv"]
 
@@ -43,8 +43,18 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_h46qh")
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_nlard"]
+height = 7.55169
+radius = 0.283078
+
 [node name="Tree3" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ka40r")
+
+[node name="CollisionShape3D" type="CharacterBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CollisionShape3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.20322, 0)
+shape = SubResource("CylinderShape3D_nlard")

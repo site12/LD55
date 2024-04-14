@@ -11,8 +11,10 @@ var distortion: float = 1.0
 @onready var shader = get_tree().root.get_node("CanvasLayer/PostProcessing").get_material()
 
 func looking_at_mannequin() -> bool:
-	return get_tree().root.get_node("CanvasLayer/SubViewportContainer/SubViewport/Tbtest/mannequin").get_node("VisibleOnScreenNotifier3D").is_on_screen()
-	# return false
+	if global_position.distance_to(get_tree().root.get_node("CanvasLayer/SubViewportContainer/SubViewport/Tbtest/mannequin").global_position) < 30:
+		return get_tree().root.get_node("CanvasLayer/SubViewportContainer/SubViewport/Tbtest/mannequin").get_node("VisibleOnScreenNotifier3D").is_on_screen()
+	else:
+		return false
 
 func can_move() -> bool:
 	return !looking_at_mannequin()
@@ -57,12 +59,14 @@ func _physics_process(delta: float) -> void:
 
 		move_and_slide()
 	elif looking_at_mannequin():
+		var dist_to_man: float = global_position.distance_to(get_tree().root.get_node("CanvasLayer/SubViewportContainer/SubViewport/Tbtest/mannequin").global_position)
+		var backforce_multiplyer = remap(dist_to_man, 0, 30., 1., 0)
 		var input_dir := Input.get_vector("left", "right", "forward", "backward")
 		input_dir = -input_dir
 		var direction = (neck.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		if direction:
-			velocity.x = direction.x * SPEED * 0.1
-			velocity.z = direction.z * SPEED * 0.1
+			velocity.x = direction.x * SPEED * 0.1 * backforce_multiplyer
+			velocity.z = direction.z * SPEED * 0.1 * backforce_multiplyer
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			velocity.z = move_toward(velocity.z, 0, SPEED)
