@@ -32,6 +32,7 @@ func find_new_location():
 	modulate = Color.WHITE
 
 func _on_timer_timeout() -> void:
+	position.y += 100.0
 	$respawn_timer.wait_time = randf_range(5., 20.)
 	$respawn_timer.start()
 

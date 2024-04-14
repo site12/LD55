@@ -64,7 +64,12 @@ func set_distortion(d_level: float, d_source: String) -> void:
 func _process(delta: float) -> void:
 	if mannequin: set_distortion(clamp(10.0 - global_position.distance_to(mannequin.global_position), 1.0, 10.0), "mannequin")
 	if bear: set_distortion(clamp(10.0 - global_position.distance_to(bear.global_position), 1.0, 10.0), "bear")
-	if shadow: set_distortion(clamp(10.0 - global_position.distance_to(shadow.global_position), 1.0, 10.0), "shadow")
+	if shadow: set_distortion(
+		clamp(
+			(10.0 - global_position.distance_to(shadow.global_position)) *
+			remap(shadow.get_node("Timer").time_left, 2, 0, 1, 0),
+			1.0, 10.0),
+			"shadow")
 	if %interactable_raycast.is_colliding():
 		if %interactable_raycast.get_collider().is_in_group("interactables"):
 			if finger_intact:
