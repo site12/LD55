@@ -9,7 +9,7 @@ const BOB_FREQ = 2.4
 const BOB_AMP = 0.08
 var t_bob = 0.0
 
-var finger_intact: bool = true
+var finger_intact: bool = false
 
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -72,12 +72,12 @@ func _process(delta: float) -> void:
 					interact.visible = true
 			else:
 				if interact_cut:
-					interact_cut.visible = false
-		else:
-			if interact:
-				interact.visible = false
-			if interact_cut:
-				interact_cut.visible = false
+					interact_cut.visible = true
+	else:
+		if interact:
+			interact.visible = false
+		if interact_cut:
+			interact_cut.visible = false
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
