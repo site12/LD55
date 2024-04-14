@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://ktwagrl61qgy"]
+
+[ext_resource type="Texture2D" uid="uid://c3okfn5llcqcg" path="res://Assets/woman shadow.png" id="1_6t5ta"]
+[ext_resource type="Script" path="res://Scripts/shadow.gd" id="2_u3oni"]
+
+[node name="shadow" type="Sprite3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.8372, 0.46097, 0)
+offset = Vector2(0, 200)
+pixel_size = 0.005
+billboard = 2
+alpha_cut = 2
+texture = ExtResource("1_6t5ta")
+script = ExtResource("2_u3oni")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.06807, 0)
+aabb = AABB(-0.5, -1, -0.5, 1, 2, 1)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="respawn_timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="screen_entered" from="VisibleOnScreenNotifier3D" to="." method="_on_visible_on_screen_notifier_3d_screen_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="respawn_timer" to="." method="_on_respawn_timer_timeout"]
