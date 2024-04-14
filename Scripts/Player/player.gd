@@ -89,6 +89,15 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 	# print(can_move())
+	
+	# Head bob
+	if not looking_at_mannequin():
+		t_bob += delta * velocity.length() * float(is_on_floor())
+	elif looking_at_mannequin():
+		print(Input.get_action_strength("forward"))
+		t_bob += delta * Input.get_action_strength("forward") * float(is_on_floor())
+	camera.transform.origin = _headbob(t_bob)
+	
 	if can_move():
 		# Handle Jump.
 		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
@@ -105,9 +114,7 @@ func _physics_process(delta: float) -> void:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			velocity.z = move_toward(velocity.z, 0, SPEED)
 		
-		# Head bob
-		t_bob += delta * velocity.length() * float(is_on_floor())
-		camera.transform.origin = _headbob(t_bob)
+		
 		
 		move_and_slide()
 	elif looking_at_mannequin():
