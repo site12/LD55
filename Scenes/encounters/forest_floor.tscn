@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://isv4jkscqmp1"]
+
+[ext_resource type="PackedScene" uid="uid://dck51t6nais1v" path="res://Assets/Trees/Tree3/Tree3.tscn" id="1_8ei1r"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_cxqur"]
+size = Vector2(20, 20)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Tree3" parent="." instance=ExtResource("1_8ei1r")]
+transform = Transform3D(0.526199, 0, -0.850361, 0, 1, 0, 0.850361, 0, 0.526199, 6.60575, -1.48687, 6.78552)
+
+[node name="Tree4" parent="." instance=ExtResource("1_8ei1r")]
+transform = Transform3D(-0.714448, 0, 0.699688, 0, 1, 0, -0.699688, 0, -0.714448, -0.421432, 0, 2.63102)
+
+[node name="Tree5" parent="." instance=ExtResource("1_8ei1r")]
+transform = Transform3D(-0.493578, 0, -0.869702, 0, 1, 0, 0.869702, 0, -0.493578, 9.44389, -1.29298, 0.00373936)
+
+[node name="Tree6" parent="." instance=ExtResource("1_8ei1r")]
+transform = Transform3D(-0.43111, 0, 0.9023, 0, 1, 0, -0.9023, 0, -0.43111, 5.02834, -1.35421, -3.12487)
+
+[node name="Tree7" parent="." instance=ExtResource("1_8ei1r")]
+transform = Transform3D(-0.650946, 0, -0.759124, 0, 1, 0, 0.759124, 0, -0.650946, 7.29453, -3.08869, -5.3218)
+
+[node name="Tree8" parent="." instance=ExtResource("1_8ei1r")]
+transform = Transform3D(-0.227671, 0, 0.973738, 0, 1, 0, -0.973738, 0, -0.227671, -7.52469, -2.34077, -8.33976)
+
+[node name="Tree9" parent="." instance=ExtResource("1_8ei1r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.17116, -0.776167, -9.43261)
+
+[node name="Tree10" parent="." instance=ExtResource("1_8ei1r")]
+transform = Transform3D(-0.269021, 0, -0.963134, 0, 1, 0, 0.963134, 0, -0.269021, -4.82008, -1.77543, -4.20505)
+
+[node name="Tree11" parent="." instance=ExtResource("1_8ei1r")]
+transform = Transform3D(-0.169229, 0, -0.985577, 0, 1, 0, 0.985577, 0, -0.169229, 2.40168, -9.53674e-07, -7.78887)
+
+[node name="Tree12" parent="." instance=ExtResource("1_8ei1r")]
+transform = Transform3D(0.150295, 0, -0.988641, 0, 1, 0, 0.988641, 0, 0.150295, -3.1543, -3.03399, -0.341649)
+
+[node name="Tree13" parent="." instance=ExtResource("1_8ei1r")]
+transform = Transform3D(-0.752139, 0, 0.659005, 0, 1, 0, -0.659005, 0, -0.752139, -6.15534, -1.25043, 6.81026)
+
+[node name="forest_floor" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("PlaneMesh_cxqur")
