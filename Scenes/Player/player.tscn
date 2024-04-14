@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_dbbxc"]
 [ext_resource type="Shader" path="res://Assets/vhs_shader.gdshader" id="2_xuu3q"]
 [ext_resource type="Script" path="res://Scenes/Player/footsteps.gd" id="3_wiq1i"]
-[ext_resource type="AudioStream" uid="uid://b4sswg64y31oq" path="res://Sounds/footsteps/outside_walk.wav" id="4_fy2dr"]
+[ext_resource type="AudioStream" uid="uid://bxakkbku0lky7" path="res://Sounds/footsteps/outside_walk.wav" id="4_fy2dr"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_m8trs"]
 radius = 0.8
