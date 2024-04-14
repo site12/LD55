@@ -152,4 +152,5 @@ transform = Transform3D(-0.37527, 0, -0.926916, 0, 1, 0, 0.926916, 0, -0.37527, 
 transform = Transform3D(-0.795336, 0, 0.606169, 0, 1, 0, -0.606169, 0, -0.795336, 11.8997, -2.73758, -11.692)
 
 [node name="forest_floor" type="MeshInstance3D" parent="."]
+visible = false
 mesh = SubResource("PlaneMesh_cxqur")

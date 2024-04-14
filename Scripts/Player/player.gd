@@ -9,12 +9,13 @@ var distortion: float = 1.0
 @onready var neck := $Neck
 @onready var camera := $Neck/Camera3d
 @onready var shader = get_tree().root.get_node("CanvasLayer/PostProcessing").get_material()
+@onready var mannequin = get_tree().root.get_node_or_null("CanvasLayerSubViewportContainer/SubViewport/Tbtest/mannequin")
 
 func looking_at_mannequin() -> bool:
-	if global_position.distance_to(get_tree().root.get_node("CanvasLayer/SubViewportContainer/SubViewport/Tbtest/mannequin").global_position) < 30:
-		return get_tree().root.get_node("CanvasLayer/SubViewportContainer/SubViewport/Tbtest/mannequin").get_node("VisibleOnScreenNotifier3D").is_on_screen()
-	else:
-		return false
+	if mannequin:
+		if global_position.distance_to(mannequin.global_position) < 30:
+			return mannequin.get_node("VisibleOnScreenNotifier3D").is_on_screen()
+	return false
 
 func can_move() -> bool:
 	return !looking_at_mannequin()
@@ -31,10 +32,11 @@ func _unhandled_input(event: InputEvent) -> void:
 			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad( - 30), deg_to_rad(60))
 
 func _process(delta: float) -> void:
-	distortion = clamp(10.0 - global_position.distance_to(get_tree().root.get_node("CanvasLayer/SubViewportContainer/SubViewport/Tbtest/mannequin").global_position), 1.0, 10.0)
-	shader.set_shader_parameter("distortion", distortion)
-	shader.set_shader_parameter("low_distortion", remap(distortion, 1., 10., 1., 2.))
-	shader.set_shader_parameter("high_distortion", remap(distortion, 1., 10., 1., 100.))
+	if mannequin:
+		distortion = clamp(10.0 - global_position.distance_to(mannequin.global_position), 1.0, 10.0)
+		shader.set_shader_parameter("distortion", distortion)
+		shader.set_shader_parameter("low_distortion", remap(distortion, 1., 10., 1., 2.))
+		shader.set_shader_parameter("high_distortion", remap(distortion, 1., 10., 1., 100.))
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
