@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cg3eacvgu84jj" path="res://Scenes/Player/player.tscn" id="3_vypwc"]
 [ext_resource type="PackedScene" uid="uid://bc8oyyfp861og" path="res://Scenes/buildings/house/house.tscn" id="4_2kegp"]
 [ext_resource type="Shader" path="res://Assets/vhs_shader_CI_version.gdshader" id="6_clfmr"]
-[ext_resource type="PackedScene" uid="uid://dig8veg16bie6" path="res://Assets/Mannequin/mannequin.tscn" id="7_dvmvm"]
+[ext_resource type="PackedScene" path="res://Assets/Mannequin/mannequin_seperated.tscn" id="7_0nwli"]
 [ext_resource type="PackedScene" uid="uid://isv4jkscqmp1" path="res://Scenes/encounters/forest_floor.tscn" id="7_ul23i"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mg4xp"]
@@ -499,22 +499,22 @@ light_color = Color(1, 0.772549, 0.576471, 1)
 shadow_enabled = true
 omni_range = 10.3
 
-[node name="mannequin" parent="SubViewportContainer/SubViewport/Tbtest" instance=ExtResource("7_dvmvm")]
+[node name="mannequin" parent="SubViewportContainer/SubViewport/Tbtest" instance=ExtResource("7_0nwli")]
 unique_name_in_owner = true
-transform = Transform3D(150, 0, 0, 0, 150, 0, 0, 0, 150, 77.2966, -0.33, -5.222)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77.2966, -0.384923, -5.222)
 
 [node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="SubViewportContainer/SubViewport/Tbtest/mannequin"]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
 aabb = AABB(-0.5, -1, -0.5, 1, 2, 1)
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="SubViewportContainer/SubViewport/Tbtest/mannequin"]
-transform = Transform3D(0.704064, 0, -0.710136, 0, 1, 0, 0.710136, 0, 0.704064, 0.0134888, 0.00686005, 0.0219078)
+transform = Transform3D(0.704064, 0, -0.710136, 0, 1, 0, 0.710136, 0, 0.704064, -0.999443, 0.00686005, 0.0219078)
 light_color = Color(1, 0.772549, 0.576471, 1)
 shadow_enabled = true
 omni_range = 10.3
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="SubViewportContainer/SubViewport/Tbtest/mannequin"]
-transform = Transform3D(0.704064, 0, -0.710136, 0, 1, 0, 0.710136, 0, 0.704064, -0.0248337, 0.00426391, 0.004776)
+transform = Transform3D(0.704064, 0, -0.710136, 0, 1, 0, 0.710136, 0, 0.704064, 0.790695, 0.381024, 1.17118)
 light_color = Color(1, 0.772549, 0.576471, 1)
 shadow_enabled = true
 omni_range = 10.3
