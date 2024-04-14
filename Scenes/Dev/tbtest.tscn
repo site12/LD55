@@ -571,7 +571,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -30)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -30)
 
 [node name="lighthouse" type="SpotLight3D" parent="SubViewportContainer/SubViewport/Tbtest"]
-transform = Transform3D(-1.19249e-08, 1.04251e-15, -1, -8.74228e-08, -1, 0, -1, 8.74228e-08, 1.19249e-08, -27.0652, 14.0087, -99.9153)
+transform = Transform3D(4.37114e-08, 3.82137e-15, 1, 8.74228e-08, -1, 0, 1, 8.74228e-08, -4.37114e-08, -27.0652, 14.0087, -99.9153)
 light_energy = 0.0
 light_volumetric_fog_energy = 50.0
 shadow_enabled = true
