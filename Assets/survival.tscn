@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxsecc8766npi"]
+
+[ext_resource type="PackedScene" uid="uid://dmnm4ds2bjxvs" path="res://Assets/Survival.fbx" id="1_b4h4n"]
+
+[node name="Survival" instance=ExtResource("1_b4h4n")]
+
+[node name="sleeping_bag_01" parent="." index="9"]
+transform = Transform3D(1.04331e-06, 7.65114e-07, 44.2792, 0, 17.5038, -1.93551e-06, -17.5038, 6.21859e-14, 2.63925e-06, 0.820545, 0.098814, -1.23117)

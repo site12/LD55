@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://dshiiv4lmhr3o"]
+
+[ext_resource type="PackedScene" uid="uid://g35b8wode8d7" path="res://Assets/models.fbx" id="1_uody4"]
+
+[node name="models" instance=ExtResource("1_uody4")]
+
+[node name="Mesa_007" parent="." index="135"]
+transform = Transform3D(95.1057, -30.9017, 1.49012e-06, 1.49012e-06, 5.96046e-06, 100, -30.9017, -95.1057, 5.96046e-06, -12.0551, -3.35218, -4.84768)
+
+[node name="Cube_220" parent="Cube_221" index="0"]
+transform = Transform3D(-1, -0.000116771, -7.03104e-05, 0.000116742, -1, 0.000202579, -7.03577e-05, 0.000202563, 1, -0.00792566, 0.00861816, -0.00584391)
+
+[node name="Cube_219" parent="Cube_221" index="1"]
+transform = Transform3D(-1, -0.000116771, -7.03104e-05, 0.000116742, -1, 0.000202579, -7.03577e-05, 0.000202563, 1, -0.00791817, 0.00858647, 0.0110788)
+
+[node name="Cube_205" parent="." index="358"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, -23.1521, -1.60301, 18.8135)
+
+[node name="Cube_203" parent="." index="360"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, -22.4668, -1.64967, 18.4331)
