@@ -646,10 +646,10 @@ transform = Transform3D(-0.49938, -3.98606e-07, -0.866383, -1.49012e-08, 1, -8.9
 transform = Transform3D(0.456436, 0.419466, 0.0106999, 0.0246172, -0.0109864, -0.619414, -0.41888, 0.45643, -0.0247431, -11.7025, 4.06958, -12.1554)
 
 [node name="Loveseat2" parent="SubViewportContainer/SubViewport/house_interior/Misc" instance=ExtResource("12_gc21s")]
-transform = Transform3D(0.448734, 0.240902, -0.353559, -0.179435, 0.571101, 0.16139, 0.388382, -0.0144851, 0.483063, -14.7317, 7.96241, -0.786687)
+transform = Transform3D(0.538004, 0.193221, -0.240036, -0.1491, 0.585899, 0.137445, 0.269669, -0.0615428, 0.55488, -14.7317, 8.14051, -0.786687)
 
 [node name="Chair" parent="SubViewportContainer/SubViewport/house_interior/Misc/Loveseat2" instance=ExtResource("16_4hr6r")]
-transform = Transform3D(1.49987, 0.335683, 0.489029, -0.0379512, 1.38135, -0.831801, -0.591939, 0.762004, 1.29244, -1.88324, -0.0101168, 0.108593)
+transform = Transform3D(1.40597, -0.722476, 0.320498, -0.774712, -1.38928, 0.266781, 0.156562, -0.386496, -1.55806, 0.228477, 0.405327, -1.06666)
 
 [node name="KitchenIsland" parent="SubViewportContainer/SubViewport/house_interior/Misc" instance=ExtResource("22_8jdwc")]
 transform = Transform3D(-0.013613, 0, -0.999908, 0, 1, 0, 0.999908, 0, -0.013613, -17.762, 4.20439, -5.71892)
