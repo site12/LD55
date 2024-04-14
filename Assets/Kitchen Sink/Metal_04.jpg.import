@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cykl38ytxxg4c"
-path.s3tc="res://.godot/imported/drywall.jpg-68ff83b7f6543eee264f8d896db687ce.s3tc.ctex"
+uid="uid://n22yi1wpts6o"
+path.s3tc="res://.godot/imported/Metal_04.jpg-d422251ae6e512790629147af8d59345.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/drywall.jpg"
-dest_files=["res://.godot/imported/drywall.jpg-68ff83b7f6543eee264f8d896db687ce.s3tc.ctex"]
+source_file="res://Assets/Kitchen Sink/Metal_04.jpg"
+dest_files=["res://.godot/imported/Metal_04.jpg-d422251ae6e512790629147af8d59345.s3tc.ctex"]
 
 [params]
 

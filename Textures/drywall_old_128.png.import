@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dcpjligv5tbgk"
-path.s3tc="res://.godot/imported/drywall_old_128.png-d3652f7dd12ac435d3993fcc967d39e9.s3tc.ctex"
+path.s3tc="res://.godot/imported/drywall_old_128.png-418f84d7021ec3b08c05d83840b802ac.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/drywall_old_128.png"
-dest_files=["res://.godot/imported/drywall_old_128.png-d3652f7dd12ac435d3993fcc967d39e9.s3tc.ctex"]
+source_file="res://Textures/drywall_old_128.png"
+dest_files=["res://.godot/imported/drywall_old_128.png-418f84d7021ec3b08c05d83840b802ac.s3tc.ctex"]
 
 [params]
 

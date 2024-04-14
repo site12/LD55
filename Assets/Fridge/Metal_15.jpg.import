@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bypxb2psc8kxx"
-path.s3tc="res://.godot/imported/drywall_128.png-cd865ae91f86ff25e431ef1a66ccec72.s3tc.ctex"
+uid="uid://b76ofhsb4uio4"
+path.s3tc="res://.godot/imported/Metal_15.jpg-5b1b0612d7ab77300b82fbb72fbafc04.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/drywall_128.png"
-dest_files=["res://.godot/imported/drywall_128.png-cd865ae91f86ff25e431ef1a66ccec72.s3tc.ctex"]
+source_file="res://Assets/Fridge/Metal_15.jpg"
+dest_files=["res://.godot/imported/Metal_15.jpg-5b1b0612d7ab77300b82fbb72fbafc04.s3tc.ctex"]
 
 [params]
 

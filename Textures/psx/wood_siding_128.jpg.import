@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://k6q0yix5wlvi"
-path.s3tc="res://.godot/imported/wood_siding_128.jpg-ff723252058c132264201bdf8573b68b.s3tc.ctex"
+path.s3tc="res://.godot/imported/wood_siding_128.jpg-5908c0c4ebc289c0dd5df701807f1651.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/psx/wood_siding_128.jpg"
-dest_files=["res://.godot/imported/wood_siding_128.jpg-ff723252058c132264201bdf8573b68b.s3tc.ctex"]
+source_file="res://Textures/psx/wood_siding_128.jpg"
+dest_files=["res://.godot/imported/wood_siding_128.jpg-5908c0c4ebc289c0dd5df701807f1651.s3tc.ctex"]
 
 [params]
 

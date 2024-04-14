@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cecqhrmx3emgp"
-path.s3tc="res://.godot/imported/oldbrick_128.png-fc88a6da190b7fa73a3d0fc934a0fc1e.s3tc.ctex"
+path.s3tc="res://.godot/imported/oldbrick_128.png-2b371d29a0ab2ea81ae9fa7596ac587c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/oldbrick_128.png"
-dest_files=["res://.godot/imported/oldbrick_128.png-fc88a6da190b7fa73a3d0fc934a0fc1e.s3tc.ctex"]
+source_file="res://Textures/oldbrick_128.png"
+dest_files=["res://.godot/imported/oldbrick_128.png-2b371d29a0ab2ea81ae9fa7596ac587c.s3tc.ctex"]
 
 [params]
 

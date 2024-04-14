@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cg7mduxfobw1l"
-path.s3tc="res://.godot/imported/metal_rusted_128.png-15330ed51ab6472596beca87974f29b9.s3tc.ctex"
+path.s3tc="res://.godot/imported/metal_rusted_128.png-0446d713678d707b41fe5f4d7afdaa67.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/metal_rusted_128.png"
-dest_files=["res://.godot/imported/metal_rusted_128.png-15330ed51ab6472596beca87974f29b9.s3tc.ctex"]
+source_file="res://Textures/metal_rusted_128.png"
+dest_files=["res://.godot/imported/metal_rusted_128.png-0446d713678d707b41fe5f4d7afdaa67.s3tc.ctex"]
 
 [params]
 
