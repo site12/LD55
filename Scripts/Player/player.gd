@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
+const D_MULTIPLY = 8.0
 
 #bob variables
 const BOB_FREQ = 2.4
@@ -10,11 +11,15 @@ var t_bob = 0.0
 
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
+# Distortion var for shader; min = 1.0; max = 10.0
 var distortion: float = 1.0
+var distortion_source: String = ""
 @onready var neck := $Neck
 @onready var camera := $Neck/Camera3d
 @onready var shader = get_tree().root.get_node("CanvasLayer/PostProcessing").get_material()
 @onready var mannequin = get_tree().root.get_node_or_null("CanvasLayer/SubViewportContainer/SubViewport/Tbtest/mannequin")
+@onready var bear = get_tree().root.get_node_or_null("CanvasLayer/SubViewportContainer/SubViewport/Tbtest/bear")
+@onready var shadow = get_tree().root.get_node_or_null("CanvasLayer/SubViewportContainer/SubViewport/Tbtest/shadow")
 
 var can_play: bool = false
 signal step
@@ -40,12 +45,22 @@ func _unhandled_input(event: InputEvent) -> void:
 			camera.rotate_x( - event.relative.y * 0.01)
 			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad( - 30), deg_to_rad(60))
 
+func set_distortion(d_level: float, d_source: String) -> void:
+	if d_level > distortion:
+		distortion = d_level
+		distortion_source = d_source
+	else:
+		if d_source == distortion_source:
+			distortion = d_level
+	var scaled_distortion = remap(distortion, 1., 10., 1., D_MULTIPLY)
+	shader.set_shader_parameter("distortion", scaled_distortion)
+	shader.set_shader_parameter("low_distortion", remap(scaled_distortion, 1., 10., 1., 2.))
+	shader.set_shader_parameter("high_distortion", remap(scaled_distortion, 1., 10., 1., 100.))
+
 func _process(delta: float) -> void:
-	if mannequin:
-		distortion = clamp(10.0 - global_position.distance_to(mannequin.global_position), 1.0, 10.0)
-		shader.set_shader_parameter("distortion", distortion)
-		shader.set_shader_parameter("low_distortion", remap(distortion, 1., 10., 1., 2.))
-		shader.set_shader_parameter("high_distortion", remap(distortion, 1., 10., 1., 100.))
+	if mannequin: set_distortion(clamp(10.0 - global_position.distance_to(mannequin.global_position), 1.0, 10.0), "mannequin")
+	if bear: set_distortion(clamp(10.0 - global_position.distance_to(bear.global_position), 1.0, 10.0), "bear")
+	if shadow: set_distortion(clamp(10.0 - global_position.distance_to(shadow.global_position), 1.0, 10.0), "shadow")
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
