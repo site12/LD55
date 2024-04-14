@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dedorys0tphb2"]
+[gd_scene load_steps=26 format=3 uid="uid://dedorys0tphb2"]
 
 [ext_resource type="Script" path="res://Scripts/forest.gd" id="1_6cpro"]
 [ext_resource type="Texture2D" uid="uid://bxgkxs8171gbf" path="res://Textures/grass_128.jpg" id="1_ae00h"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://isv4jkscqmp1" path="res://Scenes/encounters/forest_floor.tscn" id="7_ul23i"]
 [ext_resource type="Script" path="res://Scripts/lighthouse.gd" id="9_0n7i6"]
 [ext_resource type="PackedScene" uid="uid://bygc8ag3arp4u" path="res://Assets/Rocks/Rocas/rock_1.tscn" id="10_u6yme"]
+[ext_resource type="PackedScene" uid="uid://ktwagrl61qgy" path="res://Scenes/shadow.tscn" id="11_s5gid"]
 [ext_resource type="Script" path="res://Scripts/audio/audio.gd" id="12_j7u1h"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mg4xp"]
@@ -506,7 +507,7 @@ transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296
 
 [node name="Player" parent="SubViewportContainer/SubViewport/Tbtest" instance=ExtResource("3_vypwc")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.4831, -3.8147e-06, 21.0062)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.4831, -3.8147e-06, 56.0456)
 
 [node name="house" parent="SubViewportContainer/SubViewport/Tbtest" instance=ExtResource("4_2kegp")]
 transform = Transform3D(-0.290686, 0, -0.956819, 0, 1, 0, 0.956819, 0, -0.290686, -32.8434, 3.87295, 33.4311)
@@ -730,6 +731,9 @@ transform = Transform3D(3.6766, 0.348092, 8.85357, 0.065921, 2.74497, -1.21306, 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/Tbtest/Water"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.52464, 0)
 mesh = SubResource("PlaneMesh_ousjl")
+
+[node name="shadow" parent="SubViewportContainer/SubViewport/Tbtest" instance=ExtResource("11_s5gid")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.3086, 0, 16.0304)
 
 [node name="PostProcessing" type="ColorRect" parent="."]
 auto_translate_mode = 1

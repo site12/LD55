@@ -1,7 +1,7 @@
 extends Sprite3D
 
 var shadow_seen: bool = false
-const RESPAWN_RADIUS: float = 5.0
+const RESPAWN_RADIUS: float = 10.0
 @onready var player = get_tree().root.get_node("CanvasLayer/SubViewportContainer/SubViewport/Tbtest/Player")
 
 # Called when the node enters the scene tree for the first time.
@@ -12,6 +12,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if shadow_seen:
 		modulate = Color(1, 1, 1, remap($Timer.time_left, $Timer.wait_time, 0, 1.0, 0))
+	else:
+		if player.global_position.distance_to(global_position) > 40.0:
+			find_new_location()
 
 func _on_visible_on_screen_notifier_3d_screen_entered() -> void:
 	print("on_screen")
@@ -29,7 +32,7 @@ func find_new_location():
 	modulate = Color.WHITE
 
 func _on_timer_timeout() -> void:
-	$respawn_timer.wait_time = randf_range(5., 6.)
+	$respawn_timer.wait_time = randf_range(5., 20.)
 	$respawn_timer.start()
 
 func _on_respawn_timer_timeout() -> void:

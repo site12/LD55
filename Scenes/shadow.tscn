@@ -1,10 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://ktwagrl61qgy"]
 
-[ext_resource type="Texture2D" uid="uid://c3okfn5llcqcg" path="res://Assets/woman shadow.png" id="1_6t5ta"]
+[ext_resource type="Texture2D" uid="uid://bww7h7tc27djg" path="res://Assets/woman shadow.png" id="1_6t5ta"]
 [ext_resource type="Script" path="res://Scripts/shadow.gd" id="2_u3oni"]
 
 [node name="shadow" type="Sprite3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.8372, 0.46097, 0)
 offset = Vector2(0, 200)
 pixel_size = 0.005
 billboard = 2
