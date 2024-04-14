@@ -457,6 +457,30 @@ transform = Transform3D(-0.0237862, -6.83548e-05, 0.999717, 5.67509e-05, 1, 6.97
 [node name="Tree52" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
 transform = Transform3D(-0.61731, -6.69824e-05, 0.78672, 4.59542e-05, 1, 0.0001212, -0.78672, 0.000110971, -0.61731, 139.699, -0.00078547, -2.28256)
 
+[node name="Tree77" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.506635, -7.00681e-05, 0.86216, 5.09187e-05, 1, 0.000111192, -0.86216, 0.000100234, -0.506635, 133.201, -0.00243574, 18.5929)
+
+[node name="Tree78" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.921843, -4.33166e-05, 0.387564, 1.64665e-05, 1, 0.000150933, -0.387564, 0.000145518, -0.921843, 134.557, -0.00200701, 13.2147)
+
+[node name="Tree79" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.0237862, -6.83548e-05, 0.999717, 5.67509e-05, 1, 6.97244e-05, -0.999717, 5.83933e-05, -0.0237862, 126.641, -0.0016467, 9.95163)
+
+[node name="Tree80" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.61731, -6.69824e-05, 0.78672, 4.59542e-05, 1, 0.0001212, -0.78672, 0.000110971, -0.61731, 130.44, -0.0013563, 5.91045)
+
+[node name="Tree81" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.506635, -7.00681e-05, 0.86216, 5.09187e-05, 1, 0.000111192, -0.86216, 0.000100234, -0.506635, 133.2, -0.00359154, 32.5825)
+
+[node name="Tree82" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.921843, -4.33166e-05, 0.387564, 1.64665e-05, 1, 0.000150933, -0.387564, 0.000145518, -0.921843, 134.556, -0.0031628, 27.2043)
+
+[node name="Tree83" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.0237862, -6.83548e-05, 0.999717, 5.67509e-05, 1, 6.97244e-05, -0.999717, 5.83933e-05, -0.0237862, 126.64, -0.00280243, 23.9412)
+
+[node name="Tree84" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.61731, -6.69824e-05, 0.78672, 4.59542e-05, 1, 0.0001212, -0.78672, 0.000110971, -0.61731, 130.439, -0.00251204, 19.9001)
+
 [node name="Tree53" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
 transform = Transform3D(-0.506635, -7.00681e-05, 0.86216, 5.09187e-05, 1, 0.000111192, -0.86216, 0.000100234, -0.506635, 151.254, -0.000989318, -1.41899)
 
@@ -912,6 +936,8 @@ transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842
 
 [node name="Tree24" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees8" instance=ExtResource("2_pyars")]
 transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 15.5911, -1.26767, -10.0721)
+
+[node name="decals" type="Node3D" parent="SubViewportContainer/SubViewport/Tbtest"]
 
 [node name="PostProcessing" type="ColorRect" parent="."]
 auto_translate_mode = 1
