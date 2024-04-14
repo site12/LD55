@@ -162,9 +162,6 @@ transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, 
 [node name="Tree11" parent="SubViewportContainer/SubViewport/Tbtest/Trees" instance=ExtResource("2_pyars")]
 transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -21.0682, -1.26767, 0.421739)
 
-[node name="Tree12" parent="SubViewportContainer/SubViewport/Tbtest/Trees" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -12.1906, 0, 18.5839)
-
 [node name="Tree16" parent="SubViewportContainer/SubViewport/Tbtest/Trees" instance=ExtResource("2_pyars")]
 transform = Transform3D(-0.999864, 0, 0.0164751, 0, 1, 0, -0.0164751, 0, -0.999864, -0.189383, -1.26767, 30.8829)
 
