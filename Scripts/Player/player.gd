@@ -3,12 +3,10 @@ extends CharacterBody3D
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
-
 #bob variables
 const BOB_FREQ = 2.4
 const BOB_AMP = 0.08
 var t_bob = 0.0
-
 
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -16,15 +14,15 @@ var distortion: float = 1.0
 @onready var neck := $Neck
 @onready var camera := $Neck/Camera3d
 @onready var shader = get_tree().root.get_node("CanvasLayer/PostProcessing").get_material()
-@onready var mannequin = get_tree().root.get_node_or_null("CanvasLayerSubViewportContainer/SubViewport/Tbtest/mannequin")
+@onready var mannequin = get_tree().root.get_node_or_null("CanvasLayer/SubViewportContainer/SubViewport/Tbtest/mannequin")
 
 var can_play: bool = false
 signal step
 
-
 func looking_at_mannequin() -> bool:
 	if mannequin:
 		if global_position.distance_to(mannequin.global_position) < 30:
+			print("looking")
 			return mannequin.get_node("VisibleOnScreenNotifier3D").is_on_screen()
 	return false
 
@@ -74,7 +72,6 @@ func _physics_process(delta: float) -> void:
 		t_bob += delta * velocity.length() * float(is_on_floor())
 		camera.transform.origin = _headbob(t_bob)
 		
-		
 		move_and_slide()
 	elif looking_at_mannequin():
 		var dist_to_man: float = global_position.distance_to(get_tree().root.get_node("CanvasLayer/SubViewportContainer/SubViewport/Tbtest/mannequin").global_position)
@@ -98,14 +95,11 @@ func _headbob(time) -> Vector3:
 	
 	var low_pos = BOB_AMP - 0.05
 	
-	if pos.y >-low_pos:
+	if pos.y > - low_pos:
 		can_play = true
 	
-	if pos.y < -low_pos and can_play:
+	if pos.y < - low_pos and can_play:
 		can_play = false
 		emit_signal("step")
 	
 	return pos
-	
-	
-	
