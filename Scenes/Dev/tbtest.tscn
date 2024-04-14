@@ -13,8 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://bygc8ag3arp4u" path="res://Assets/Rocks/Rocas/rock_1.tscn" id="10_u6yme"]
 [ext_resource type="PackedScene" uid="uid://ktwagrl61qgy" path="res://Scenes/shadow.tscn" id="11_s5gid"]
 [ext_resource type="Script" path="res://Scripts/audio/audio.gd" id="12_j7u1h"]
-[ext_resource type="Texture2D" uid="uid://da1rd4ss55yo" path="res://Assets/hand.png" id="14_s8hn1"]
-[ext_resource type="Texture2D" uid="uid://cpqihtn55p113" path="res://Assets/hand_cut.png" id="15_1kow6"]
+[ext_resource type="Texture2D" uid="uid://cfrnsbhleeqvx" path="res://Assets/hand.png" id="14_s8hn1"]
+[ext_resource type="Texture2D" uid="uid://cqejtrp4qf30u" path="res://Assets/hand_cut.png" id="15_1kow6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mg4xp"]
 sky_top_color = Color(0.00514768, 0, 0.401698, 1)
@@ -28,7 +28,6 @@ sky_material = SubResource("ProceduralSkyMaterial_mg4xp")
 background_mode = 2
 sky = SubResource("Sky_dehto")
 tonemap_mode = 2
-volumetric_fog_enabled = true
 volumetric_fog_density = 0.1
 volumetric_fog_albedo = Color(0.737193, 0.737193, 0.737193, 1)
 adjustment_enabled = true
@@ -138,381 +137,12 @@ mesh = SubResource("ArrayMesh_cru6v")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/Tbtest/TBLoader/Default Layer/entity_0_geometry_col"]
 shape = SubResource("ConcavePolygonShape3D_74v6r")
 
-[node name="Trees" type="Node3D" parent="SubViewportContainer/SubViewport/Tbtest"]
-transform = Transform3D(1, -1.14577e-05, 6.33199e-05, 1.14577e-05, 1, 8.26168e-05, -6.33199e-05, -8.26168e-05, 1, -23.5543, -0.979592, 14.5403)
-
-[node name="Tree3" parent="SubViewportContainer/SubViewport/Tbtest/Trees" instance=ExtResource("2_pyars")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3618, 0, -12.6409)
-
-[node name="Tree4" parent="SubViewportContainer/SubViewport/Tbtest/Trees" instance=ExtResource("2_pyars")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.94808, -1.26767, -6.65723)
-
-[node name="Tree6" parent="SubViewportContainer/SubViewport/Tbtest/Trees" instance=ExtResource("2_pyars")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0437, 0, -14.7584)
-
-[node name="Tree7" parent="SubViewportContainer/SubViewport/Tbtest/Trees" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -26.9062, 0, 11.3145)
-
-[node name="Tree8" parent="SubViewportContainer/SubViewport/Tbtest/Trees" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, 11.509, -1.26767, 21.7187)
-
-[node name="Tree10" parent="SubViewportContainer/SubViewport/Tbtest/Trees" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -5.93016, -1.77206, -1.3394)
-
-[node name="Tree11" parent="SubViewportContainer/SubViewport/Tbtest/Trees" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -21.0682, -1.26767, 0.421739)
-
-[node name="Tree16" parent="SubViewportContainer/SubViewport/Tbtest/Trees" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.999864, 0, 0.0164751, 0, 1, 0, -0.0164751, 0, -0.999864, -0.189383, -1.26767, 30.8829)
-
-[node name="Tree17" parent="SubViewportContainer/SubViewport/Tbtest/Trees" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 18.165, 0, 8.24569)
-
-[node name="Tree18" parent="SubViewportContainer/SubViewport/Tbtest/Trees" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 17.0033, -1.26767, 17.7454)
-
-[node name="Tree19" parent="SubViewportContainer/SubViewport/Tbtest/Trees" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 23.5911, 0, -2.07211)
-
-[node name="Tree20" parent="SubViewportContainer/SubViewport/Tbtest/Trees" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.999864, 0, 0.0164751, 0, 1, 0, -0.0164751, 0, -0.999864, -10.7207, 0, 4.70178)
-
-[node name="Tree21" parent="SubViewportContainer/SubViewport/Tbtest/Trees" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.999864, 0, 0.0164751, 0, 1, 0, -0.0164751, 0, -0.999864, -8.18938, -1.77206, 22.8829)
-
-[node name="Tree22" parent="SubViewportContainer/SubViewport/Tbtest/Trees" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 10.165, -1.26767, 0.245686)
-
-[node name="Tree24" parent="SubViewportContainer/SubViewport/Tbtest/Trees" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 15.5911, -1.26767, -10.0721)
-
-[node name="Tree13" parent="SubViewportContainer/SubViewport/Tbtest/Trees" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -14.066, -1.77206, 31.234)
-
-[node name="Trees2" type="Node3D" parent="SubViewportContainer/SubViewport/Tbtest"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5543, -0.979592, -30.0758)
-
-[node name="Tree3" parent="SubViewportContainer/SubViewport/Tbtest/Trees2" instance=ExtResource("2_pyars")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3618, 0, -12.6409)
-
-[node name="Tree4" parent="SubViewportContainer/SubViewport/Tbtest/Trees2" instance=ExtResource("2_pyars")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.94808, -1.26767, -6.65723)
-
-[node name="Tree6" parent="SubViewportContainer/SubViewport/Tbtest/Trees2" instance=ExtResource("2_pyars")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0437, 0, -14.7584)
-
-[node name="Tree7" parent="SubViewportContainer/SubViewport/Tbtest/Trees2" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -26.9062, 0, 11.3145)
-
-[node name="Tree8" parent="SubViewportContainer/SubViewport/Tbtest/Trees2" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, 11.509, -1.26767, 21.7187)
-
-[node name="Tree10" parent="SubViewportContainer/SubViewport/Tbtest/Trees2" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -5.93016, -1.77206, -1.3394)
-
-[node name="Tree11" parent="SubViewportContainer/SubViewport/Tbtest/Trees2" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -21.0682, -1.26767, 0.421739)
-
-[node name="Tree12" parent="SubViewportContainer/SubViewport/Tbtest/Trees2" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -12.1906, 0, 18.5839)
-
-[node name="Tree16" parent="SubViewportContainer/SubViewport/Tbtest/Trees2" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.999864, 0, 0.0164751, 0, 1, 0, -0.0164751, 0, -0.999864, -0.189383, -1.26767, 30.8829)
-
-[node name="Tree17" parent="SubViewportContainer/SubViewport/Tbtest/Trees2" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 18.165, 0, 8.24569)
-
-[node name="Tree18" parent="SubViewportContainer/SubViewport/Tbtest/Trees2" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 17.0033, -1.26767, 17.7454)
-
-[node name="Tree19" parent="SubViewportContainer/SubViewport/Tbtest/Trees2" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 23.5911, 0, -2.07211)
-
-[node name="Tree20" parent="SubViewportContainer/SubViewport/Tbtest/Trees2" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.999864, 0, 0.0164751, 0, 1, 0, -0.0164751, 0, -0.999864, -10.7207, 0, 4.70178)
-
-[node name="Tree21" parent="SubViewportContainer/SubViewport/Tbtest/Trees2" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.999864, 0, 0.0164751, 0, 1, 0, -0.0164751, 0, -0.999864, -8.18938, -1.77206, 22.8829)
-
-[node name="Tree22" parent="SubViewportContainer/SubViewport/Tbtest/Trees2" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 10.165, -1.26767, 0.245686)
-
-[node name="Tree24" parent="SubViewportContainer/SubViewport/Tbtest/Trees2" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 15.5911, -1.26767, -10.0721)
-
-[node name="Tree13" parent="SubViewportContainer/SubViewport/Tbtest/Trees2" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -14.066, -1.77206, 31.234)
-
-[node name="Trees3" type="Node3D" parent="SubViewportContainer/SubViewport/Tbtest"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5889, -0.979592, -39.5591)
-
-[node name="Tree3" parent="SubViewportContainer/SubViewport/Tbtest/Trees3" instance=ExtResource("2_pyars")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3618, 0, -12.6409)
-
-[node name="Tree4" parent="SubViewportContainer/SubViewport/Tbtest/Trees3" instance=ExtResource("2_pyars")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.94808, -1.26767, -6.65723)
-
-[node name="Tree6" parent="SubViewportContainer/SubViewport/Tbtest/Trees3" instance=ExtResource("2_pyars")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0437, 0, -14.7584)
-
-[node name="Tree7" parent="SubViewportContainer/SubViewport/Tbtest/Trees3" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -26.9062, 0, 11.3145)
-
-[node name="Tree8" parent="SubViewportContainer/SubViewport/Tbtest/Trees3" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, 11.509, -1.26767, 21.7187)
-
-[node name="Tree10" parent="SubViewportContainer/SubViewport/Tbtest/Trees3" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -5.93016, -1.77206, -1.3394)
-
-[node name="Tree11" parent="SubViewportContainer/SubViewport/Tbtest/Trees3" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -21.0682, -1.26767, 0.421739)
-
-[node name="Tree12" parent="SubViewportContainer/SubViewport/Tbtest/Trees3" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -12.1906, 0, 18.5839)
-
-[node name="Tree16" parent="SubViewportContainer/SubViewport/Tbtest/Trees3" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.999864, 0, 0.0164751, 0, 1, 0, -0.0164751, 0, -0.999864, -0.189383, -1.26767, 30.8829)
-
-[node name="Tree17" parent="SubViewportContainer/SubViewport/Tbtest/Trees3" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 18.165, 0, 8.24569)
-
-[node name="Tree18" parent="SubViewportContainer/SubViewport/Tbtest/Trees3" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 17.0033, -1.26767, 17.7454)
-
-[node name="Tree19" parent="SubViewportContainer/SubViewport/Tbtest/Trees3" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 23.5911, 0, -2.07211)
-
-[node name="Tree20" parent="SubViewportContainer/SubViewport/Tbtest/Trees3" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.999864, 0, 0.0164751, 0, 1, 0, -0.0164751, 0, -0.999864, -10.7207, 0, 4.70178)
-
-[node name="Tree21" parent="SubViewportContainer/SubViewport/Tbtest/Trees3" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.999864, 0, 0.0164751, 0, 1, 0, -0.0164751, 0, -0.999864, -8.18938, -1.77206, 22.8829)
-
-[node name="Tree22" parent="SubViewportContainer/SubViewport/Tbtest/Trees3" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 10.165, -1.26767, 0.245686)
-
-[node name="Tree24" parent="SubViewportContainer/SubViewport/Tbtest/Trees3" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 15.5911, -1.26767, -10.0721)
-
-[node name="Tree13" parent="SubViewportContainer/SubViewport/Tbtest/Trees3" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -14.066, -1.77206, 31.234)
-
-[node name="Trees4" type="Node3D" parent="SubViewportContainer/SubViewport/Tbtest"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.7923, -0.979592, -51.2724)
-
-[node name="Tree3" parent="SubViewportContainer/SubViewport/Tbtest/Trees4" instance=ExtResource("2_pyars")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3618, 0, -12.6409)
-
-[node name="Tree4" parent="SubViewportContainer/SubViewport/Tbtest/Trees4" instance=ExtResource("2_pyars")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.94808, -1.26767, -6.65723)
-
-[node name="Tree6" parent="SubViewportContainer/SubViewport/Tbtest/Trees4" instance=ExtResource("2_pyars")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0437, 0, -14.7584)
-
-[node name="Tree7" parent="SubViewportContainer/SubViewport/Tbtest/Trees4" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -26.9062, 0, 11.3145)
-
-[node name="Tree10" parent="SubViewportContainer/SubViewport/Tbtest/Trees4" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -5.93016, -1.77206, -1.3394)
-
-[node name="Tree11" parent="SubViewportContainer/SubViewport/Tbtest/Trees4" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -21.0682, -1.26767, 0.421739)
-
-[node name="Tree12" parent="SubViewportContainer/SubViewport/Tbtest/Trees4" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -12.1906, 0, 18.5839)
-
-[node name="Tree17" parent="SubViewportContainer/SubViewport/Tbtest/Trees4" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 18.165, 0, 8.24569)
-
-[node name="Tree18" parent="SubViewportContainer/SubViewport/Tbtest/Trees4" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 17.0033, -1.26767, 17.7454)
-
-[node name="Tree19" parent="SubViewportContainer/SubViewport/Tbtest/Trees4" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 23.5911, 0, -2.07211)
-
-[node name="Tree20" parent="SubViewportContainer/SubViewport/Tbtest/Trees4" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.999864, 0, 0.0164751, 0, 1, 0, -0.0164751, 0, -0.999864, -10.7207, 0, 4.70178)
-
-[node name="Tree22" parent="SubViewportContainer/SubViewport/Tbtest/Trees4" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 10.165, -1.26767, 0.245686)
-
-[node name="Tree24" parent="SubViewportContainer/SubViewport/Tbtest/Trees4" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 15.5911, -1.26767, -10.0721)
-
-[node name="Trees5" type="Node3D" parent="SubViewportContainer/SubViewport/Tbtest"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.7923, -0.979592, 38.0217)
-
-[node name="Tree3" parent="SubViewportContainer/SubViewport/Tbtest/Trees5" instance=ExtResource("2_pyars")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3618, 0, -12.6409)
-
-[node name="Tree4" parent="SubViewportContainer/SubViewport/Tbtest/Trees5" instance=ExtResource("2_pyars")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.94808, -1.26767, -6.65723)
-
-[node name="Tree6" parent="SubViewportContainer/SubViewport/Tbtest/Trees5" instance=ExtResource("2_pyars")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0437, 0, -14.7584)
-
-[node name="Tree7" parent="SubViewportContainer/SubViewport/Tbtest/Trees5" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -26.9062, 0, 11.3145)
-
-[node name="Tree10" parent="SubViewportContainer/SubViewport/Tbtest/Trees5" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -5.93016, -1.77206, -1.3394)
-
-[node name="Tree11" parent="SubViewportContainer/SubViewport/Tbtest/Trees5" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -21.0682, -1.26767, 0.421739)
-
-[node name="Tree12" parent="SubViewportContainer/SubViewport/Tbtest/Trees5" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -12.1906, 0, 18.5839)
-
-[node name="Tree17" parent="SubViewportContainer/SubViewport/Tbtest/Trees5" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 18.165, 0, 8.24569)
-
-[node name="Tree18" parent="SubViewportContainer/SubViewport/Tbtest/Trees5" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 17.0033, -1.26767, 17.7454)
-
-[node name="Tree19" parent="SubViewportContainer/SubViewport/Tbtest/Trees5" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 23.5911, 0, -2.07211)
-
-[node name="Tree20" parent="SubViewportContainer/SubViewport/Tbtest/Trees5" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.999864, 0, 0.0164751, 0, 1, 0, -0.0164751, 0, -0.999864, -10.7207, 0, 4.70178)
-
-[node name="Tree22" parent="SubViewportContainer/SubViewport/Tbtest/Trees5" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 10.165, -1.26767, 0.245686)
-
-[node name="Tree24" parent="SubViewportContainer/SubViewport/Tbtest/Trees5" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 15.5911, -1.26767, -10.0721)
-
-[node name="Trees6" type="Node3D" parent="SubViewportContainer/SubViewport/Tbtest"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8247, -0.979592, 38.0217)
-
-[node name="Tree3" parent="SubViewportContainer/SubViewport/Tbtest/Trees6" instance=ExtResource("2_pyars")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3618, 0, -12.6409)
-
-[node name="Tree4" parent="SubViewportContainer/SubViewport/Tbtest/Trees6" instance=ExtResource("2_pyars")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.94808, -1.26767, -6.65723)
-
-[node name="Tree6" parent="SubViewportContainer/SubViewport/Tbtest/Trees6" instance=ExtResource("2_pyars")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0437, 0, -14.7584)
-
-[node name="Tree7" parent="SubViewportContainer/SubViewport/Tbtest/Trees6" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -26.9062, 0, 11.3145)
-
-[node name="Tree10" parent="SubViewportContainer/SubViewport/Tbtest/Trees6" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -5.93016, -1.77206, -1.3394)
-
-[node name="Tree11" parent="SubViewportContainer/SubViewport/Tbtest/Trees6" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -21.0682, -1.26767, 0.421739)
-
-[node name="Tree12" parent="SubViewportContainer/SubViewport/Tbtest/Trees6" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -12.1906, 0, 18.5839)
-
-[node name="Tree17" parent="SubViewportContainer/SubViewport/Tbtest/Trees6" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 18.165, 0, 8.24569)
-
-[node name="Tree18" parent="SubViewportContainer/SubViewport/Tbtest/Trees6" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 17.0033, -1.26767, 17.7454)
-
-[node name="Tree19" parent="SubViewportContainer/SubViewport/Tbtest/Trees6" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 23.5911, 0, -2.07211)
-
-[node name="Tree20" parent="SubViewportContainer/SubViewport/Tbtest/Trees6" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.999864, 0, 0.0164751, 0, 1, 0, -0.0164751, 0, -0.999864, -10.7207, 0, 4.70178)
-
-[node name="Tree22" parent="SubViewportContainer/SubViewport/Tbtest/Trees6" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 10.165, -1.26767, 0.245686)
-
-[node name="Tree24" parent="SubViewportContainer/SubViewport/Tbtest/Trees6" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 15.5911, -1.26767, -10.0721)
-
-[node name="Trees7" type="Node3D" parent="SubViewportContainer/SubViewport/Tbtest"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.9368, -0.979592, 38.4359)
-
-[node name="Tree3" parent="SubViewportContainer/SubViewport/Tbtest/Trees7" instance=ExtResource("2_pyars")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3618, 0, -12.6409)
-
-[node name="Tree4" parent="SubViewportContainer/SubViewport/Tbtest/Trees7" instance=ExtResource("2_pyars")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.0641, -1.26767, -25.6033)
-
-[node name="Tree6" parent="SubViewportContainer/SubViewport/Tbtest/Trees7" instance=ExtResource("2_pyars")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0437, 0, -14.7584)
-
-[node name="Tree7" parent="SubViewportContainer/SubViewport/Tbtest/Trees7" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -26.9062, 0, 11.3145)
-
-[node name="Tree10" parent="SubViewportContainer/SubViewport/Tbtest/Trees7" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -5.93016, -1.77206, -1.3394)
-
-[node name="Tree11" parent="SubViewportContainer/SubViewport/Tbtest/Trees7" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -21.0682, -1.26767, 0.421739)
-
-[node name="Tree12" parent="SubViewportContainer/SubViewport/Tbtest/Trees7" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -12.1906, 0, 18.5839)
-
-[node name="Tree17" parent="SubViewportContainer/SubViewport/Tbtest/Trees7" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 18.165, 0, 8.24569)
-
-[node name="Tree18" parent="SubViewportContainer/SubViewport/Tbtest/Trees7" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 17.0033, -1.26767, 17.7454)
-
-[node name="Tree19" parent="SubViewportContainer/SubViewport/Tbtest/Trees7" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 23.5911, 0, -2.07211)
-
-[node name="Tree20" parent="SubViewportContainer/SubViewport/Tbtest/Trees7" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.999864, 0, 0.0164751, 0, 1, 0, -0.0164751, 0, -0.999864, -10.7207, 0, 4.70178)
-
-[node name="Tree22" parent="SubViewportContainer/SubViewport/Tbtest/Trees7" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 10.165, -1.26767, 0.245686)
-
-[node name="Tree24" parent="SubViewportContainer/SubViewport/Tbtest/Trees7" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 15.5911, -1.26767, -10.0721)
-
-[node name="Trees8" type="Node3D" parent="SubViewportContainer/SubViewport/Tbtest"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.9368, -0.979592, -14.4408)
-
-[node name="Tree3" parent="SubViewportContainer/SubViewport/Tbtest/Trees8" instance=ExtResource("2_pyars")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3618, 0, -12.6409)
-
-[node name="Tree4" parent="SubViewportContainer/SubViewport/Tbtest/Trees8" instance=ExtResource("2_pyars")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.94808, -1.26767, -6.65723)
-
-[node name="Tree6" parent="SubViewportContainer/SubViewport/Tbtest/Trees8" instance=ExtResource("2_pyars")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0437, 0, -14.7584)
-
-[node name="Tree7" parent="SubViewportContainer/SubViewport/Tbtest/Trees8" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -26.9062, 0, 11.3145)
-
-[node name="Tree10" parent="SubViewportContainer/SubViewport/Tbtest/Trees8" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -5.93016, -1.77206, -1.3394)
-
-[node name="Tree11" parent="SubViewportContainer/SubViewport/Tbtest/Trees8" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -21.0682, -1.26767, 0.421739)
-
-[node name="Tree12" parent="SubViewportContainer/SubViewport/Tbtest/Trees8" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -12.1906, 0, 18.5839)
-
-[node name="Tree17" parent="SubViewportContainer/SubViewport/Tbtest/Trees8" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 18.165, 0, 8.24569)
-
-[node name="Tree18" parent="SubViewportContainer/SubViewport/Tbtest/Trees8" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 17.0033, -1.26767, 17.7454)
-
-[node name="Tree19" parent="SubViewportContainer/SubViewport/Tbtest/Trees8" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 23.5911, 0, -2.07211)
-
-[node name="Tree20" parent="SubViewportContainer/SubViewport/Tbtest/Trees8" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.999864, 0, 0.0164751, 0, 1, 0, -0.0164751, 0, -0.999864, -10.7207, 0, 4.70178)
-
-[node name="Tree22" parent="SubViewportContainer/SubViewport/Tbtest/Trees8" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 10.165, -1.26767, 0.245686)
-
-[node name="Tree24" parent="SubViewportContainer/SubViewport/Tbtest/Trees8" instance=ExtResource("2_pyars")]
-transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 15.5911, -1.26767, -10.0721)
-
 [node name="Player" parent="SubViewportContainer/SubViewport/Tbtest" instance=ExtResource("3_vypwc")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.4831, -3.8147e-06, 56.0456)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9986, -3.8147e-06, 14.2993)
 
 [node name="house" parent="SubViewportContainer/SubViewport/Tbtest" instance=ExtResource("4_2kegp")]
-transform = Transform3D(-0.290686, 0, -0.956819, 0, 1, 0, 0.956819, 0, -0.290686, -32.8434, 3.87295, 33.4311)
+transform = Transform3D(0.625134, 0, 0.780518, 0, 1, 0, -0.780518, 0, 0.625134, -32.8434, 3.87295, 33.4311)
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="SubViewportContainer/SubViewport/Tbtest/house"]
 transform = Transform3D(0.704064, 0, -0.710136, 0, 1, 0, 0.710136, 0, 0.704064, 1.68805, -0.5177, 3.73916)
@@ -743,6 +373,545 @@ mesh = SubResource("PlaneMesh_ousjl")
 
 [node name="shadow" parent="SubViewportContainer/SubViewport/Tbtest" instance=ExtResource("11_s5gid")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.3086, 0, 16.0304)
+
+[node name="Trees_parent" type="Node3D" parent="SubViewportContainer/SubViewport/Tbtest"]
+
+[node name="Trees" type="Node3D" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent"]
+transform = Transform3D(1, -1.14577e-05, 6.33199e-05, 1.14577e-05, 1, 8.26168e-05, -6.33199e-05, -8.26168e-05, 1, -23.5543, -0.979592, 14.5403)
+
+[node name="Tree3" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(1, -4.75175e-14, 0, -1.71863e-13, 1, 0, 0, 0, 1, -4.61302, -0.000100315, -12.6403)
+
+[node name="Tree4" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.94808, -1.26767, -6.65723)
+
+[node name="Tree6" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0437, 0, -14.7584)
+
+[node name="Tree7" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.897705, -4.75175e-14, 0.440597, -3.63798e-12, 1, -7.27596e-12, -0.440597, 0, 0.897705, -35.105, 9.39965e-05, 11.314)
+
+[node name="Tree8" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, 11.509, -1.26767, 21.7187)
+
+[node name="Tree5" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.777914, -4.93694e-05, 0.62837, 5.44585e-05, 1, 1.11483e-05, -0.62837, 2.55477e-05, 0.777914, -39.434, -0.000500798, -2.96296)
+
+[node name="Tree9" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.777914, -4.93694e-05, 0.62837, 5.44585e-05, 1, 1.11483e-05, -0.62837, 2.55477e-05, 0.777914, -20.6525, -1.26705, -10.442)
+
+[node name="Tree14" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.777914, -4.93694e-05, 0.62837, 5.44585e-05, 1, 1.11483e-05, -0.62837, 2.55477e-05, 0.777914, -21.7791, 0.000804722, -19.9459)
+
+[node name="Tree15" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.421479, -4.93694e-05, 0.906838, 4.39758e-05, 1, 3.40022e-05, -0.906838, 2.55477e-05, 0.421479, -34.9175, -0.000971317, 24.1832)
+
+[node name="Tree25" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.777914, -4.93694e-05, 0.62837, 5.44585e-05, 1, 1.11483e-05, -0.62837, 2.55477e-05, 0.777914, -35.0582, 0.00113469, -23.3663)
+
+[node name="Tree26" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.777914, -4.93694e-05, 0.62837, 5.44585e-05, 1, 1.11483e-05, -0.62837, 2.55477e-05, 0.777914, -16.2767, -1.26542, -30.8454)
+
+[node name="Tree27" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.777914, -4.93694e-05, 0.62837, 5.44585e-05, 1, 1.11483e-05, -0.62837, 2.55477e-05, 0.777914, -17.4034, 0.00244021, -40.3493)
+
+[node name="Tree28" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.421479, -4.93694e-05, 0.906838, 4.39758e-05, 1, 3.40022e-05, -0.906838, 2.55477e-05, 0.421479, -30.5417, 0.000664175, 3.77981)
+
+[node name="Tree29" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.421479, -4.93694e-05, 0.906838, 4.39758e-05, 1, 3.40022e-05, -0.906838, 2.55477e-05, 0.421479, 5.8798, -1.2648, -12.2656)
+
+[node name="Tree40" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.0749439, -7.0068e-05, 0.997188, 9.47009e-05, 1, 7.73829e-05, -0.997188, 0.000100234, -0.0749439, 122.076, -1.26781, -21.0152)
+
+[node name="Tree41" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.506635, -7.00681e-05, 0.86216, 5.09187e-05, 1, 0.000111192, -0.86216, 0.000100234, -0.506635, 142.46, -0.00186497, 10.3999)
+
+[node name="Tree42" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.506635, -7.00681e-05, 0.86216, 5.09187e-05, 1, 0.000111192, -0.86216, 0.000100234, -0.506635, 149.956, -1.26509, -28.6871)
+
+[node name="Tree43" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.0749439, -7.0068e-05, 0.997188, 9.47009e-05, 1, 7.7383e-05, -0.997188, 0.000100234, -0.0749439, 111.778, -1.26644, -36.1669)
+
+[node name="Tree44" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.506635, -7.00681e-05, 0.86216, 5.09187e-05, 1, 0.000111192, -0.86216, 0.000100234, -0.506635, 132.161, -0.000495195, -4.7518)
+
+[node name="Tree45" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.506635, -7.00681e-05, 0.86216, 5.09187e-05, 1, 0.000111192, -0.86216, 0.000100234, -0.506635, 139.658, -1.26372, -43.8388)
+
+[node name="Tree46" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.656783, -4.33167e-05, 0.754079, 8.12825e-05, 1, 0.000128238, -0.75408, 0.000145518, -0.656783, 108.686, -1.26874, -7.94969)
+
+[node name="Tree47" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.921843, -4.33166e-05, 0.387564, 1.64665e-05, 1, 0.000150933, -0.387564, 0.000145518, -0.921843, 143.816, -0.00143617, 5.02171)
+
+[node name="Tree49" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.0237862, -6.83548e-05, 0.999717, 5.67509e-05, 1, 6.97244e-05, -0.999717, 5.83933e-05, -0.0237862, 135.9, -0.000369668, -6.7901)
+
+[node name="Tree50" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.61731, -6.69824e-05, 0.78672, 4.59542e-05, 1, 0.0001212, -0.78672, 0.000110971, -0.61731, 139.699, -7.92146e-05, -10.8313)
+
+[node name="Tree51" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.0237862, -6.83548e-05, 0.999717, 5.67509e-05, 1, 6.97244e-05, -0.999717, 5.83933e-05, -0.0237862, 135.9, -0.00107592, 1.75862)
+
+[node name="Tree52" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.61731, -6.69824e-05, 0.78672, 4.59542e-05, 1, 0.0001212, -0.78672, 0.000110971, -0.61731, 139.699, -0.00078547, -2.28256)
+
+[node name="Tree53" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.506635, -7.00681e-05, 0.86216, 5.09187e-05, 1, 0.000111192, -0.86216, 0.000100234, -0.506635, 151.254, -0.000989318, -1.41899)
+
+[node name="Tree54" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.921843, -4.33166e-05, 0.387564, 1.64665e-05, 1, 0.000150933, -0.387564, 0.000145518, -0.921843, 152.61, -0.000560462, -6.79723)
+
+[node name="Tree55" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.0237862, -6.83548e-05, 0.999717, 5.67509e-05, 1, 6.97244e-05, -0.999717, 5.83933e-05, -0.0237862, 144.694, 0.000505984, -18.609)
+
+[node name="Tree56" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.61731, -6.69824e-05, 0.78672, 4.59542e-05, 1, 0.0001212, -0.78672, 0.000110971, -0.61731, 148.494, 0.000796378, -22.6502)
+
+[node name="Tree57" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.0237862, -6.83548e-05, 0.999717, 5.67509e-05, 1, 6.97244e-05, -0.999717, 5.83933e-05, -0.0237862, 144.694, -0.000200272, -10.0603)
+
+[node name="Tree58" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.61731, -6.69824e-05, 0.78672, 4.59542e-05, 1, 0.0001212, -0.78672, 0.000110971, -0.61731, 148.493, 9.01222e-05, -14.1015)
+
+[node name="Tree59" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.506635, -7.00681e-05, 0.86216, 5.09187e-05, 1, 0.000111192, -0.86216, 0.000100234, -0.506635, 140.46, 0.000697255, -20.3375)
+
+[node name="Tree60" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.921843, -4.33166e-05, 0.387564, 1.64665e-05, 1, 0.000150933, -0.387564, 0.000145518, -0.921843, 141.816, 0.00112623, -25.7158)
+
+[node name="Tree61" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.0237862, -6.83548e-05, 0.999717, 5.67509e-05, 1, 6.97244e-05, -0.999717, 5.83933e-05, -0.0237862, 133.9, 0.00219268, -37.5276)
+
+[node name="Tree62" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.61731, -6.69824e-05, 0.78672, 4.59542e-05, 1, 0.0001212, -0.78672, 0.000110971, -0.61731, 137.699, 0.00248313, -41.5688)
+
+[node name="Tree63" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.0237862, -6.83548e-05, 0.999717, 5.67509e-05, 1, 6.97244e-05, -0.999717, 5.83933e-05, -0.0237862, 133.9, 0.00148642, -28.9789)
+
+[node name="Tree64" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.61731, -6.69824e-05, 0.78672, 4.59542e-05, 1, 0.0001212, -0.78672, 0.000110971, -0.61731, 137.699, 0.00177687, -33.0201)
+
+[node name="Tree65" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.506635, -7.00681e-05, 0.86216, 5.09187e-05, 1, 0.000111192, -0.86216, 0.000100234, -0.506635, 129.331, 0.00201929, -34.7961)
+
+[node name="Tree66" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.921843, -4.33166e-05, 0.387564, 1.64665e-05, 1, 0.000150933, -0.387564, 0.000145518, -0.921843, 130.687, 0.00244826, -40.1743)
+
+[node name="Tree67" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.0237862, -6.83548e-05, 0.999717, 5.67509e-05, 1, 6.97244e-05, -0.999717, 5.83933e-05, -0.0237862, 122.772, 0.00351477, -51.9861)
+
+[node name="Tree68" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.61731, -6.69824e-05, 0.78672, 4.59542e-05, 1, 0.0001212, -0.78672, 0.000110971, -0.61731, 126.571, 0.00380516, -56.0273)
+
+[node name="Tree69" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.0237862, -6.83548e-05, 0.999717, 5.67509e-05, 1, 6.97244e-05, -0.999717, 5.83933e-05, -0.0237862, 122.771, 0.00280851, -43.4374)
+
+[node name="Tree70" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.61731, -6.69824e-05, 0.78672, 4.59542e-05, 1, 0.0001212, -0.78672, 0.000110971, -0.61731, 126.57, 0.00309891, -47.4786)
+
+[node name="Tree71" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.974413, -3.17935e-05, 0.224764, 3.61879e-06, 1, 0.000157141, -0.224764, 0.000153934, -0.974413, 136.314, 0.00349504, -53.6269)
+
+[node name="Tree72" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.915185, 1.94834e-05, -0.403034, -4.89265e-05, 1, 0.000159441, 0.403034, 0.000165637, -0.915185, 133.34, 0.00391614, -58.3093)
+
+[node name="Tree73" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.742373, -6.10016e-05, 0.669987, 3.7743e-05, 1, 0.00013287, -0.669987, 0.000123926, -0.742373, 119.321, 0.00427258, -60.6807)
+
+[node name="Tree74" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.99571, -2.18747e-05, 0.0925274, -7.06216e-06, 1, 0.000160416, -0.0925274, 0.000159074, -0.99571, 118.998, 0.00473386, -66.2179)
+
+[node name="Tree75" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.742373, -6.10016e-05, 0.669987, 3.7743e-05, 1, 0.00013287, -0.669987, 0.000123926, -0.742373, 125.529, 0.00371593, -54.8034)
+
+[node name="Tree76" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.99571, -2.18747e-05, 0.0925274, -7.06215e-06, 1, 0.000160416, -0.0925274, 0.000159074, -0.99571, 125.206, 0.00417721, -60.3407)
+
+[node name="Tree48" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.921843, -4.33166e-05, 0.387564, 1.64665e-05, 1, 0.000150933, -0.387564, 0.000145518, -0.921843, 126.431, -1.26465, -30.7799)
+
+[node name="Tree30" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.777914, -4.93694e-05, 0.62837, 5.44585e-05, 1, 1.11483e-05, -0.62837, 2.55477e-05, 0.777914, -25.4178, 0.00304717, -47.8519)
+
+[node name="Tree31" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.777914, -4.93694e-05, 0.62837, 5.44585e-05, 1, 1.11483e-05, -0.62837, 2.55477e-05, 0.777914, -6.63633, -1.2635, -55.331)
+
+[node name="Tree32" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.777914, -4.93694e-05, 0.62837, 5.44585e-05, 1, 1.11483e-05, -0.62837, 2.55477e-05, 0.777914, -7.76297, 0.00435269, -64.8349)
+
+[node name="Tree33" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.421479, -4.93694e-05, 0.906838, 4.39758e-05, 1, 3.40022e-05, -0.906838, 2.55477e-05, 0.421479, -13.0096, 0.00248617, -20.7053)
+
+[node name="Tree34" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.421479, -4.93694e-05, 0.906838, 4.39758e-05, 1, 3.40022e-05, -0.906838, 2.55477e-05, 0.421479, 15.5202, -1.26289, -36.7512)
+
+[node name="Tree35" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.0463743, -7.16015e-05, 0.998924, 9.34543e-05, 1, 6.73401e-05, -0.998924, 9.02309e-05, 0.0463743, -40.3302, -0.00277883, 24.7347)
+
+[node name="Tree36" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.0463743, -7.16015e-05, 0.998924, 9.34543e-05, 1, 6.73401e-05, -0.998924, 9.02309e-05, 0.0463743, -33.4574, -1.26824, 5.72296)
+
+[node name="Tree37" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.0463743, -7.16015e-05, 0.998924, 9.34543e-05, 1, 6.73401e-05, -0.998924, 9.02309e-05, 0.0463743, -41.3137, -0.000640631, 0.257236)
+
+[node name="Tree38" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.398493, -7.16015e-05, 0.917172, 5.42245e-05, 1, 0.000101627, -0.917172, 9.02309e-05, -0.398493, -17.0287, -0.00243139, 39.3754)
+
+[node name="Tree39" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.398493, -7.16015e-05, 0.917172, 5.42245e-05, 1, 0.000101627, -0.917172, 9.02309e-05, -0.398493, -4.85413, -1.26581, 1.48394)
+
+[node name="Tree10" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -5.93016, -1.77206, -1.3394)
+
+[node name="Tree11" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -21.0682, -1.26767, 0.421739)
+
+[node name="Tree16" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.999864, 0, 0.0164751, 0, 1, 0, -0.0164751, 0, -0.999864, -0.189383, -1.26767, 30.8829)
+
+[node name="Tree17" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 18.165, 0, 8.24569)
+
+[node name="Tree18" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 17.0033, -1.26767, 17.7454)
+
+[node name="Tree19" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 23.5911, 0, -2.07211)
+
+[node name="Tree20" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.999864, 0, 0.0164751, 0, 1, 0, -0.0164751, 0, -0.999864, -10.7207, 0, 4.70178)
+
+[node name="Tree21" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.999864, 0, 0.0164751, 0, 1, 0, -0.0164751, 0, -0.999864, -8.18938, -1.77206, 22.8829)
+
+[node name="Tree22" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 10.165, -1.26767, 0.245686)
+
+[node name="Tree24" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 15.5911, -1.26767, -10.0721)
+
+[node name="Tree13" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -14.066, -1.77206, 31.234)
+
+[node name="Trees2" type="Node3D" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5543, -0.979592, -30.0758)
+
+[node name="Tree3" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees2" instance=ExtResource("2_pyars")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3618, 0, -12.6409)
+
+[node name="Tree4" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees2" instance=ExtResource("2_pyars")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.94808, -1.26767, -6.65723)
+
+[node name="Tree6" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees2" instance=ExtResource("2_pyars")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0437, 0, -14.7584)
+
+[node name="Tree7" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees2" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -26.9062, 0, 11.3145)
+
+[node name="Tree8" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees2" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, 11.509, -1.26767, 21.7187)
+
+[node name="Tree10" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees2" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -5.93016, -1.77206, -1.3394)
+
+[node name="Tree11" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees2" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -21.0682, -1.26767, 0.421739)
+
+[node name="Tree12" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees2" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -12.1906, 0, 18.5839)
+
+[node name="Tree16" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees2" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.999864, 0, 0.0164751, 0, 1, 0, -0.0164751, 0, -0.999864, -0.189383, -1.26767, 30.8829)
+
+[node name="Tree17" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees2" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 18.165, 0, 8.24569)
+
+[node name="Tree18" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees2" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 17.0033, -1.26767, 17.7454)
+
+[node name="Tree19" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees2" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 23.5911, 0, -2.07211)
+
+[node name="Tree20" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees2" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.999864, 0, 0.0164751, 0, 1, 0, -0.0164751, 0, -0.999864, -10.7207, 0, 4.70178)
+
+[node name="Tree21" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees2" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.999864, 0, 0.0164751, 0, 1, 0, -0.0164751, 0, -0.999864, -8.18938, -1.77206, 22.8829)
+
+[node name="Tree22" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees2" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 10.165, -1.26767, 0.245686)
+
+[node name="Tree24" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees2" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 15.5911, -1.26767, -10.0721)
+
+[node name="Tree13" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees2" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -14.066, -1.77206, 31.234)
+
+[node name="Trees3" type="Node3D" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5889, -0.979592, -39.5591)
+
+[node name="Tree3" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees3" instance=ExtResource("2_pyars")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3618, 0, -12.6409)
+
+[node name="Tree4" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees3" instance=ExtResource("2_pyars")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.94808, -1.26767, -6.65723)
+
+[node name="Tree6" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees3" instance=ExtResource("2_pyars")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0437, 0, -14.7584)
+
+[node name="Tree7" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees3" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -26.9062, 0, 11.3145)
+
+[node name="Tree8" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees3" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, 11.509, -1.26767, 21.7187)
+
+[node name="Tree10" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees3" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -5.93016, -1.77206, -1.3394)
+
+[node name="Tree11" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees3" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -21.0682, -1.26767, 0.421739)
+
+[node name="Tree12" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees3" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -12.1906, 0, 18.5839)
+
+[node name="Tree16" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees3" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.999864, 0, 0.0164751, 0, 1, 0, -0.0164751, 0, -0.999864, -0.189383, -1.26767, 30.8829)
+
+[node name="Tree17" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees3" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 18.165, 0, 8.24569)
+
+[node name="Tree18" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees3" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 17.0033, -1.26767, 17.7454)
+
+[node name="Tree19" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees3" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 23.5911, 0, -2.07211)
+
+[node name="Tree20" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees3" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.999864, 0, 0.0164751, 0, 1, 0, -0.0164751, 0, -0.999864, -10.7207, 0, 4.70178)
+
+[node name="Tree21" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees3" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.999864, 0, 0.0164751, 0, 1, 0, -0.0164751, 0, -0.999864, -8.18938, -1.77206, 22.8829)
+
+[node name="Tree22" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees3" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 10.165, -1.26767, 0.245686)
+
+[node name="Tree24" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees3" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 15.5911, -1.26767, -10.0721)
+
+[node name="Tree13" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees3" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -14.066, -1.77206, 31.234)
+
+[node name="Trees4" type="Node3D" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.7923, -0.979592, -51.2724)
+
+[node name="Tree3" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees4" instance=ExtResource("2_pyars")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3618, 0, -12.6409)
+
+[node name="Tree4" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees4" instance=ExtResource("2_pyars")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.94808, -1.26767, -6.65723)
+
+[node name="Tree6" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees4" instance=ExtResource("2_pyars")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0437, 0, -14.7584)
+
+[node name="Tree7" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees4" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -26.9062, 0, 11.3145)
+
+[node name="Tree10" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees4" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -5.93016, -1.77206, -1.3394)
+
+[node name="Tree11" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees4" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -21.0682, -1.26767, 0.421739)
+
+[node name="Tree12" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees4" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -12.1906, 0, 18.5839)
+
+[node name="Tree17" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees4" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 18.165, 0, 8.24569)
+
+[node name="Tree18" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees4" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 17.0033, -1.26767, 17.7454)
+
+[node name="Tree19" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees4" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 23.5911, 0, -2.07211)
+
+[node name="Tree20" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees4" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.999864, 0, 0.0164751, 0, 1, 0, -0.0164751, 0, -0.999864, -10.7207, 0, 4.70178)
+
+[node name="Tree22" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees4" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 10.165, -1.26767, 0.245686)
+
+[node name="Tree24" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees4" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 15.5911, -1.26767, -10.0721)
+
+[node name="Trees5" type="Node3D" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.7923, -0.979592, 38.0217)
+
+[node name="Tree3" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees5" instance=ExtResource("2_pyars")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3618, 0, -12.6409)
+
+[node name="Tree4" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees5" instance=ExtResource("2_pyars")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.94808, -1.26767, -6.65723)
+
+[node name="Tree6" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees5" instance=ExtResource("2_pyars")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0437, 0, -14.7584)
+
+[node name="Tree7" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees5" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -26.9062, 0, 11.3145)
+
+[node name="Tree10" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees5" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -5.93016, -1.77206, -1.3394)
+
+[node name="Tree11" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees5" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -21.0682, -1.26767, 0.421739)
+
+[node name="Tree12" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees5" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -12.1906, 0, 18.5839)
+
+[node name="Tree17" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees5" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 18.165, 0, 8.24569)
+
+[node name="Tree18" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees5" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 17.0033, -1.26767, 17.7454)
+
+[node name="Tree19" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees5" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 23.5911, 0, -2.07211)
+
+[node name="Tree20" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees5" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.999864, 0, 0.0164751, 0, 1, 0, -0.0164751, 0, -0.999864, -10.7207, 0, 4.70178)
+
+[node name="Tree22" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees5" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 10.165, -1.26767, 0.245686)
+
+[node name="Tree24" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees5" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 15.5911, -1.26767, -10.0721)
+
+[node name="Trees6" type="Node3D" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8247, -0.979592, 38.0217)
+
+[node name="Tree3" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees6" instance=ExtResource("2_pyars")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3618, 0, -12.6409)
+
+[node name="Tree4" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees6" instance=ExtResource("2_pyars")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.94808, -1.26767, -6.65723)
+
+[node name="Tree6" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees6" instance=ExtResource("2_pyars")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0437, 0, -14.7584)
+
+[node name="Tree7" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees6" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -26.9062, 0, 11.3145)
+
+[node name="Tree10" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees6" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -5.93016, -1.77206, -1.3394)
+
+[node name="Tree11" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees6" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -21.0682, -1.26767, 0.421739)
+
+[node name="Tree12" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees6" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -12.1906, 0, 18.5839)
+
+[node name="Tree17" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees6" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 18.165, 0, 8.24569)
+
+[node name="Tree18" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees6" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 17.0033, -1.26767, 17.7454)
+
+[node name="Tree19" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees6" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 23.5911, 0, -2.07211)
+
+[node name="Tree20" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees6" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.999864, 0, 0.0164751, 0, 1, 0, -0.0164751, 0, -0.999864, -10.7207, 0, 4.70178)
+
+[node name="Tree22" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees6" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 10.165, -1.26767, 0.245686)
+
+[node name="Tree24" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees6" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 15.5911, -1.26767, -10.0721)
+
+[node name="Trees7" type="Node3D" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.9368, -0.979592, 38.4359)
+
+[node name="Tree3" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees7" instance=ExtResource("2_pyars")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3618, 0, -12.6409)
+
+[node name="Tree4" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees7" instance=ExtResource("2_pyars")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.0641, -1.26767, -25.6033)
+
+[node name="Tree6" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees7" instance=ExtResource("2_pyars")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.348, 0, -9.01907)
+
+[node name="Tree7" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees7" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -26.9062, 0, 11.3145)
+
+[node name="Tree10" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees7" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -5.93016, -1.77206, -1.3394)
+
+[node name="Tree11" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees7" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -21.0682, -1.26767, 0.421739)
+
+[node name="Tree12" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees7" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -12.1906, 0, 18.5839)
+
+[node name="Tree17" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees7" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 18.165, 0, 8.24569)
+
+[node name="Tree18" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees7" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 17.0033, -1.26767, 17.7454)
+
+[node name="Tree19" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees7" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 23.5911, 0, -2.07211)
+
+[node name="Tree20" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees7" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.999864, 0, 0.0164751, 0, 1, 0, -0.0164751, 0, -0.999864, -10.7207, 0, 4.70178)
+
+[node name="Tree22" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees7" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 10.165, -1.26767, 0.245686)
+
+[node name="Tree25" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees7" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 4.68507, -1.26767, -8.27679)
+
+[node name="Trees8" type="Node3D" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.9368, -0.979592, -14.4408)
+
+[node name="Tree3" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees8" instance=ExtResource("2_pyars")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3618, 0, -12.6409)
+
+[node name="Tree4" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees8" instance=ExtResource("2_pyars")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.94808, -1.26767, -6.65723)
+
+[node name="Tree6" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees8" instance=ExtResource("2_pyars")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0437, 0, -14.7584)
+
+[node name="Tree7" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees8" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -26.9062, 0, 11.3145)
+
+[node name="Tree10" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees8" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.897705, 0, 0.440597, 0, 1, 0, -0.440597, 0, 0.897705, -5.93016, -1.77206, -1.3394)
+
+[node name="Tree11" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees8" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -21.0682, -1.26767, 0.421739)
+
+[node name="Tree12" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees8" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.685386, 0, -0.72818, 0, 1, 0, 0.72818, 0, 0.685386, -12.1906, 0, 18.5839)
+
+[node name="Tree17" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees8" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 18.165, 0, 8.24569)
+
+[node name="Tree18" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees8" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 17.0033, -1.26767, 17.7454)
+
+[node name="Tree19" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees8" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 23.5911, 0, -2.07211)
+
+[node name="Tree20" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees8" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.999864, 0, 0.0164751, 0, 1, 0, -0.0164751, 0, -0.999864, -10.7207, 0, 4.70178)
+
+[node name="Tree22" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees8" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 10.165, -1.26767, 0.245686)
+
+[node name="Tree24" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees8" instance=ExtResource("2_pyars")]
+transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 15.5911, -1.26767, -10.0721)
 
 [node name="PostProcessing" type="ColorRect" parent="."]
 auto_translate_mode = 1
