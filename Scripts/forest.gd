@@ -20,7 +20,7 @@ func _physics_process(_delta: float) -> void:
 			input_dir = -input_dir
 			var direction = (player.neck.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 			%floors.position += direction * .1
-			if (abs(snapped( %floors.position.x, 0.1)) == 20.0):
+			if (abs(snapped( %floors.position.x, 0.1)) == 30.0):
 				%floors.position.x = 0.
-			if (abs(snapped( %floors.position.z, 0.1)) == 20.0):
+			if (abs(snapped( %floors.position.z, 0.1)) == 30.0):
 				%floors.position.z = 0.
