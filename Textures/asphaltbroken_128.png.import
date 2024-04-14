@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bchwtdss150g0"
-path="res://.godot/imported/grass_1024.jpg-0e44d430cb230463ca2b12eb50beddc1.ctex"
+uid="uid://dff7lwqbvri2n"
+path="res://.godot/imported/asphaltbroken_128.png-52f829f1f13f9a8a79d5dbaee6b4a721.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/original/grass_1024.jpg"
-dest_files=["res://.godot/imported/grass_1024.jpg-0e44d430cb230463ca2b12eb50beddc1.ctex"]
+source_file="res://textures/asphaltbroken_128.png"
+dest_files=["res://.godot/imported/asphaltbroken_128.png-52f829f1f13f9a8a79d5dbaee6b4a721.ctex"]
 
 [params]
 

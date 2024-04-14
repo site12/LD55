@@ -2,26 +2,47 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://d23so0nklasb2"
 path="res://.godot/imported/drywall_old_128.png-418f84d7021ec3b08c05d83840b802ac.ctex"
 metadata={
 "vram_texture": false
+=======
+uid="uid://dcpjligv5tbgk"
+path.s3tc="res://.godot/imported/drywall_old_128.png-d3652f7dd12ac435d3993fcc967d39e9.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+>>>>>>> 6417f5e9ff10535d489034d26fcdcebe03e50ce2
 }
 
 [deps]
 
+<<<<<<< HEAD
 source_file="res://Textures/drywall_old_128.png"
 dest_files=["res://.godot/imported/drywall_old_128.png-418f84d7021ec3b08c05d83840b802ac.ctex"]
 
 [params]
 
 compress/mode=0
+=======
+source_file="res://textures/drywall_old_128.png"
+dest_files=["res://.godot/imported/drywall_old_128.png-d3652f7dd12ac435d3993fcc967d39e9.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+>>>>>>> 6417f5e9ff10535d489034d26fcdcebe03e50ce2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
+<<<<<<< HEAD
 mipmaps/generate=false
+=======
+mipmaps/generate=true
+>>>>>>> 6417f5e9ff10535d489034d26fcdcebe03e50ce2
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -31,4 +52,8 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
+<<<<<<< HEAD
 detect_3d/compress_to=1
+=======
+detect_3d/compress_to=0
+>>>>>>> 6417f5e9ff10535d489034d26fcdcebe03e50ce2
