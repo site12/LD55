@@ -9,6 +9,8 @@ const BOB_FREQ = 2.4
 const BOB_AMP = 0.08
 var t_bob = 0.0
 
+var finger_intact: bool = true
+
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 # Distortion var for shader; min = 1.0; max = 10.0
@@ -20,6 +22,8 @@ var distortion_source: String = ""
 @onready var mannequin = get_tree().root.get_node_or_null("CanvasLayer/SubViewportContainer/SubViewport/Tbtest/mannequin")
 @onready var bear = get_tree().root.get_node_or_null("CanvasLayer/SubViewportContainer/SubViewport/Tbtest/bear")
 @onready var shadow = get_tree().root.get_node_or_null("CanvasLayer/SubViewportContainer/SubViewport/Tbtest/shadow")
+@onready var interact = get_tree().root.get_node_or_null("CanvasLayer/interact")
+@onready var interact_cut = get_tree().root.get_node_or_null("CanvasLayer/interact_cut")
 
 var can_play: bool = false
 signal step
@@ -61,6 +65,19 @@ func _process(delta: float) -> void:
 	if mannequin: set_distortion(clamp(10.0 - global_position.distance_to(mannequin.global_position), 1.0, 10.0), "mannequin")
 	if bear: set_distortion(clamp(10.0 - global_position.distance_to(bear.global_position), 1.0, 10.0), "bear")
 	if shadow: set_distortion(clamp(10.0 - global_position.distance_to(shadow.global_position), 1.0, 10.0), "shadow")
+	if %interactable_raycast.is_colliding():
+		if %interactable_raycast.get_collider().is_in_group("interactables"):
+			if finger_intact:
+				if interact:
+					interact.visible = true
+			else:
+				if interact_cut:
+					interact_cut.visible = false
+		else:
+			if interact:
+				interact.visible = false
+			if interact_cut:
+				interact_cut.visible = false
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
