@@ -23,13 +23,17 @@ func _on_visible_on_screen_notifier_3d_screen_entered() -> void:
 
 func find_new_location():
 	shadow_seen = true
+	while get_node("VisibleOnScreenNotifier3D").is_on_screen():
+		try_new_pos()
+	shadow_seen = false
+	modulate = Color.WHITE
+
+func try_new_pos():
 	var pos: Vector3 = player.global_position
 	var theta: float = randf_range(0., 2 * PI)
 	position.x = RESPAWN_RADIUS * cos(theta) + pos.x
 	position.y = pos.y
 	position.z = RESPAWN_RADIUS * sin(theta) + pos.z
-	shadow_seen = false
-	modulate = Color.WHITE
 
 func _on_timer_timeout() -> void:
 	position.y += 100.0
