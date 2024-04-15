@@ -1,4 +1,4 @@
-[gd_scene load_steps=122 format=3 uid="uid://dedorys0tphb2"]
+[gd_scene load_steps=123 format=3 uid="uid://dedorys0tphb2"]
 
 [ext_resource type="Script" path="res://Scripts/forest.gd" id="1_6cpro"]
 [ext_resource type="Texture2D" uid="uid://bxgkxs8171gbf" path="res://Textures/grass_128.jpg" id="1_ae00h"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://b2y6f4lf55s3v" path="res://Assets/hand.png" id="14_s8hn1"]
 [ext_resource type="Texture2D" uid="uid://bvwbaxwme4por" path="res://Assets/hand_cut.png" id="15_1kow6"]
 [ext_resource type="PackedScene" uid="uid://dvxo50xpfvolu" path="res://Scenes/buildings/house/house_interior.tscn" id="15_jmvq6"]
+[ext_resource type="PackedScene" uid="uid://dy0njrsmlfqgp" path="res://Scenes/encounters/heart_guy.tscn" id="15_m5sbm"]
 [ext_resource type="Texture2D" uid="uid://2ivsxj883nxa" path="res://Textures/logwall_128.png" id="15_nqkr7"]
 [ext_resource type="Texture2D" uid="uid://s3myhn0l2lgy" path="res://Textures/metal-sheet_128.png" id="16_xkw2e"]
 [ext_resource type="Texture2D" uid="uid://4oi81k6l8j17" path="res://Textures/woodplanks_128.png" id="17_n287j"]
@@ -1711,6 +1712,8 @@ transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842
 transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296, 15.5911, -1.26767, -10.0721)
 
 [node name="decals" type="Node3D" parent="SubViewportContainer/SubViewport/Tbtest"]
+
+[node name="heart_guy" parent="SubViewportContainer/SubViewport/Tbtest" instance=ExtResource("15_m5sbm")]
 
 [node name="house_interior" parent="SubViewportContainer/SubViewport" instance=ExtResource("15_jmvq6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -23.8323, 0)
