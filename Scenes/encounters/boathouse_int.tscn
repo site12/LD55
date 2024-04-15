@@ -1,9 +1,9 @@
 [gd_scene load_steps=84 format=3 uid="uid://0xk4g071t25n"]
 
-[ext_resource type="Texture2D" uid="uid://crf0l5dnfwwl" path="res://textures/logwall_128.png" id="1_id8xv"]
-[ext_resource type="Texture2D" uid="uid://b5aswnccdv34f" path="res://textures/metal-sheet_128.png" id="2_7jm1c"]
-[ext_resource type="Texture2D" uid="uid://b10ld3moa1i60" path="res://textures/woodplanks_128.png" id="3_inyeu"]
-[ext_resource type="Texture2D" uid="uid://upxa861wv663" path="res://textures/log_128x512.png" id="4_mloj6"]
+[ext_resource type="Texture2D" uid="uid://csxj3pedpecys" path="res://Textures/logwall_128.png" id="1_id8xv"]
+[ext_resource type="Texture2D" uid="uid://df6ujd8l6q1aa" path="res://Textures/metal-sheet_128.png" id="2_7jm1c"]
+[ext_resource type="Texture2D" uid="uid://dl7coc3cnvajh" path="res://Textures/woodplanks_128.png" id="3_inyeu"]
+[ext_resource type="Texture2D" uid="uid://dpfv5ybon63bg" path="res://Textures/log_128x512.png" id="4_mloj6"]
 [ext_resource type="Texture2D" uid="uid://drbr3nfi0l4m6" path="res://Textures/planks_128.jpg" id="5_1p6ui"]
 [ext_resource type="Texture2D" uid="uid://drnuw2gdm10mv" path="res://Textures/TCom_Wall_BlockConcrete4_2x2_512_albedo.png" id="6_v75tt"]
 [ext_resource type="Texture2D" uid="uid://b1nhnjxfstq8m" path="res://Textures/psx/rooftiles1_128.jpg" id="7_k6dak"]
