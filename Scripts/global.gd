@@ -110,7 +110,6 @@ func interact_body():
 		%Player.can_walk = true
 		%house_interior.get_node("basement_misc/Mass/mass_collider/mass_col").disabled = false
 
-
 func interact_mass():
 	if finger_intact&&!face_returned&&!necklace_returned&&!heart_returned:
 		body_interacted = true
@@ -126,17 +125,16 @@ func interact_mass():
 		%body_anims.play("fade")
 		await get_tree().create_timer(5).timeout
 		%body_anims.stop()
-		%body_text.text = "YOU MUST STEAL BACK HER SMILE."
+		%body_text.text = "YOU MUST STEAL BACK HER SMILE,"
 		%body_anims.play("fade")
 		await get_tree().create_timer(5).timeout
 		%body_anims.stop()
-		%body_text.text = "YOU MUST FIND THE METAL NOOSE."
+		%body_text.text = "FIND THE METAL NOOSE,"
 		%body_anims.play("fade")
 		await get_tree().create_timer(5).timeout
 		%body_anims.stop()
-		%body_text.text = "THE BODY IS NAUGHT WITHOUT THE HEART."
+		%body_text.text = "AND WIN BACK HER HEART."
 		%body_anims.play("fade")
 		await get_tree().create_timer(5).timeout
 		%Player.can_interact = true
 		%Player.can_walk = true
-		
