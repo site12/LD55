@@ -2093,7 +2093,7 @@ transform = Transform3D(-0.650204, 0, -0.75976, 0, 1, 0, 0.75976, 0, -0.650204, 
 
 [node name="boathouse_cam" type="Camera3D" parent="SubViewportContainer/SubViewport/cutscene_cams"]
 unique_name_in_owner = true
-transform = Transform3D(0.775242, 0, -0.631664, 0, 1, 0, 0.631664, 0, 0.775242, 48.6756, 262.336, -1.3746)
+transform = Transform3D(0.775242, 0, -0.631664, 0, 1, 0, 0.631664, 0, 0.775242, 48.736, 262.336, -1.23902)
 
 [node name="body_interact" type="Control" parent="SubViewportContainer/SubViewport"]
 unique_name_in_owner = true

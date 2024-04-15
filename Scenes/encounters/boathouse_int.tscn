@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=3 uid="uid://0xk4g071t25n"]
+[gd_scene load_steps=99 format=3 uid="uid://0xk4g071t25n"]
 
 [ext_resource type="Script" path="res://Scripts/boathouse_int.gd" id="1_enuk6"]
 [ext_resource type="Texture2D" uid="uid://2ivsxj883nxa" path="res://Textures/logwall_128.png" id="1_id8xv"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://c4ngnbtc4pppe" path="res://Textures/BLOOD.png" id="9_5nwi3"]
 [ext_resource type="PackedScene" uid="uid://fxsorecdshl1" path="res://Scenes/Dev/candle.tscn" id="9_kjf1x"]
 [ext_resource type="Texture2D" uid="uid://m30pykynqj17" path="res://Assets/Axe.png" id="10_52qaq"]
+[ext_resource type="PackedScene" uid="uid://qhrsxmrdrtfo" path="res://Assets/arms/player_arms.tscn" id="13_ei2b8"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_tpi07"]
 
@@ -645,6 +646,7 @@ shadow_mesh = SubResource("ArrayMesh_a2g0x")
 
 [sub_resource type="Animation" id="Animation_qwmo3"]
 resource_name = "boathouse_cutscene"
+length = 15.0
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fic7m"]
 _data = {
@@ -1060,6 +1062,9 @@ collision_layer = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="misc/door5/door/entity_1_geometry_col"]
 shape = SubResource("ConcavePolygonShape3D_ety7o")
+
+[node name="Player_Arms" parent="misc" instance=ExtResource("13_ei2b8")]
+transform = Transform3D(-0.149948, 0, -0.00393694, 0, 0.15, 0, 0.00393694, 0, -0.149948, -5.85183, 4.59103, -6.83784)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

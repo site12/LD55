@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://qhrsxmrdrtfo"]
 
-[ext_resource type="PackedScene" uid="uid://dapkl5tgjbshy" path="res://Assets/arms/Arms/Player_Arms.fbx" id="1_3wh0j"]
-[ext_resource type="Texture2D" uid="uid://c3tdnlo40p11d" path="res://Assets/arms/Arms/PlayerArms.png" id="2_ubbr1"]
+[ext_resource type="PackedScene" uid="uid://ca3ow0oydfoyc" path="res://Assets/arms/Arms/Player_Arms.fbx" id="1_3wh0j"]
+[ext_resource type="Texture2D" uid="uid://bo4dq47gdm660" path="res://Assets/arms/Arms/PlayerArms.png" id="2_ubbr1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3lngh"]
 albedo_texture = ExtResource("2_ubbr1")
@@ -52,6 +52,7 @@ _surfaces = [{
 blend_shape_mode = 0
 
 [node name="Player_Arms" instance=ExtResource("1_3wh0j")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
 
 [node name="Cube_001" parent="Armature_001/Skeleton3D" index="0"]
 mesh = SubResource("ArrayMesh_ody3a")

@@ -165,6 +165,10 @@ func interact_mass():
 
 func interact_axe(player):
 	if finger_intact&&!face_returned&&!heart_returned:
-		%boathouse_int.begin_cutscene(player,%boathouse_cam)
+		%interact.visible = false
+		%interact_cut.visible = false
+		%Player.can_interact = false
 		%body_anims.play("fully_fade")
-		await get_tree().create_timer(1).timeout
+		await get_tree().create_timer(0.5).timeout
+		%boathouse_int.begin_cutscene(player,%boathouse_cam)
+		
