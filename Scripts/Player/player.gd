@@ -25,6 +25,10 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 var can_play: bool = false
 signal step
 
+var can_interact = true
+var can_walk = true
+
+
 func looking_at_mannequin() -> bool:
 	if mannequin:
 		if global_position.distance_to(mannequin.global_position) < 30:
@@ -40,12 +44,14 @@ func _unhandled_input(event: InputEvent) -> void:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	if event.is_action_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	if event.is_action_pressed("interact"):
+	if event.is_action_pressed("interact") && can_interact:
 		if %interactable_raycast.is_colliding():
 			var collider = %interactable_raycast.get_collider()
 			if collider.is_in_group("interactables"):
 				if collider.is_in_group("doors"):
 					position = global.get_tele_node(collider.get_meta("tele_loc")).global_position
+				if collider.is_in_group("body"):
+					get_tree().get_root().get_node_or_null("CanvasLayer").interact_body()
 				
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		if event is InputEventMouseMotion:
@@ -63,7 +69,7 @@ func _process(delta: float) -> void:
 			1.0, 10.0),
 			"shadow")
 	if %interactable_raycast.is_colliding():
-		if %interactable_raycast.get_collider().is_in_group("interactables"):
+		if %interactable_raycast.get_collider().is_in_group("interactables") && can_interact:
 			if global.get_finger_intact():
 				if interact:
 					interact.visible = true
@@ -90,7 +96,7 @@ func _physics_process(delta: float) -> void:
 		t_bob += delta * Input.get_action_strength("forward") * float(is_on_floor())
 	camera.transform.origin = _headbob(t_bob)
 	
-	if can_move():
+	if can_move() and can_walk:
 
 		# Get the input direction and handle the movement/deceleration.
 		# As good practice, you should replace UI actions with custom gameplay actions.

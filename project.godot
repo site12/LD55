@@ -46,6 +46,7 @@ import/fbx/enabled=false
 
 interactables=""
 doors=""
+body=""
 
 [input]
 
