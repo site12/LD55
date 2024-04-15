@@ -1,7 +1,65 @@
-[gd_scene load_steps=2 format=3 uid="uid://fxsorecdshl1"]
+[gd_scene load_steps=7 format=3 uid="uid://fxsorecdshl1"]
+
+[ext_resource type="Script" path="res://Scenes/Dev/candle.gd" id="1_w6gbf"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_qi6iv"]
 
+[sub_resource type="QuadMesh" id="QuadMesh_h0dh0"]
+
+[sub_resource type="Animation" id="Animation_6ki8e"]
+resource_name = "candle_light"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OmniLight3D:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.6, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [1.0, 0.822, 1.178, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_xd3jg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OmniLight3D:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3xwsx"]
+_data = {
+"RESET": SubResource("Animation_xd3jg"),
+"candle_light": SubResource("Animation_6ki8e")
+}
+
 [node name="candle" type="MeshInstance3D"]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
+transform = Transform3D(0.115226, 0, 0, 0, 0.104233, 0, 0, 0, 0.117037, 0, 0.100705, 0)
 mesh = SubResource("CylinderMesh_qi6iv")
+script = ExtResource("1_w6gbf")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.344041, -0.343346, 0, 0.344137, 0.34325, 0, 0, 0, 1, 0, 0.792249, 0)
+mesh = SubResource("QuadMesh_h0dh0")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.51826, 0)
+light_color = Color(1, 0.576471, 0.160784, 1)
+light_volumetric_fog_energy = 0.4
+shadow_enabled = true
+omni_range = 2.329
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3xwsx")
+}

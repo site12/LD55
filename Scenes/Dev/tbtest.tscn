@@ -1913,6 +1913,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.3008, 0, -3.62946)
 [node name="middle_of_map" type="Marker3D" parent="audio"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.3357, 0, 2.52762)
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="audio"]
+
 [node name="interact" type="TextureRect" parent="."]
 visible = false
 texture_filter = 1
