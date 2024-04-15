@@ -1,9 +1,8 @@
-[gd_scene load_steps=71 format=3 uid="uid://dvxo50xpfvolu"]
+[gd_scene load_steps=69 format=3 uid="uid://dvxo50xpfvolu"]
 
 [ext_resource type="Texture2D" uid="uid://b57vwgs5ivuaj" path="res://Textures/plywood1_brown_128.jpg" id="1_kpca5"]
 [ext_resource type="Texture2D" uid="uid://b3bgmydhhdct7" path="res://Textures/plywood2_brown_128.png" id="2_map3m"]
 [ext_resource type="Texture2D" uid="uid://k6q0yix5wlvi" path="res://Textures/psx/wood_siding_128.jpg" id="3_pe6pd"]
-[ext_resource type="Shader" path="res://Assets/vhs_shader_CI_version.gdshader" id="4_sa78g"]
 [ext_resource type="Texture2D" uid="uid://b1nhnjxfstq8m" path="res://Textures/psx/rooftiles1_128.jpg" id="4_w3uh8"]
 [ext_resource type="Texture2D" uid="uid://bf1caqi4p7xws" path="res://Textures/plywood1_128.jpg" id="5_ls03l"]
 [ext_resource type="Texture2D" uid="uid://dcpjligv5tbgk" path="res://Textures/drywall_old_128.png" id="6_lkbgd"]
@@ -457,200 +456,172 @@ _surfaces = [{
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_tj7x5"]
 data = PackedVector3Array(-0.5625, 0.975, -0.5, -0.5625, 0.85, -0.5, 0.6875, 0.85, -0.5, -0.5625, 0.975, -0.5, 0.6875, 0.85, -0.5, 0.6875, 0.975, -0.5, -0.5625, 0.975, -0.5, -0.5625, 0.975, 0.5, -0.5625, 0.85, 0.5, -0.5625, 0.975, -0.5, -0.5625, 0.85, 0.5, -0.5625, 0.85, -0.5, 0.6875, 0.85, -0.5, -0.5625, 0.85, -0.5, -0.5625, 0.85, 0.5, 0.6875, 0.85, -0.5, -0.5625, 0.85, 0.5, 0.6875, 0.85, 0.5, 0.6875, 0.975, -0.5, 0.6875, 0.975, 0.5, -0.5625, 0.975, 0.5, 0.6875, 0.975, -0.5, -0.5625, 0.975, 0.5, -0.5625, 0.975, -0.5, 0.6875, 0.975, -0.5, 0.6875, 0.85, -0.5, 0.6875, 0.85, 0.5, 0.6875, 0.975, -0.5, 0.6875, 0.85, 0.5, 0.6875, 0.975, 0.5, -0.5625, 0.975, 0.5, 0.6875, 0.975, 0.5, 0.6875, 0.85, 0.5, -0.5625, 0.975, 0.5, 0.6875, 0.85, 0.5, -0.5625, 0.85, 0.5, 0.5625, 0.85, -0.5, 0.5625, -1.15, -0.5, 0.6875, -1.15, -0.5, 0.5625, 0.85, -0.5, 0.6875, -1.15, -0.5, 0.6875, 0.85, -0.5, 0.5625, 0.85, -0.5, 0.5625, 0.85, 0.5, 0.5625, -1.15, 0.5, 0.5625, 0.85, -0.5, 0.5625, -1.15, 0.5, 0.5625, -1.15, -0.5, 0.6875, -1.15, -0.5, 0.5625, -1.15, -0.5, 0.5625, -1.15, 0.5, 0.6875, -1.15, -0.5, 0.5625, -1.15, 0.5, 0.6875, -1.15, 0.5, 0.6875, 0.85, -0.5, 0.6875, 0.85, 0.5, 0.5625, 0.85, 0.5, 0.6875, 0.85, -0.5, 0.5625, 0.85, 0.5, 0.5625, 0.85, -0.5, 0.6875, 0.85, -0.5, 0.6875, -1.15, -0.5, 0.6875, -1.15, 0.5, 0.6875, 0.85, -0.5, 0.6875, -1.15, 0.5, 0.6875, 0.85, 0.5, 0.5625, 0.85, 0.5, 0.6875, 0.85, 0.5, 0.6875, -1.15, 0.5, 0.5625, 0.85, 0.5, 0.6875, -1.15, 0.5, 0.5625, -1.15, 0.5, -0.3125, -0.4, -0.5, -0.3125, -0.525, -0.5, -0.1875, -0.525, -0.5, -0.3125, -0.4, -0.5, -0.1875, -0.525, -0.5, -0.1875, -0.4, -0.5, -0.3125, -0.4, -0.5, -0.3125, -0.4, 0.5, -0.3125, -0.525, 0.5, -0.3125, -0.4, -0.5, -0.3125, -0.525, 0.5, -0.3125, -0.525, -0.5, -0.1875, -0.525, -0.5, -0.3125, -0.525, -0.5, -0.3125, -0.525, 0.5, -0.1875, -0.525, -0.5, -0.3125, -0.525, 0.5, -0.1875, -0.525, 0.5, -0.1875, -0.4, -0.5, -0.1875, -0.4, 0.5, -0.3125, -0.4, 0.5, -0.1875, -0.4, -0.5, -0.3125, -0.4, 0.5, -0.3125, -0.4, -0.5, -0.1875, -0.4, -0.5, -0.1875, -0.525, -0.5, -0.1875, -0.525, 0.5, -0.1875, -0.4, -0.5, -0.1875, -0.525, 0.5, -0.1875, -0.4, 0.5, -0.3125, -0.4, 0.5, -0.1875, -0.4, 0.5, -0.1875, -0.525, 0.5, -0.3125, -0.4, 0.5, -0.1875, -0.525, 0.5, -0.3125, -0.525, 0.5, -0.5625, 0.85, -0.5, -0.5625, -1.15, -0.5, -0.4375, -1.15, -0.5, -0.5625, 0.85, -0.5, -0.4375, -1.15, -0.5, -0.4375, 0.85, -0.5, -0.5625, 0.85, -0.5, -0.5625, 0.85, 0.5, -0.5625, -1.15, 0.5, -0.5625, 0.85, -0.5, -0.5625, -1.15, 0.5, -0.5625, -1.15, -0.5, -0.4375, -1.15, -0.5, -0.5625, -1.15, -0.5, -0.5625, -1.15, 0.5, -0.4375, -1.15, -0.5, -0.5625, -1.15, 0.5, -0.4375, -1.15, 0.5, -0.4375, 0.85, -0.5, -0.4375, 0.85, 0.5, -0.5625, 0.85, 0.5, -0.4375, 0.85, -0.5, -0.5625, 0.85, 0.5, -0.5625, 0.85, -0.5, -0.4375, 0.85, -0.5, -0.4375, -1.15, -0.5, -0.4375, -1.15, 0.5, -0.4375, 0.85, -0.5, -0.4375, -1.15, 0.5, -0.4375, 0.85, 0.5, -0.5625, 0.85, 0.5, -0.4375, 0.85, 0.5, -0.4375, -1.15, 0.5, -0.5625, 0.85, 0.5, -0.4375, -1.15, 0.5, -0.5625, -1.15, 0.5, -0.4375, 0.85, -0.375, -0.4375, -1.15, -0.375, 0.5625, -1.15, -0.375, -0.4375, 0.85, -0.375, 0.5625, -1.15, -0.375, 0.5625, 0.85, -0.375, -0.4375, 0.85, -0.375, -0.4375, 0.85, 0.375, -0.4375, -1.15, 0.375, -0.4375, 0.85, -0.375, -0.4375, -1.15, 0.375, -0.4375, -1.15, -0.375, 0.5625, -1.15, -0.375, -0.4375, -1.15, -0.375, -0.4375, -1.15, 0.375, 0.5625, -1.15, -0.375, -0.4375, -1.15, 0.375, 0.5625, -1.15, 0.375, 0.5625, 0.85, -0.375, 0.5625, 0.85, 0.375, -0.4375, 0.85, 0.375, 0.5625, 0.85, -0.375, -0.4375, 0.85, 0.375, -0.4375, 0.85, -0.375, 0.5625, 0.85, -0.375, 0.5625, -1.15, -0.375, 0.5625, -1.15, 0.375, 0.5625, 0.85, -0.375, 0.5625, -1.15, 0.375, 0.5625, 0.85, 0.375, -0.4375, 0.85, 0.375, 0.5625, 0.85, 0.375, 0.5625, -1.15, 0.375, -0.4375, 0.85, 0.375, 0.5625, -1.15, 0.375, -0.4375, -1.15, 0.375)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_jsohu"]
-shader = ExtResource("4_sa78g")
-shader_parameter/low_distortion = 1.0
-shader_parameter/distortion = 1.0
-shader_parameter/high_distortion = 1.0
+[node name="house_interior" type="Node3D"]
 
-[node name="CanvasLayer" type="CanvasLayer"]
-layer = -1
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
-texture_filter = 1
-offset_right = 640.0
-offset_bottom = 481.0
-stretch = true
-stretch_shrink = 3
-
-[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
-handle_input_locally = false
-size = Vector2i(213, 160)
-render_target_update_mode = 4
-
-[node name="house_interior" type="Node3D" parent="SubViewportContainer/SubViewport"]
-
-[node name="TBLoader" type="TBLoader" parent="SubViewportContainer/SubViewport/house_interior"]
+[node name="TBLoader" type="TBLoader" parent="."]
 map_resource = "res://Maps/house_interior.map"
 option_filter_nearest = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0133412, -0.0155747, -0.0263481)
 
-[node name="Default Layer" type="Node3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader"]
+[node name="Default Layer" type="Node3D" parent="TBLoader"]
 
-[node name="entity_0_geometry" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader/Default Layer"]
+[node name="entity_0_geometry" type="MeshInstance3D" parent="TBLoader/Default Layer"]
 mesh = SubResource("ArrayMesh_u1we5")
 
-[node name="entity_0_geometry_col" type="StaticBody3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader/Default Layer"]
+[node name="entity_0_geometry_col" type="StaticBody3D" parent="TBLoader/Default Layer"]
 
-[node name="house" type="Node3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader"]
+[node name="house" type="Node3D" parent="TBLoader"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0519, 6.02612, -4.21875)
 
-[node name="entity_1_geometry" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader/house"]
+[node name="entity_1_geometry" type="MeshInstance3D" parent="TBLoader/house"]
 mesh = SubResource("ArrayMesh_nolgf")
 
-[node name="entity_1_geometry_col" type="StaticBody3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader/house"]
+[node name="entity_1_geometry_col" type="StaticBody3D" parent="TBLoader/house"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader/house/entity_1_geometry_col"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TBLoader/house/entity_1_geometry_col"]
 shape = SubResource("ConcavePolygonShape3D_a4pna")
 
-[node name="window" type="Node3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader"]
+[node name="window" type="Node3D" parent="TBLoader"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 9.25, 1.1125)
 
-[node name="entity_2_geometry" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader/window"]
+[node name="entity_2_geometry" type="MeshInstance3D" parent="TBLoader/window"]
 mesh = SubResource("ArrayMesh_uoapn")
 
-[node name="entity_2_geometry_col" type="StaticBody3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader/window"]
+[node name="entity_2_geometry_col" type="StaticBody3D" parent="TBLoader/window"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader/window/entity_2_geometry_col"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TBLoader/window/entity_2_geometry_col"]
 shape = SubResource("ConcavePolygonShape3D_4pxr0")
 
-[node name="window2" type="Node3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader"]
+[node name="window2" type="Node3D" parent="TBLoader"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 12.75, 1.1125)
 
-[node name="entity_3_geometry" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader/window2"]
+[node name="entity_3_geometry" type="MeshInstance3D" parent="TBLoader/window2"]
 mesh = SubResource("ArrayMesh_xe771")
 
-[node name="entity_3_geometry_col" type="StaticBody3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader/window2"]
+[node name="entity_3_geometry_col" type="StaticBody3D" parent="TBLoader/window2"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader/window2/entity_3_geometry_col"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TBLoader/window2/entity_3_geometry_col"]
 shape = SubResource("ConcavePolygonShape3D_60tc8")
 
-[node name="window3" type="Node3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader"]
+[node name="window3" type="Node3D" parent="TBLoader"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 5.5, 1.1125)
 
-[node name="entity_4_geometry" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader/window3"]
+[node name="entity_4_geometry" type="MeshInstance3D" parent="TBLoader/window3"]
 mesh = SubResource("ArrayMesh_j8ytd")
 
-[node name="entity_4_geometry_col" type="StaticBody3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader/window3"]
+[node name="entity_4_geometry_col" type="StaticBody3D" parent="TBLoader/window3"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader/window3/entity_4_geometry_col"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TBLoader/window3/entity_4_geometry_col"]
 shape = SubResource("ConcavePolygonShape3D_tgugk")
 
-[node name="Stairs" type="Node3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader"]
+[node name="Stairs" type="Node3D" parent="TBLoader"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8434, 5.80892, -0.72144)
 
-[node name="entity_5_geometry" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader/Stairs"]
+[node name="entity_5_geometry" type="MeshInstance3D" parent="TBLoader/Stairs"]
 mesh = SubResource("ArrayMesh_uemyy")
 
-[node name="entity_5_geometry_col" type="StaticBody3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader/Stairs"]
+[node name="entity_5_geometry_col" type="StaticBody3D" parent="TBLoader/Stairs"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader/Stairs/entity_5_geometry_col"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TBLoader/Stairs/entity_5_geometry_col"]
 shape = SubResource("ConcavePolygonShape3D_hqn4o")
 
-[node name="window4" type="Node3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader"]
+[node name="window4" type="Node3D" parent="TBLoader"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.3875, 13.5, -4)
 
-[node name="entity_6_geometry" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader/window4"]
+[node name="entity_6_geometry" type="MeshInstance3D" parent="TBLoader/window4"]
 mesh = SubResource("ArrayMesh_l180h")
 
-[node name="entity_6_geometry_col" type="StaticBody3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader/window4"]
+[node name="entity_6_geometry_col" type="StaticBody3D" parent="TBLoader/window4"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader/window4/entity_6_geometry_col"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TBLoader/window4/entity_6_geometry_col"]
 shape = SubResource("ConcavePolygonShape3D_k5f2m")
 
-[node name="door" type="Node3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader"]
+[node name="door" type="Node3D" parent="TBLoader"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.8125, 4.9, -12.75)
 
-[node name="entity_7_geometry" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader/door"]
+[node name="entity_7_geometry" type="MeshInstance3D" parent="TBLoader/door"]
 mesh = SubResource("ArrayMesh_sty1g")
 
-[node name="entity_7_geometry_col" type="StaticBody3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader/door"]
+[node name="entity_7_geometry_col" type="StaticBody3D" parent="TBLoader/door"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader/door/entity_7_geometry_col"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TBLoader/door/entity_7_geometry_col"]
 shape = SubResource("ConcavePolygonShape3D_gmtny")
 
-[node name="interior walls" type="Node3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader"]
+[node name="interior walls" type="Node3D" parent="TBLoader"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2813, 7, -6.0625)
 
-[node name="entity_8_geometry" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader/interior walls"]
+[node name="entity_8_geometry" type="MeshInstance3D" parent="TBLoader/interior walls"]
 mesh = SubResource("ArrayMesh_puxoe")
 
-[node name="entity_8_geometry_col" type="StaticBody3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader/interior walls"]
+[node name="entity_8_geometry_col" type="StaticBody3D" parent="TBLoader/interior walls"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader/interior walls/entity_8_geometry_col"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TBLoader/interior walls/entity_8_geometry_col"]
 shape = SubResource("ConcavePolygonShape3D_0inqm")
 
-[node name="door2" type="Node3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader"]
+[node name="door2" type="Node3D" parent="TBLoader"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.4375, 4.9, -1.125)
 
-[node name="entity_9_geometry" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader/door2"]
+[node name="entity_9_geometry" type="MeshInstance3D" parent="TBLoader/door2"]
 mesh = SubResource("ArrayMesh_gsp20")
 
-[node name="entity_9_geometry_col" type="StaticBody3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader/door2"]
+[node name="entity_9_geometry_col" type="StaticBody3D" parent="TBLoader/door2"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader/door2/entity_9_geometry_col"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TBLoader/door2/entity_9_geometry_col"]
 shape = SubResource("ConcavePolygonShape3D_tj7x5")
 
-[node name="Misc" type="Node3D" parent="SubViewportContainer/SubViewport/house_interior"]
+[node name="Misc" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.126929, 0.0326538, 0.309204)
 
-[node name="Shelving" parent="SubViewportContainer/SubViewport/house_interior/Misc" instance=ExtResource("20_vungw")]
+[node name="Shelving" parent="Misc" instance=ExtResource("20_vungw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.5024, 1.29285, -0.0339197)
 
-[node name="Shelving2" parent="SubViewportContainer/SubViewport/house_interior/Misc" instance=ExtResource("20_vungw")]
+[node name="Shelving2" parent="Misc" instance=ExtResource("20_vungw")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17.6739, 1.29285, -2.15623)
 
-[node name="Chair" parent="SubViewportContainer/SubViewport/house_interior/Misc" instance=ExtResource("16_4hr6r")]
+[node name="Chair" parent="Misc" instance=ExtResource("16_4hr6r")]
 transform = Transform3D(0.749776, 1.4168e-07, -0.661691, 2.84217e-14, 1, -5.68434e-14, 0.661692, 1.02179e-07, 0.749776, -16.698, 4.36394, -7.93145)
 
-[node name="Chair2" parent="SubViewportContainer/SubViewport/house_interior/Misc" instance=ExtResource("16_4hr6r")]
+[node name="Chair2" parent="Misc" instance=ExtResource("16_4hr6r")]
 transform = Transform3D(0.383001, -0.923399, 0.025407, 0.0479114, -0.00760979, -0.998823, 0.922505, 0.383767, 0.0413274, -16.6104, 3.92534, -12.0706)
 
-[node name="Table" parent="SubViewportContainer/SubViewport/house_interior/Misc" instance=ExtResource("16_vbak7")]
+[node name="Table" parent="Misc" instance=ExtResource("16_vbak7")]
 transform = Transform3D(1, -5.40167e-08, -2.6077e-08, -1.02445e-08, 1, 4.17233e-07, 3.35276e-08, -1.78814e-07, 1, -15.9021, 4.50469, -10.1014)
 
-[node name="Lantern" parent="SubViewportContainer/SubViewport/house_interior/Misc" instance=ExtResource("15_siuqi")]
+[node name="Lantern" parent="Misc" instance=ExtResource("15_siuqi")]
 transform = Transform3D(-0.0884941, -0.995549, 0.0324179, 0.949657, -0.0745059, 0.304302, -0.300532, 0.0577149, 0.952024, -11.3363, 3.84909, -7.13034)
 
-[node name="Pot" parent="SubViewportContainer/SubViewport/house_interior/Misc" instance=ExtResource("14_fjofu")]
+[node name="Pot" parent="Misc" instance=ExtResource("14_fjofu")]
 transform = Transform3D(1, 0, -5.96046e-08, 7.10543e-15, 1, -2.66454e-15, 0, 0, 1, -11.1271, 3.80964, -8.21614)
 
-[node name="SleepingBag" parent="SubViewportContainer/SubViewport/house_interior/Misc" instance=ExtResource("13_xrp4g")]
+[node name="SleepingBag" parent="Misc" instance=ExtResource("13_xrp4g")]
 transform = Transform3D(-0.49938, -3.98606e-07, -0.866383, -1.49012e-08, 1, -8.96398e-09, 0.866383, -1.15484e-07, -0.499381, -10.2861, 3.83284, -7.19937)
 
-[node name="Loveseat" parent="SubViewportContainer/SubViewport/house_interior/Misc" instance=ExtResource("12_gc21s")]
+[node name="Loveseat" parent="Misc" instance=ExtResource("12_gc21s")]
 transform = Transform3D(0.456436, 0.419466, 0.0106999, 0.0246172, -0.0109864, -0.619414, -0.41888, 0.45643, -0.0247431, -11.7025, 4.06958, -12.1554)
 
-[node name="Loveseat2" parent="SubViewportContainer/SubViewport/house_interior/Misc" instance=ExtResource("12_gc21s")]
+[node name="Loveseat2" parent="Misc" instance=ExtResource("12_gc21s")]
 transform = Transform3D(0.538004, 0.193221, -0.240036, -0.1491, 0.585899, 0.137445, 0.269669, -0.0615428, 0.55488, -14.7317, 8.14051, -0.786687)
 
-[node name="Chair" parent="SubViewportContainer/SubViewport/house_interior/Misc/Loveseat2" instance=ExtResource("16_4hr6r")]
+[node name="Chair" parent="Misc/Loveseat2" instance=ExtResource("16_4hr6r")]
 transform = Transform3D(1.40597, -0.722476, 0.320498, -0.774712, -1.38928, 0.266781, 0.156562, -0.386496, -1.55806, 0.228477, 0.405327, -1.06666)
 
-[node name="KitchenIsland" parent="SubViewportContainer/SubViewport/house_interior/Misc" instance=ExtResource("22_8jdwc")]
+[node name="KitchenIsland" parent="Misc" instance=ExtResource("22_8jdwc")]
 transform = Transform3D(-0.013613, 0, -0.999908, 0, 1, 0, 0.999908, 0, -0.013613, -17.762, 4.20439, -5.71892)
 
-[node name="Can" parent="SubViewportContainer/SubViewport/house_interior/Misc" instance=ExtResource("23_yphja")]
+[node name="Can" parent="Misc" instance=ExtResource("23_yphja")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.386, 3.75631, -7.92408)
 
-[node name="Can2" parent="SubViewportContainer/SubViewport/house_interior/Misc" instance=ExtResource("23_yphja")]
+[node name="Can2" parent="Misc" instance=ExtResource("23_yphja")]
 transform = Transform3D(0.0324366, 0.99811, 0.0521998, -0.988149, 0.0241854, 0.151582, 0.150033, -0.056498, 0.987065, -17.8305, 4.77414, -6.04961)
 
-[node name="Can3" parent="SubViewportContainer/SubViewport/house_interior/Misc" instance=ExtResource("23_yphja")]
+[node name="Can3" parent="Misc" instance=ExtResource("23_yphja")]
 transform = Transform3D(-0.15234, -0.199494, -0.967985, -0.988267, 0.0199138, 0.151428, -0.0109329, 0.979697, -0.200188, -17.8305, 4.77414, -5.3216)
 
-[node name="Can4" parent="SubViewportContainer/SubViewport/house_interior/Misc" instance=ExtResource("23_yphja")]
+[node name="Can4" parent="Misc" instance=ExtResource("23_yphja")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.4968, 4.77414, -5.67186)
 
-[node name="Fridge" parent="SubViewportContainer/SubViewport/house_interior/Misc" instance=ExtResource("22_u5b4q")]
+[node name="Fridge" parent="Misc" instance=ExtResource("22_u5b4q")]
 transform = Transform3D(0.227093, 0, 0.973873, 0, 1, 0, -0.973873, 0, 0.227093, -14.2485, 4.63616, -4.9112)
-
-[node name="PostProcessing" type="ColorRect" parent="."]
-material = SubResource("ShaderMaterial_jsohu")
-offset_right = 640.0
-offset_bottom = 480.0
-mouse_filter = 2
-color = Color(1, 1, 1, 0)
 
 [node name="KitchenSink" parent="." instance=ExtResource("25_cv564")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -17.638, 4.23939, -4.28153)
