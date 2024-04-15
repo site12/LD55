@@ -2,10 +2,13 @@ extends CanvasLayer
 
 const D_MULTIPLY: float = 8.0
 
+var body_interacted: bool = false
 var finger_intact: bool = true
 var face_returned: bool = false
 var necklace_returned: bool = false
 var heart_returned: bool = false
+
+var player_indoors: bool = false
 
 # Distortion var for shader; min = 1.0; max = 10.0
 var distortion: float = 1.0
@@ -44,20 +47,29 @@ func get_tele_node(node_name: String) -> Node:
 	# get the node to teleport to when going through doors
 	# we can also use this to handle scene transitions
 	if node_name == "house_ext_tele":
-		play_sound(load("res://Sounds/door_open.wav"))
-		get_node("SubViewportContainer/SubViewport/Tbtest/WorldEnvironment").environment.volumetric_fog_density = 0.1
-		if face_returned&&necklace_returned:
-			_scene_change_flood()
-		return house_ext_tele
+		# Lock player in house if they haven't interacted with body
+		if body_interacted:
+			play_sound(load("res://Sounds/door_open.wav"))
+			get_node("SubViewportContainer/SubViewport/Tbtest/WorldEnvironment").environment.volumetric_fog_density = 0.1
+			if face_returned&&necklace_returned:
+				_scene_change_flood()
+			player_indoors = false
+			return house_ext_tele
+		else:
+			# TODO play house locked sound
+			return null
 	if node_name == "house_int_tele":
 		play_sound(load("res://Sounds/door_open.wav"))
 		get_node("SubViewportContainer/SubViewport/Tbtest/WorldEnvironment").environment.volumetric_fog_density = 0.3
+		player_indoors = true
 		return house_int_tele
 	if node_name == "boathouse_ext_tele":
 		play_sound(load("res://Sounds/door_open.wav"))
+		player_indoors = false
 		return boathouse_ext_tele
 	if node_name == "boathouse_int_tele":
 		play_sound(load("res://Sounds/door_open.wav"))
+		player_indoors = true
 		return boathouse_int_tele
 	return null
 
@@ -82,10 +94,9 @@ func play_sound(sound: AudioStreamWAV):
 	audio_player.play()
 	audio_player.finished.connect(func destroy(): audio_player.queue_free())
 
-
 func interact_body():
 	var hud = %body_interact
-	if finger_intact && !face_returned && !necklace_returned && !heart_returned:
+	if finger_intact&&!face_returned&&!necklace_returned&&!heart_returned:
 		%body_text.text = "She can't talk right now."
 		%body_anims.play("fade")
 		%Player.can_interact = false
