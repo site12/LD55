@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dcif532xj544e"
+path="res://.godot/imported/ambience (1).wav-214fa468d7c1bba888d37b11d585ef5f.sample"
+
+[deps]
+
+source_file="res://Sounds/compressed/ambience (1).wav"
+dest_files=["res://.godot/imported/ambience (1).wav-214fa468d7c1bba888d37b11d585ef5f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
