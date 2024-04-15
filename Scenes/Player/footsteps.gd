@@ -9,7 +9,9 @@ func _ready():
 
 func play_sound():
 	var audio_player :AudioStreamPlayer2D = AudioStreamPlayer2D.new()
-	print(%footstep_raycast.get_collider().get_parent().name)
+	if %footstep_raycast.get_collider() == null:
+		return
+	#print(%footstep_raycast.get_collider().get_parent().name)
 	if %footstep_raycast.get_collider().get_parent().name == "Default Layer":
 		audio_player.stream = footstep_sounds[0]
 	elif %footstep_raycast.get_collider().get_parent().name == "path" || %footstep_raycast.get_collider().get_parent().name == "basement":

@@ -113,6 +113,7 @@ func interact_body():
 
 func interact_mass():
 	if finger_intact&&!face_returned&&!necklace_returned&&!heart_returned:
+		body_interacted = true
 		%body_text.text = "YOU'RE IN DIRE STRAITS, AREN'T YOU?"
 		%body_anims.play("fade")
 		%Player.can_interact = false
@@ -120,5 +121,22 @@ func interact_mass():
 		%interact.visible = false
 		%interact_cut.visible = false
 		await get_tree().create_timer(5).timeout
+		%body_anims.stop()
+		%body_text.text = "THE BODY IS RESTING. YOU CAN WAKE IT."
+		%body_anims.play("fade")
+		await get_tree().create_timer(5).timeout
+		%body_anims.stop()
+		%body_text.text = "YOU MUST STEAL BACK HER SMILE."
+		%body_anims.play("fade")
+		await get_tree().create_timer(5).timeout
+		%body_anims.stop()
+		%body_text.text = "YOU MUST FIND THE METAL NOOSE."
+		%body_anims.play("fade")
+		await get_tree().create_timer(5).timeout
+		%body_anims.stop()
+		%body_text.text = "THE BODY IS NAUGHT WITHOUT THE HEART."
+		%body_anims.play("fade")
+		await get_tree().create_timer(5).timeout
 		%Player.can_interact = true
 		%Player.can_walk = true
+		
