@@ -1,11 +1,15 @@
-[gd_scene load_steps=11 format=3 uid="uid://cg3eacvgu84jj"]
+[gd_scene load_steps=15 format=3 uid="uid://cg3eacvgu84jj"]
 
 [ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_dbbxc"]
 [ext_resource type="Shader" path="res://Assets/vhs_shader.gdshader" id="2_xuu3q"]
+[ext_resource type="PackedScene" uid="uid://qhrsxmrdrtfo" path="res://Assets/arms/player_arms.tscn" id="3_aum46"]
 [ext_resource type="Script" path="res://Scenes/Player/footsteps.gd" id="3_wiq1i"]
 [ext_resource type="AudioStream" uid="uid://belp45vkt0qii" path="res://Sounds/footsteps/outside_walk.wav" id="4_fy2dr"]
+[ext_resource type="PackedScene" uid="uid://cgt5bfb0b5qf6" path="res://Assets/body/face/face.tscn" id="4_tmuc0"]
 [ext_resource type="AudioStream" uid="uid://cma8r6b8ouf6k" path="res://Sounds/footsteps/wood_walk.wav" id="5_k65rr"]
+[ext_resource type="PackedScene" uid="uid://bd1kx4qaidru7" path="res://Assets/Heart/heart.tscn" id="5_sconx"]
 [ext_resource type="AudioStream" uid="uid://0q0n5wklycao" path="res://Sounds/footsteps/concrete_walk.wav" id="6_732ls"]
+[ext_resource type="PackedScene" uid="uid://cubv87qg17r8q" path="res://Assets/body/necklace/necklace.tscn" id="6_g8uu7"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_m8trs"]
 radius = 0.8
@@ -57,6 +61,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 5)
 
 [node name="heart_spawn" type="Node3D" parent="Neck"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 80)
+
+[node name="Player_Arms" parent="Neck" instance=ExtResource("3_aum46")]
+transform = Transform3D(-0.249574, 2.15368e-08, -0.0145827, 0.00170767, -0.24828, -0.0292262, -0.0144823, -0.029276, 0.247857, -0.489733, -0.387906, 0.221259)
+
+[node name="face" parent="Neck" instance=ExtResource("4_tmuc0")]
+transform = Transform3D(74.9518, 0.951084, -2.51497, 1.85248, 32.5797, 67.5287, 1.94883, -67.5475, 32.5353, -0.465539, -1.98355, 2.36974)
+
+[node name="heart" parent="Neck" instance=ExtResource("5_sconx")]
+transform = Transform3D(0.00224691, 0.00475685, -0.00337436, 0.000154374, 0.00356635, 0.00513029, 0.0058301, -0.00192771, 0.00116463, -0.544019, -0.278043, -0.911845)
+visible = false
+
+[node name="necklace" parent="Neck" instance=ExtResource("6_g8uu7")]
+transform = Transform3D(47.8661, 12.2508, -7.66517, 0.341528, 25.5545, 42.975, 14.4471, -41.1933, 24.3803, -0.460944, -0.309631, -0.882877)
+visible = false
 
 [node name="footsteps" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0700037, 0)

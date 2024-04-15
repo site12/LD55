@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cubv87qg17r8q"]
 
-[ext_resource type="PackedScene" uid="uid://b8opvqwys8v8d" path="res://Assets/body/necklace/necklace.fbx" id="1_3t1s2"]
+[ext_resource type="PackedScene" uid="uid://cn8uvhxbl6cij" path="res://Assets/body/necklace/necklace.fbx" id="1_3t1s2"]
 [ext_resource type="Texture2D" uid="uid://cg7mduxfobw1l" path="res://Textures/metal_rusted_128.png" id="2_ke1wx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ujabe"]
