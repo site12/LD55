@@ -1,7 +1,7 @@
 extends Node3D
 
-const SPEED_MAX: float = 10.0
-const SPEED_MIN: float = 5.0
+const SPEED_MAX: float = 5.0
+const SPEED_MIN: float = 2.0
 const SEEN_DISTANCE: float = 20.0
 var fleeing: bool = false
 var last_spawn: Vector3 = Vector3.ZERO

@@ -1,14 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://dy0njrsmlfqgp"]
+[gd_scene load_steps=8 format=3 uid="uid://dy0njrsmlfqgp"]
 
 [ext_resource type="Script" path="res://Scripts/heart_guy.gd" id="1_rgblo"]
 [ext_resource type="Texture2D" uid="uid://qkboamcjx5gf" path="res://Textures/bloody_hell.png" id="2_r6mu4"]
+[ext_resource type="AudioStream" uid="uid://dtyjnnj324dux" path="res://Sounds/compressed/369017__patobottos__heartbeats-61(1).wav" id="3_ewv6a"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oybqi"]
-albedo_color = Color(1, 0, 0, 1)
 albedo_texture = ExtResource("2_r6mu4")
+albedo_texture_force_srgb = true
 emission = Color(0.306923, 0.306923, 0.306923, 1)
 emission_operator = 1
 emission_texture = ExtResource("2_r6mu4")
+heightmap_texture = ExtResource("2_r6mu4")
 
 [sub_resource type="SphereMesh" id="SphereMesh_va0yd"]
 material = SubResource("StandardMaterial3D_oybqi")
@@ -30,6 +32,7 @@ aabb = AABB(-0.5, -1, -0.5, 1, 2, 1)
 [node name="CPUParticles3D" type="CPUParticles3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0146232, 1.4647, 0.0163441)
 amount = 64
+speed_scale = 0.24
 local_coords = true
 mesh = SubResource("SphereMesh_va0yd")
 emission_shape = 1
@@ -40,12 +43,19 @@ angle_max = 360.0
 scale_amount_min = 0.1
 scale_amount_max = 2.0
 scale_amount_curve = SubResource("Curve_wb6m5")
-hue_variation_max = 1.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." groups=["interactables"]]
 collision_layer = 256
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("SphereShape3D_5o6l4")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_ewv6a")
+volume_db = 80.0
+max_db = 6.0
+autoplay = true
+max_distance = 80.0
+panning_strength = 3.0
 
 [connection signal="screen_entered" from="VisibleOnScreenNotifier3D" to="." method="_on_visible_on_screen_notifier_3d_screen_entered"]
