@@ -1,6 +1,7 @@
 extends Sprite3D
 
 var shadow_seen: bool = false
+var active: bool = false
 const RESPAWN_RADIUS: float = 10.0
 @onready var player = get_tree().root.get_node("CanvasLayer/SubViewportContainer/SubViewport/Tbtest/Player")
 
@@ -10,6 +11,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if !active: return
 	if shadow_seen:
 		modulate = Color(1, 1, 1, remap($Timer.time_left, $Timer.wait_time, 0, 1.0, 0))
 	else:
