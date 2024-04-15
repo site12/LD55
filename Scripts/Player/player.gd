@@ -166,11 +166,13 @@ func on_item_returned():
 
 func pickup_heart():
 	get_node("Neck/heart").visible = true
+	heart_guy.active = false
 	arms.visible = true
 	holding_heart = true
 
 func pickup_necklace():
 	get_node("Neck/necklace").visible = true
+	mannequin.active = false
 	arms.visible = true
 	holding_necklace = true
 
