@@ -1,4 +1,4 @@
-[gd_scene load_steps=118 format=3 uid="uid://dedorys0tphb2"]
+[gd_scene load_steps=115 format=3 uid="uid://dedorys0tphb2"]
 
 [ext_resource type="Script" path="res://Scripts/forest.gd" id="1_6cpro"]
 [ext_resource type="Texture2D" uid="uid://bxgkxs8171gbf" path="res://Textures/grass_128.jpg" id="1_ae00h"]
@@ -11,7 +11,6 @@
 [ext_resource type="Shader" path="res://Assets/vhs_shader_CI_version.gdshader" id="6_clfmr"]
 [ext_resource type="PackedScene" uid="uid://crtuwqyesxf4p" path="res://Assets/Mannequin/mannequin_seperated.tscn" id="7_0nwli"]
 [ext_resource type="PackedScene" uid="uid://isv4jkscqmp1" path="res://Scenes/encounters/forest_floor.tscn" id="7_ul23i"]
-[ext_resource type="Script" path="res://Scripts/lighthouse.gd" id="9_0n7i6"]
 [ext_resource type="PackedScene" uid="uid://bygc8ag3arp4u" path="res://Assets/Rocks/Rocas/rock_1.tscn" id="10_u6yme"]
 [ext_resource type="PackedScene" uid="uid://ktwagrl61qgy" path="res://Scenes/shadow.tscn" id="11_s5gid"]
 [ext_resource type="Script" path="res://Scripts/audio/audio.gd" id="12_j7u1h"]
@@ -120,12 +119,6 @@ data = PackedVector3Array(-41.8182, -0.4125, -46.1923, -17.5681, 5.2924, -47.544
 size = Vector3(1, 2.02698, 1)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_t1pob"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_hnso7"]
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_14dlk"]
-height = 8.50802
-radius = 17.1776
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mqren"]
 transparency = 1
@@ -663,7 +656,7 @@ shader_parameter/low_distortion = 1.0
 shader_parameter/distortion = 1.0
 shader_parameter/high_distortion = 1.0
 
-[node name="CanvasLayer2" type="CanvasLayer"]
+[node name="CanvasLayer" type="CanvasLayer"]
 layer = -1
 script = ExtResource("1_dquwi")
 
@@ -799,25 +792,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -30)
 
 [node name="Node3D9" parent="SubViewportContainer/SubViewport/Tbtest/floor_origin/floors" instance=ExtResource("7_ul23i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -30)
-
-[node name="lighthouse" type="SpotLight3D" parent="SubViewportContainer/SubViewport/Tbtest"]
-transform = Transform3D(4.37114e-08, 3.82137e-15, 1, 8.74228e-08, -1, 0, 1, 8.74228e-08, -4.37114e-08, -27.0652, 14.0087, -99.9153)
-light_energy = 0.0
-light_volumetric_fog_energy = 50.0
-shadow_enabled = true
-spot_range = 100.0
-spot_angle = 20.0
-script = ExtResource("9_0n7i6")
-
-[node name="bear" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/Tbtest"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.1658, 0.196606, -30.5576)
-mesh = SubResource("CapsuleMesh_hnso7")
-
-[node name="Area3D" type="Area3D" parent="SubViewportContainer/SubViewport/Tbtest/bear"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/Tbtest/bear/Area3D"]
-transform = Transform3D(1, -3.55271e-15, 1.77636e-15, 3.55271e-15, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, 0, 0)
-shape = SubResource("CylinderShape3D_14dlk")
 
 [node name="Rocks" type="Node3D" parent="SubViewportContainer/SubViewport/Tbtest"]
 
@@ -1502,7 +1476,10 @@ transform = Transform3D(-0.999864, 0, 0.0164751, 0, 1, 0, -0.0164751, 0, -0.9998
 transform = Transform3D(-0.904842, 0, -0.425748, 0, 1, 0, 0.425748, 0, -0.904842, 10.165, -1.26767, 0.245686)
 
 [node name="Tree25" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees7" instance=ExtResource("2_pyars")]
-transform = Transform3D(0.0683815, 0, 0.997659, 0, 1, 0, -0.997659, 0, 0.0683815, 11.9121, -1.26767, -18.7876)
+transform = Transform3D(0.554409, 0, 0.832244, 0, 1, 0, -0.832244, 0, 0.554409, 12.1979, -1.26767, -18.0416)
+
+[node name="Tree27" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent/Trees7" instance=ExtResource("2_pyars")]
+transform = Transform3D(0.62134, 0, 0.783541, 0, 1, 0, -0.783541, 0, 0.62134, 16.5839, -0.760185, -16.7572)
 
 [node name="Trees8" type="Node3D" parent="SubViewportContainer/SubViewport/Tbtest/Trees_parent"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.9368, -0.979592, -14.4408)
@@ -1902,5 +1879,3 @@ scale = Vector2(0.159999, 0.159999)
 mouse_filter = 2
 texture = ExtResource("15_1kow6")
 stretch_mode = 1
-
-[connection signal="body_entered" from="SubViewportContainer/SubViewport/Tbtest/bear/Area3D" to="SubViewportContainer/SubViewport/Tbtest/lighthouse" method="_on_area_3d_body_entered"]

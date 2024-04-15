@@ -55,7 +55,6 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _process(delta: float) -> void:
 	if mannequin: global.set_distortion(clamp(10.0 - global_position.distance_to(mannequin.global_position), 1.0, 10.0), "mannequin")
-	if bear: global.set_distortion(clamp(10.0 - global_position.distance_to(bear.global_position), 1.0, 10.0), "bear")
 	if heart_guy: global.set_distortion(clamp(15.0 - global_position.distance_to(heart_guy.global_position), 1.0, 15.0), "heart_guy")
 	if shadow: global.set_distortion(
 		clamp(
