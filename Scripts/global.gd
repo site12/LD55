@@ -96,7 +96,6 @@ func play_sound(sound: AudioStreamWAV):
 	audio_player.finished.connect(func destroy(): audio_player.queue_free())
 
 func interact_body():
-	var hud = %body_interact
 	if finger_intact&&!face_returned&&!necklace_returned&&!heart_returned:
 		%body_text.text = "She can't talk right now."
 		%body_anims.play("fade")
@@ -109,12 +108,12 @@ func interact_body():
 		await get_tree().create_timer(5).timeout
 		%Player.can_interact = true
 		%Player.can_walk = true
+		%house_interior.get_node("basement_misc/Mass/mass_collider/mass_col").disabled = false
 
 
 func interact_mass():
-	var hud = %body_interact
 	if finger_intact&&!face_returned&&!necklace_returned&&!heart_returned:
-		%body_text.text = "YOU'RE IN A TERRIBLE CIRCUMSTANCE, AREN'T YOU?"
+		%body_text.text = "YOU'RE IN DIRE STRAITS, AREN'T YOU?"
 		%body_anims.play("fade")
 		%Player.can_interact = false
 		%Player.can_walk = false

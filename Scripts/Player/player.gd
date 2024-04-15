@@ -53,6 +53,8 @@ func _unhandled_input(event: InputEvent) -> void:
 						position = tele_node.global_position
 				if collider.is_in_group("body"):
 					global.interact_body()
+				if collider.is_in_group("wall"):
+					global.interact_mass()
 				
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		if event is InputEventMouseMotion:
