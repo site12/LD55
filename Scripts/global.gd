@@ -3,6 +3,8 @@ extends CanvasLayer
 var finger_intact = true
 @onready var house_ext_tele = get_node("SubViewportContainer/SubViewport/Tbtest/house_ext_tele")
 @onready var house_int_tele = get_node("SubViewportContainer/SubViewport/house_interior/house_int_tele")
+@onready var boathouse_ext_tele = get_node("SubViewportContainer/SubViewport/boathouse/boathouse_ext_tele")
+@onready var boathouse_int_tele = get_node("SubViewportContainer/SubViewport/boathouse_int/boathouse_int_tele")
 
 func set_finger_intact(finger: bool) -> bool:
 	finger_intact = finger
@@ -20,4 +22,8 @@ func get_tele_node(node_name: String) -> Node:
 	if node_name == "house_int_tele":
 		get_node("SubViewportContainer/SubViewport/Tbtest/WorldEnvironment").environment.volumetric_fog_density = 0.3
 		return house_int_tele
+	if node_name == "boathouse_ext_tele":
+		return boathouse_ext_tele
+	if node_name == "boathouse_int_tele":
+		return boathouse_int_tele
 	return null
