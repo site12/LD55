@@ -1,3 +1,5 @@
+# Heart by Poly by Google [CC-BY] via Poly Pizza
+
 extends CanvasLayer
 
 const D_MULTIPLY: float = 8.0
@@ -23,8 +25,10 @@ var distortion_source: String = ""
 @onready var heart_guy = get_node_or_null("SubViewportContainer/SubViewport/Tbtest/heart_guy")
 @onready var shadow = get_node_or_null("SubViewportContainer/SubViewport/Tbtest/shadow")
 @onready var mass_lights = get_node_or_null("SubViewportContainer/SubViewport/house_interior/basement_misc/Mass/light_pivot")
+@onready var player = get_node_or_null("SubViewportContainer/SubViewport/Tbtest/Player")
 
 signal level_changed_flood
+signal item_returned
 
 func set_distortion(d_level: float, d_source: String) -> void:
 	if d_level > distortion:
@@ -121,18 +125,31 @@ func play_sound(sound: AudioStreamWAV):
 
 func interact_body():
 	if finger_intact&&!face_returned&&!necklace_returned&&!heart_returned:
-		%body_text.text = "She can't talk right now."
-		%body_anims.play("fade")
-		%Player.can_interact = false
-		%Player.can_walk = false
-		%interact.visible = false
-		%interact_cut.visible = false
-		if mass_lights:
-			mass_lights.visible = true
-		await get_tree().create_timer(5).timeout
-		%Player.can_interact = true
-		%Player.can_walk = true
-		%house_interior.get_node("basement_misc/Mass/mass_collider/mass_col").disabled = false
+		if !player.holding_heart&&!player.holding_face&&!player.holding_necklace:
+			%body_text.text = "She can't talk right now."
+			%body_anims.play("fade")
+			%Player.can_interact = false
+			%Player.can_walk = false
+			%interact.visible = false
+			%interact_cut.visible = false
+			if mass_lights:
+				mass_lights.visible = true
+			await get_tree().create_timer(5).timeout
+			%Player.can_interact = true
+			%Player.can_walk = true
+			%house_interior.get_node("basement_misc/Mass/mass_collider/mass_col").disabled = false
+	# Return items to body
+	if player.holding_necklace:
+		necklace_returned = true
+		player.on_item_returned()
+		get_node("SubViewportContainer/SubViewport/house_interior/woman2/necklace").visible = true
+	elif player.holding_face:
+		face_returned = true
+		player.on_item_returned()
+		get_node("SubViewportContainer/SubViewport/house_interior/woman2/face").visible = true
+	elif player.holding_heart:
+		heart_returned = true
+		player.on_item_returned()
 
 func interact_mass():
 	if finger_intact&&!face_returned&&!necklace_returned&&!heart_returned:
@@ -170,5 +187,4 @@ func interact_axe(player):
 		%Player.can_interact = false
 		%body_anims.play("fully_fade")
 		await get_tree().create_timer(0.5).timeout
-		%boathouse_int.begin_cutscene(player,%boathouse_cam)
-		
+		%boathouse_int.begin_cutscene(player, %boathouse_cam)

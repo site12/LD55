@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://cgt5bfb0b5qf6"]
 
-[ext_resource type="PackedScene" uid="uid://bue182aefkwfy" path="res://Assets/body/face/face.fbx" id="1_8kyy4"]
+[ext_resource type="PackedScene" uid="uid://dfd10c3gnjc5r" path="res://Assets/body/face/face.fbx" id="1_8kyy4"]
 
 [node name="face" instance=ExtResource("1_8kyy4")]

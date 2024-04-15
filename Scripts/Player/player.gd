@@ -8,6 +8,10 @@ const BOB_FREQ = 2.4
 const BOB_AMP = 0.08
 var t_bob = 0.0
 
+var holding_heart: bool = false
+var holding_face: bool = true
+var holding_necklace: bool = false
+
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -18,6 +22,7 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var bear = get_tree().root.get_node_or_null("CanvasLayer/SubViewportContainer/SubViewport/Tbtest/bear")
 @onready var shadow = get_tree().root.get_node_or_null("CanvasLayer/SubViewportContainer/SubViewport/Tbtest/shadow")
 @onready var heart_guy = get_tree().root.get_node_or_null("CanvasLayer/SubViewportContainer/SubViewport/Tbtest/heart_guy")
+@onready var arms = get_node("Neck/Player_Arms")
 @onready var interact = get_tree().root.get_node_or_null("CanvasLayer/interact")
 @onready var interact_cut = get_tree().root.get_node_or_null("CanvasLayer/interact_cut")
 @onready var global = get_tree().root.get_node("CanvasLayer")
@@ -145,3 +150,27 @@ func _headbob(time) -> Vector3:
 		emit_signal("step")
 	
 	return pos
+
+func on_item_returned():
+	get_node("Neck/heart").visible = false
+	get_node("Neck/necklace").visible = false
+	get_node("Neck/face").visible = false
+	arms.visible = false
+	holding_heart = false
+	holding_face = true
+	holding_necklace = false
+
+func pickup_heart():
+	get_node("Neck/heart").visible = true
+	arms.visible = true
+	holding_heart = true
+
+func pickup_necklace():
+	get_node("Neck/necklace").visible = true
+	arms.visible = true
+	holding_necklace = true
+
+func pickup_face():
+	get_node("Neck/face").visible = true
+	arms.visible = true
+	holding_face = true
