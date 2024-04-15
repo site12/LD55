@@ -5,7 +5,7 @@ const D_MULTIPLY: float = 8.0
 var finger_intact: bool = true
 var face_returned: bool = false
 var necklace_returned: bool = false
-var hear_returned: bool = false
+var heart_returned: bool = false
 
 # Distortion var for shader; min = 1.0; max = 10.0
 var distortion: float = 1.0
@@ -13,7 +13,7 @@ var distortion_source: String = ""
 
 @onready var shader = get_node("PostProcessing").get_material()
 
-@onready var house_ext_tele = get_node("SubViewportContainer/SubViewport/Tbtest/house_ext_tele")
+@onready var house_ext_tele = get_node("SubViewportContainer/SubViewport/Tbtest/house/house_ext_tele")
 @onready var house_int_tele = get_node("SubViewportContainer/SubViewport/house_interior/house_int_tele")
 @onready var boathouse_ext_tele = get_node("SubViewportContainer/SubViewport/boathouse/boathouse_ext_tele")
 @onready var boathouse_int_tele = get_node("SubViewportContainer/SubViewport/boathouse_int/boathouse_int_tele")
