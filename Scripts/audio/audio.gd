@@ -1,6 +1,6 @@
 extends Node2D
 
-var tracks:Array[AudioStreamWAV] = [load("res://Sounds/compressed/ambience (1).wav"),load("res://Sounds/compressed/shore (1).wav")]
+var tracks:Array[AudioStreamWAV] = [load("res://Sounds/compressed/ambience (1).wav")]
 @export var locations:Array[Marker3D]
 @onready var player :CharacterBody3D = %Player
 
