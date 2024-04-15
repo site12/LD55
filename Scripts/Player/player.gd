@@ -28,7 +28,6 @@ signal step
 var can_interact = true
 var can_walk = true
 
-
 func looking_at_mannequin() -> bool:
 	if mannequin:
 		if global_position.distance_to(mannequin.global_position) < 30:
@@ -44,14 +43,14 @@ func _unhandled_input(event: InputEvent) -> void:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	if event.is_action_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	if event.is_action_pressed("interact") && can_interact:
+	if event.is_action_pressed("interact")&&can_interact:
 		if %interactable_raycast.is_colliding():
 			var collider = %interactable_raycast.get_collider()
 			if collider.is_in_group("interactables"):
 				if collider.is_in_group("doors"):
 					position = global.get_tele_node(collider.get_meta("tele_loc")).global_position
 				if collider.is_in_group("body"):
-					get_tree().get_root().get_node_or_null("CanvasLayer").interact_body()
+					global.interact_body()
 				
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		if event is InputEventMouseMotion:
@@ -69,7 +68,7 @@ func _process(delta: float) -> void:
 			1.0, 10.0),
 			"shadow")
 	if %interactable_raycast.is_colliding():
-		if %interactable_raycast.get_collider().is_in_group("interactables") && can_interact:
+		if %interactable_raycast.get_collider().is_in_group("interactables")&&can_interact:
 			if global.get_finger_intact():
 				if interact:
 					interact.visible = true
