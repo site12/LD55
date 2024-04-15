@@ -55,9 +55,11 @@ func _unhandled_input(event: InputEvent) -> void:
 					global.interact_body()
 				if collider.is_in_group("wall"):
 					global.interact_mass()
+				if collider.is_in_group("axe"):
+					global.interact_axe(self)
 				
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-		if event is InputEventMouseMotion:
+		if event is InputEventMouseMotion and can_walk:
 			neck.rotate_y( - event.relative.x * 0.01)
 			camera.rotate_x( - event.relative.y * 0.01)
 			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad( - 30), deg_to_rad(60))

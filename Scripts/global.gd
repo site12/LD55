@@ -162,3 +162,9 @@ func interact_mass():
 		await get_tree().create_timer(5).timeout
 		%Player.can_interact = true
 		%Player.can_walk = true
+
+func interact_axe(player):
+	if finger_intact&&!face_returned&&!heart_returned:
+		%boathouse_int.begin_cutscene(player,%boathouse_cam)
+		%body_anims.play("fully_fade")
+		await get_tree().create_timer(1).timeout

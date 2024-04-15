@@ -1,4 +1,4 @@
-[gd_scene load_steps=123 format=3 uid="uid://dedorys0tphb2"]
+[gd_scene load_steps=124 format=3 uid="uid://dedorys0tphb2"]
 
 [ext_resource type="Script" path="res://Scripts/forest.gd" id="1_6cpro"]
 [ext_resource type="Texture2D" uid="uid://bxgkxs8171gbf" path="res://Textures/grass_128.jpg" id="1_ae00h"]
@@ -716,6 +716,30 @@ tracks/3/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ColorRect2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ColorRect2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_mdxhp"]
 resource_name = "fade"
@@ -769,10 +793,38 @@ tracks/3/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_facw8"]
+resource_name = "fully_fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect2:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, true, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4q6k7"]
 _data = {
 "RESET": SubResource("Animation_vjndq"),
-"fade": SubResource("Animation_mdxhp")
+"fade": SubResource("Animation_mdxhp"),
+"fully_fade": SubResource("Animation_facw8")
 }
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jsohu"]
@@ -843,7 +895,7 @@ shape = SubResource("ConcavePolygonShape3D_kll8o")
 
 [node name="Player" parent="SubViewportContainer/SubViewport/Tbtest" instance=ExtResource("3_vypwc")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.1013, -3.8147e-06, 19.2358)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 102.29, -7.6294e-06, 44.6131)
 
 [node name="house" parent="SubViewportContainer/SubViewport/Tbtest" instance=ExtResource("4_2kegp")]
 transform = Transform3D(0.625134, 0, 0.780518, 0, 1, 0, -0.780518, 0, 0.625134, -32.8434, 3.87295, 33.4311)
@@ -2034,7 +2086,14 @@ shadow_enabled = true
 omni_range = 10.3
 
 [node name="boathouse_int" parent="SubViewportContainer/SubViewport" instance=ExtResource("22_pwkwe")]
+unique_name_in_owner = true
 transform = Transform3D(-0.650204, 0, -0.75976, 0, 1, 0, 0.75976, 0, -0.650204, 40.3835, 257.576, -2.05346)
+
+[node name="cutscene_cams" type="Node3D" parent="SubViewportContainer/SubViewport"]
+
+[node name="boathouse_cam" type="Camera3D" parent="SubViewportContainer/SubViewport/cutscene_cams"]
+unique_name_in_owner = true
+transform = Transform3D(0.775242, 0, -0.631664, 0, 1, 0, 0.631664, 0, 0.775242, 48.6756, 262.336, -1.3746)
 
 [node name="body_interact" type="Control" parent="SubViewportContainer/SubViewport"]
 unique_name_in_owner = true
@@ -2046,6 +2105,19 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="SubViewportContainer/SubViewport/body_interact"]
+auto_translate_mode = 1
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
 
 [node name="ColorRect" type="ColorRect" parent="SubViewportContainer/SubViewport/body_interact"]
 visible = false

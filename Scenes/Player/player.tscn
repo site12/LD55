@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_dbbxc"]
 [ext_resource type="Shader" path="res://Assets/vhs_shader.gdshader" id="2_xuu3q"]
 [ext_resource type="Script" path="res://Scenes/Player/footsteps.gd" id="3_wiq1i"]
-[ext_resource type="AudioStream" uid="uid://belp45vkt0qii" path="res://Sounds/footsteps/outside_walk.wav" id="4_fy2dr"]
+[ext_resource type="AudioStream" path="res://Sounds/footsteps/outside_walk.wav" id="4_fy2dr"]
 [ext_resource type="AudioStream" uid="uid://cma8r6b8ouf6k" path="res://Sounds/footsteps/wood_walk.wav" id="5_k65rr"]
 [ext_resource type="AudioStream" uid="uid://0q0n5wklycao" path="res://Sounds/footsteps/concrete_walk.wav" id="6_732ls"]
 
