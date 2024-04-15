@@ -22,6 +22,3 @@ mono_crash.*.json
 .DS_Store
 *~
 *.blend1
-
-# Local import files
-*.import
