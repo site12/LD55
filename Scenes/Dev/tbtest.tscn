@@ -1,4 +1,4 @@
-[gd_scene load_steps=121 format=3 uid="uid://dedorys0tphb2"]
+[gd_scene load_steps=122 format=3 uid="uid://dedorys0tphb2"]
 
 [ext_resource type="Script" path="res://Scripts/forest.gd" id="1_6cpro"]
 [ext_resource type="Texture2D" uid="uid://bxgkxs8171gbf" path="res://Textures/grass_128.jpg" id="1_ae00h"]
@@ -27,8 +27,8 @@
 [ext_resource type="Texture2D" uid="uid://drnuw2gdm10mv" path="res://Textures/TCom_Wall_BlockConcrete4_2x2_512_albedo.png" id="20_65hjp"]
 [ext_resource type="Texture2D" uid="uid://b1nhnjxfstq8m" path="res://Textures/psx/rooftiles1_128.jpg" id="21_b0dob"]
 [ext_resource type="PackedScene" uid="uid://0xk4g071t25n" path="res://Scenes/encounters/boathouse_int.tscn" id="22_pwkwe"]
-[ext_resource type="FontFile" uid="uid://dwjkbrnw7o6se" path="res://Assets/fonts/Palatino/palr45w.ttf" id="28_8v6wn"]
-[ext_resource type="AudioStream" uid="uid://3a1fl4l8xxwt" path="res://Sounds/bug.wav" id="29_x8i12"]
+[ext_resource type="FontFile" uid="uid://cmq6cvids1oje" path="res://Assets/fonts/Palatino/palr45w.ttf" id="28_8v6wn"]
+[ext_resource type="AudioStream" uid="uid://buoce30scygnf" path="res://Sounds/bug.wav" id="29_x8i12"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dwvbc"]
 albedo_texture = ExtResource("1_tyfa8")
@@ -107,12 +107,12 @@ size = Vector3(1, 2.02698, 1)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_t1pob"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ekjh7"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x8sc7"]
 transparency = 1
 albedo_color = Color(0, 0.176471, 1, 0.54902)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ousjl"]
-material = SubResource("StandardMaterial3D_ekjh7")
+material = SubResource("StandardMaterial3D_x8sc7")
 size = Vector2(512, 512)
 subdivide_width = 1024
 subdivide_depth = 1024
@@ -120,7 +120,18 @@ subdivide_depth = 1024
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_geurf"]
 render_priority = 0
 shader = ExtResource("11_0q5ke")
-shader_parameter/out_color = Color(0.625575, 7.46027e-07, 1.44392e-07, 1)
+shader_parameter/out_color = Color(0, 0.780392, 0.705882, 1)
+shader_parameter/amount = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/beer_factor = 0.0
+shader_parameter/metallic = 0.6
+shader_parameter/specular = 0.5
+shader_parameter/roughness = 0.01
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_almje"]
+render_priority = 0
+shader = ExtResource("11_0q5ke")
+shader_parameter/out_color = Color(1, 0, 0, 1)
 shader_parameter/amount = 0.2
 shader_parameter/speed = 1.0
 shader_parameter/beer_factor = 0.0
@@ -1061,7 +1072,7 @@ visible = false
 [node name="MeshInstance3D" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/Tbtest/Flood"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.52464, 0)
 mesh = SubResource("PlaneMesh_ousjl")
-surface_material_override/0 = SubResource("ShaderMaterial_geurf")
+surface_material_override/0 = SubResource("ShaderMaterial_almje")
 
 [node name="shadow" parent="SubViewportContainer/SubViewport/Tbtest" instance=ExtResource("11_s5gid")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.3086, 0, 16.0304)

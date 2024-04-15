@@ -1,4 +1,4 @@
-[gd_scene load_steps=84 format=3 uid="uid://0xk4g071t25n"]
+[gd_scene load_steps=88 format=3 uid="uid://0xk4g071t25n"]
 
 [ext_resource type="Texture2D" uid="uid://2ivsxj883nxa" path="res://Textures/logwall_128.png" id="1_id8xv"]
 [ext_resource type="Texture2D" uid="uid://s3myhn0l2lgy" path="res://Textures/metal-sheet_128.png" id="2_7jm1c"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://drbr3nfi0l4m6" path="res://Textures/planks_128.jpg" id="5_1p6ui"]
 [ext_resource type="Texture2D" uid="uid://drnuw2gdm10mv" path="res://Textures/TCom_Wall_BlockConcrete4_2x2_512_albedo.png" id="6_v75tt"]
 [ext_resource type="Texture2D" uid="uid://b1nhnjxfstq8m" path="res://Textures/psx/rooftiles1_128.jpg" id="7_k6dak"]
+[ext_resource type="Shader" path="res://Assets/water.gdshader" id="8_6mrqb"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_tpi07"]
 
@@ -559,13 +560,43 @@ size = Vector3(1, 2.02698, 1)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_6a3nc"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dargs"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7fgvx"]
+render_priority = 0
+shader = ExtResource("8_6mrqb")
+shader_parameter/out_color = Color(0, 0.780392, 0.705882, 1)
+shader_parameter/amount = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/beer_factor = 0.0
+shader_parameter/metallic = 0.6
+shader_parameter/specular = 0.5
+shader_parameter/roughness = 0.01
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_cjblr"]
+material = SubResource("ShaderMaterial_7fgvx")
+size = Vector2(50, 60)
+subdivide_width = 50
+subdivide_depth = 50
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ekjh7"]
 transparency = 1
 albedo_color = Color(0, 0.176471, 1, 0.54902)
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_cjblr"]
-material = SubResource("StandardMaterial3D_dargs")
-size = Vector2(50, 60)
+[sub_resource type="PlaneMesh" id="PlaneMesh_53i56"]
+material = SubResource("StandardMaterial3D_ekjh7")
+size = Vector2(512, 512)
+subdivide_width = 1024
+subdivide_depth = 1024
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k27qp"]
+render_priority = 0
+shader = ExtResource("8_6mrqb")
+shader_parameter/out_color = Color(0.625575, 7.46027e-07, 1.44392e-07, 1)
+shader_parameter/amount = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/beer_factor = 0.0
+shader_parameter/metallic = 0.6
+shader_parameter/specular = 0.5
+shader_parameter/roughness = 0.01
 
 [node name="boathouse_int" type="Node3D"]
 transform = Transform3D(-0.650204, 0, -0.75976, 0, 1, 0, 0.75976, 0, -0.650204, 0, 0, 0)
@@ -861,3 +892,11 @@ skeleton = NodePath("../..")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Water"]
 transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, -5.17694, 1.8899, -17.5371)
 mesh = SubResource("PlaneMesh_cjblr")
+
+[node name="Water" type="Node3D" parent="Water"]
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Water/Water"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.52464, 0)
+mesh = SubResource("PlaneMesh_53i56")
+surface_material_override/0 = SubResource("ShaderMaterial_k27qp")
