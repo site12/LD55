@@ -5,6 +5,7 @@
 [ext_resource type="Script" path="res://Scripts/global.gd" id="1_dquwi"]
 [ext_resource type="Texture2D" uid="uid://c2ebufbw1qyj4" path="res://Textures/psx/grass2_128.jpg" id="1_tyfa8"]
 [ext_resource type="PackedScene" uid="uid://dck51t6nais1v" path="res://Assets/Trees/Tree3/Tree3.tscn" id="2_pyars"]
+[ext_resource type="Environment" uid="uid://clgnoaed447hy" path="res://Scenes/Dev/main_env.tres" id="3_ta5io"]
 [ext_resource type="PackedScene" uid="uid://cg3eacvgu84jj" path="res://Scenes/Player/player.tscn" id="3_vypwc"]
 [ext_resource type="PackedScene" uid="uid://bc8oyyfp861og" path="res://Scenes/buildings/house/house.tscn" id="4_2kegp"]
 [ext_resource type="Texture2D" uid="uid://cwi6e0s1nw4bs" path="res://Textures/path_128.jpg" id="4_jvg4q"]
@@ -12,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://crtuwqyesxf4p" path="res://Assets/Mannequin/mannequin_seperated.tscn" id="7_0nwli"]
 [ext_resource type="PackedScene" uid="uid://isv4jkscqmp1" path="res://Scenes/encounters/forest_floor.tscn" id="7_ul23i"]
 [ext_resource type="PackedScene" uid="uid://bygc8ag3arp4u" path="res://Assets/Rocks/Rocas/rock_1.tscn" id="10_u6yme"]
+[ext_resource type="Shader" path="res://Assets/water.gdshader" id="11_0q5ke"]
 [ext_resource type="PackedScene" uid="uid://ktwagrl61qgy" path="res://Scenes/shadow.tscn" id="11_s5gid"]
 [ext_resource type="Script" path="res://Scripts/audio/audio.gd" id="12_j7u1h"]
 [ext_resource type="Texture2D" uid="uid://cfrnsbhleeqvx" path="res://Assets/hand.png" id="14_s8hn1"]
@@ -25,23 +27,6 @@
 [ext_resource type="Texture2D" uid="uid://drnuw2gdm10mv" path="res://Textures/TCom_Wall_BlockConcrete4_2x2_512_albedo.png" id="20_65hjp"]
 [ext_resource type="Texture2D" uid="uid://b1nhnjxfstq8m" path="res://Textures/psx/rooftiles1_128.jpg" id="21_b0dob"]
 [ext_resource type="PackedScene" uid="uid://0xk4g071t25n" path="res://Scenes/encounters/boathouse_int.tscn" id="22_pwkwe"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mg4xp"]
-sky_top_color = Color(0.00514768, 0, 0.401698, 1)
-sky_horizon_color = Color(3.48948e-07, 0.197502, 0.263536, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-
-[sub_resource type="Sky" id="Sky_dehto"]
-sky_material = SubResource("ProceduralSkyMaterial_mg4xp")
-
-[sub_resource type="Environment" id="Environment_pfc5n"]
-background_mode = 2
-sky = SubResource("Sky_dehto")
-tonemap_mode = 2
-volumetric_fog_enabled = true
-volumetric_fog_density = 0.1
-volumetric_fog_albedo = Color(0.737193, 0.737193, 0.737193, 1)
-adjustment_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dwvbc"]
 albedo_texture = ExtResource("1_tyfa8")
@@ -120,13 +105,26 @@ size = Vector3(1, 2.02698, 1)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_t1pob"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mqren"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ekjh7"]
 transparency = 1
 albedo_color = Color(0, 0.176471, 1, 0.54902)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ousjl"]
-material = SubResource("StandardMaterial3D_mqren")
+material = SubResource("StandardMaterial3D_ekjh7")
 size = Vector2(512, 512)
+subdivide_width = 1024
+subdivide_depth = 1024
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_geurf"]
+render_priority = 0
+shader = ExtResource("11_0q5ke")
+shader_parameter/out_color = Color(0.625575, 7.46027e-07, 1.44392e-07, 1)
+shader_parameter/amount = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/beer_factor = 0.0
+shader_parameter/metallic = 0.6
+shader_parameter/specular = 0.5
+shader_parameter/roughness = 0.01
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_v8tbt"]
 
@@ -681,11 +679,12 @@ transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -
 light_color = Color(0.556863, 0.729412, 1, 1)
 light_energy = 0.09
 light_volumetric_fog_energy = 18.175
+light_angular_distance = 0.5
 shadow_enabled = true
 directional_shadow_blend_splits = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="SubViewportContainer/SubViewport/Tbtest"]
-environment = SubResource("Environment_pfc5n")
+environment = ExtResource("3_ta5io")
 
 [node name="TBLoader" type="TBLoader" parent="SubViewportContainer/SubViewport/Tbtest"]
 map_resource = "res://Maps/draft1.map"
@@ -938,6 +937,16 @@ transform = Transform3D(3.6766, 0.348092, 8.85357, 0.065921, 2.74497, -1.21306, 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/Tbtest/Water"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.52464, 0)
 mesh = SubResource("PlaneMesh_ousjl")
+surface_material_override/0 = SubResource("ShaderMaterial_geurf")
+
+[node name="Flood" type="Node3D" parent="SubViewportContainer/SubViewport/Tbtest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4, 0)
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/Tbtest/Flood"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.52464, 0)
+mesh = SubResource("PlaneMesh_ousjl")
+surface_material_override/0 = SubResource("ShaderMaterial_geurf")
 
 [node name="shadow" parent="SubViewportContainer/SubViewport/Tbtest" instance=ExtResource("11_s5gid")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.3086, 0, 16.0304)

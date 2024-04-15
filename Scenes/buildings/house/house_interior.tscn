@@ -25,8 +25,8 @@
 [ext_resource type="PackedScene" uid="uid://ctljpljx8d3d" path="res://Assets/Can/can.tscn" id="23_yphja"]
 [ext_resource type="PackedScene" uid="uid://cusrvqpwifqgf" path="res://Assets/mass/mass.tscn" id="25_7rybl"]
 [ext_resource type="PackedScene" uid="uid://bdfj8ssgrgvbi" path="res://Assets/Kitchen Sink/kitchen_sink.tscn" id="25_cv564"]
-[ext_resource type="Texture2D" uid="uid://bexla32aeahx1" path="res://Textures/BLOOD.png" id="26_2dv7r"]
-[ext_resource type="Texture2D" uid="uid://qsdgava67240" path="res://Assets/body/Pe8.png" id="26_ywv7p"]
+[ext_resource type="Texture2D" uid="uid://c4ngnbtc4pppe" path="res://Textures/BLOOD.png" id="26_2dv7r"]
+[ext_resource type="Texture2D" uid="uid://crs8o6qhf5uvt" path="res://Assets/body/Pe8.png" id="26_ywv7p"]
 [ext_resource type="PackedScene" uid="uid://fxsorecdshl1" path="res://Scenes/Dev/candle.tscn" id="28_8wjm1"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_bj51l"]
