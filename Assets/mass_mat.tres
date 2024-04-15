@@ -1,0 +1,28 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://cogi1rsonh2ud"]
+
+[ext_resource type="Shader" path="res://Assets/mass.gdshader" id="1_y78bj"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x80cw"]
+load_path = "res://.godot/imported/hell.png-a36cc90ece861404f5dabfa19ab3f6eb.s3tc.ctex"
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_c3dti"]
+noise_type = 3
+fractal_type = 3
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_3k601"]
+as_normal_map = true
+bump_strength = 32.0
+noise = SubResource("FastNoiseLite_c3dti")
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_y78bj")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0.45, 0)
+shader_parameter/brightness = 1.0
+shader_parameter/disp_scale = Vector2(0.1, 0.1)
+shader_parameter/strength = 0.1
+shader_parameter/speed = 0.5
+shader_parameter/albedo_texture = SubResource("CompressedTexture2D_x80cw")
+shader_parameter/flowMap = SubResource("NoiseTexture2D_3k601")

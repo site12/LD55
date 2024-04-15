@@ -21,6 +21,7 @@ var distortion_source: String = ""
 @onready var boathouse_ext_tele = get_node("SubViewportContainer/SubViewport/boathouse/boathouse_ext_tele")
 @onready var boathouse_int_tele = get_node("SubViewportContainer/SubViewport/boathouse_int/boathouse_int_tele")
 @onready var heart_guy = get_node_or_null("SubViewportContainer/SubViewport/Tbtest/heart_guy")
+@onready var mass_lights = get_node_or_null("SubViewportContainer/SubViewport/house_interior/basement_misc/Mass/light_pivot")
 
 signal level_changed_flood
 
@@ -103,6 +104,8 @@ func interact_body():
 		%Player.can_walk = false
 		%interact.visible = false
 		%interact_cut.visible = false
+		if mass_lights:
+			mass_lights.visible = true
 		await get_tree().create_timer(5).timeout
 		%Player.can_interact = true
 		%Player.can_walk = true
