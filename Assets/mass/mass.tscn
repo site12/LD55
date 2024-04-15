@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cusrvqpwifqgf"]
+
+[ext_resource type="PackedScene" uid="uid://c2bgd3sy8hgd7" path="res://Assets/mass/Mass.fbx" id="1_vlymi"]
+
+[node name="Mass" instance=ExtResource("1_vlymi")]
+
+[node name="Mass" parent="." index="0"]
+transform = Transform3D(50, 0, 0, 0, 18.046, 0, 0, 0, 44.257, 0, 0.00506622, 0)

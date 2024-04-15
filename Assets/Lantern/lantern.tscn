@@ -44,4 +44,5 @@ shadow_mesh = SubResource("ArrayMesh_7rf6k")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(103, 0, 0, 0, -4.50227e-06, 103, 0, -103, -4.50227e-06, 0, 0, 0)
+cast_shadow = 0
 mesh = SubResource("ArrayMesh_mn4fu")
