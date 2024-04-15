@@ -1,19 +1,18 @@
-[gd_scene load_steps=75 format=3 uid="uid://dvxo50xpfvolu"]
+[gd_scene load_steps=71 format=3 uid="uid://dvxo50xpfvolu"]
 
-[ext_resource type="Texture2D" uid="uid://b57vwgs5ivuaj" path="res://textures/plywood1_brown_128.jpg" id="1_kpca5"]
-[ext_resource type="Texture2D" uid="uid://b3bgmydhhdct7" path="res://textures/plywood2_brown_128.png" id="2_map3m"]
-[ext_resource type="PackedScene" uid="uid://cg3eacvgu84jj" path="res://Scenes/Player/player.tscn" id="2_rhyi4"]
-[ext_resource type="Texture2D" uid="uid://k6q0yix5wlvi" path="res://textures/psx/wood_siding_128.jpg" id="3_pe6pd"]
+[ext_resource type="Texture2D" uid="uid://b57vwgs5ivuaj" path="res://Textures/plywood1_brown_128.jpg" id="1_kpca5"]
+[ext_resource type="Texture2D" uid="uid://b3bgmydhhdct7" path="res://Textures/plywood2_brown_128.png" id="2_map3m"]
+[ext_resource type="Texture2D" uid="uid://k6q0yix5wlvi" path="res://Textures/psx/wood_siding_128.jpg" id="3_pe6pd"]
 [ext_resource type="Shader" path="res://Assets/vhs_shader_CI_version.gdshader" id="4_sa78g"]
-[ext_resource type="Texture2D" uid="uid://b1nhnjxfstq8m" path="res://textures/psx/rooftiles1_128.jpg" id="4_w3uh8"]
-[ext_resource type="Texture2D" uid="uid://bf1caqi4p7xws" path="res://textures/plywood1_128.jpg" id="5_ls03l"]
-[ext_resource type="Texture2D" uid="uid://dcpjligv5tbgk" path="res://textures/drywall_old_128.png" id="6_lkbgd"]
-[ext_resource type="Texture2D" uid="uid://bnrjlg0bshhvs" path="res://textures/wood_old_128.png" id="7_e8ej5"]
-[ext_resource type="Texture2D" uid="uid://cecqhrmx3emgp" path="res://textures/oldbrick_128.png" id="7_l61hn"]
-[ext_resource type="Texture2D" uid="uid://b7t4d1j6stxdf" path="res://textures/concrete_128.png" id="8_e3nuu"]
-[ext_resource type="Texture2D" uid="uid://cvkn3nft3flmr" path="res://textures/asphalt_128.png" id="9_i24eu"]
-[ext_resource type="Texture2D" uid="uid://drbr3nfi0l4m6" path="res://textures/planks_128.jpg" id="10_ofpvv"]
-[ext_resource type="Texture2D" uid="uid://eb8ycwmvsgj8" path="res://textures/rippedwallpaper_128.png" id="11_ho512"]
+[ext_resource type="Texture2D" uid="uid://b1nhnjxfstq8m" path="res://Textures/psx/rooftiles1_128.jpg" id="4_w3uh8"]
+[ext_resource type="Texture2D" uid="uid://bf1caqi4p7xws" path="res://Textures/plywood1_128.jpg" id="5_ls03l"]
+[ext_resource type="Texture2D" uid="uid://dcpjligv5tbgk" path="res://Textures/drywall_old_128.png" id="6_lkbgd"]
+[ext_resource type="Texture2D" uid="uid://bnrjlg0bshhvs" path="res://Textures/wood_old_128.png" id="7_e8ej5"]
+[ext_resource type="Texture2D" uid="uid://cecqhrmx3emgp" path="res://Textures/oldbrick_128.png" id="7_l61hn"]
+[ext_resource type="Texture2D" uid="uid://b7t4d1j6stxdf" path="res://Textures/concrete_128.png" id="8_e3nuu"]
+[ext_resource type="Texture2D" uid="uid://cvkn3nft3flmr" path="res://Textures/asphalt_128.png" id="9_i24eu"]
+[ext_resource type="Texture2D" uid="uid://drbr3nfi0l4m6" path="res://Textures/planks_128.jpg" id="10_ofpvv"]
+[ext_resource type="Texture2D" uid="uid://eb8ycwmvsgj8" path="res://Textures/rippedwallpaper_128.png" id="11_ho512"]
 [ext_resource type="PackedScene" uid="uid://bpred3t5ujto1" path="res://Assets/Loveseat/loveseat.tscn" id="12_gc21s"]
 [ext_resource type="PackedScene" uid="uid://b3bqlsjufy6rm" path="res://Assets/Sleeping bag/sleeping_bag.tscn" id="13_xrp4g"]
 [ext_resource type="PackedScene" uid="uid://c0mlbfrwjtnvw" path="res://Assets/Pot/pot.tscn" id="14_fjofu"]
@@ -26,19 +25,6 @@
 [ext_resource type="PackedScene" uid="uid://bfqfmw77rkcpn" path="res://Assets/Fridge/fridge.tscn" id="22_u5b4q"]
 [ext_resource type="PackedScene" uid="uid://ctljpljx8d3d" path="res://Assets/Can/can.tscn" id="23_yphja"]
 [ext_resource type="PackedScene" uid="uid://bdfj8ssgrgvbi" path="res://Assets/Kitchen Sink/kitchen_sink.tscn" id="25_cv564"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sd38u"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-
-[sub_resource type="Sky" id="Sky_28547"]
-sky_material = SubResource("ProceduralSkyMaterial_sd38u")
-
-[sub_resource type="Environment" id="Environment_s224c"]
-background_mode = 2
-sky = SubResource("Sky_28547")
-tonemap_mode = 2
-glow_enabled = true
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_u1we5"]
 
@@ -494,13 +480,6 @@ render_target_update_mode = 4
 
 [node name="house_interior" type="Node3D" parent="SubViewportContainer/SubViewport"]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport/house_interior"]
-transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.75, -0.43301, 0, 0, 0)
-shadow_enabled = true
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="SubViewportContainer/SubViewport/house_interior"]
-environment = SubResource("Environment_s224c")
-
 [node name="TBLoader" type="TBLoader" parent="SubViewportContainer/SubViewport/house_interior"]
 map_resource = "res://Maps/house_interior.map"
 option_filter_nearest = true
@@ -611,9 +590,6 @@ mesh = SubResource("ArrayMesh_gsp20")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/house_interior/TBLoader/door2/entity_9_geometry_col"]
 shape = SubResource("ConcavePolygonShape3D_tj7x5")
-
-[node name="Player" parent="SubViewportContainer/SubViewport/house_interior" instance=ExtResource("2_rhyi4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6709, 3.8947, -2.40362)
 
 [node name="Misc" type="Node3D" parent="SubViewportContainer/SubViewport/house_interior"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.126929, 0.0326538, 0.309204)

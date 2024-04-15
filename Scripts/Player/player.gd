@@ -9,8 +9,6 @@ const BOB_FREQ = 2.4
 const BOB_AMP = 0.08
 var t_bob = 0.0
 
-var finger_intact: bool = false
-
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 # Distortion var for shader; min = 1.0; max = 10.0
@@ -24,6 +22,7 @@ var distortion_source: String = ""
 @onready var shadow = get_tree().root.get_node_or_null("CanvasLayer/SubViewportContainer/SubViewport/Tbtest/shadow")
 @onready var interact = get_tree().root.get_node_or_null("CanvasLayer/interact")
 @onready var interact_cut = get_tree().root.get_node_or_null("CanvasLayer/interact_cut")
+@onready var global = get_tree().root.get_node("CanvasLayer")
 
 var can_play: bool = false
 signal step
@@ -43,6 +42,13 @@ func _unhandled_input(event: InputEvent) -> void:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	if event.is_action_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	if event.is_action_pressed("interact"):
+		if %interactable_raycast.is_colliding():
+			var collider = %interactable_raycast.get_collider()
+			if collider.is_in_group("interactables"):
+				if collider.is_in_group("doors"):
+					position = global.get_tele_node(collider.get_meta("tele_loc")).global_position
+				
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		if event is InputEventMouseMotion:
 			neck.rotate_y( - event.relative.x * 0.01)
@@ -72,7 +78,7 @@ func _process(delta: float) -> void:
 			"shadow")
 	if %interactable_raycast.is_colliding():
 		if %interactable_raycast.get_collider().is_in_group("interactables"):
-			if finger_intact:
+			if global.get_finger_intact():
 				if interact:
 					interact.visible = true
 			else:
@@ -113,8 +119,6 @@ func _physics_process(delta: float) -> void:
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			velocity.z = move_toward(velocity.z, 0, SPEED)
-		
-		
 		
 		move_and_slide()
 	elif looking_at_mannequin():
