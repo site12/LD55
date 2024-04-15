@@ -95,11 +95,15 @@ func get_tele_node(node_name: String) -> Node:
 		set_shadow_active(true)
 		return boathouse_ext_tele
 	if node_name == "boathouse_int_tele":
-		play_sound(load("res://Sounds/door_open.wav"))
-		player_indoors = true
-		set_heartguy_active(false)
-		set_shadow_active(false)
-		return boathouse_int_tele
+		if body_interacted:
+			play_sound(load("res://Sounds/door_open.wav"))
+			player_indoors = true
+			set_heartguy_active(false)
+			set_shadow_active(false)
+			return boathouse_int_tele
+		else:
+			play_sound(load("res://Sounds/door_locked.wav"))
+			return null
 	return null
 
 func _ready():
