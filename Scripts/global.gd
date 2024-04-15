@@ -17,6 +17,9 @@ var distortion_source: String = ""
 @onready var house_int_tele = get_node("SubViewportContainer/SubViewport/house_interior/house_int_tele")
 @onready var boathouse_ext_tele = get_node("SubViewportContainer/SubViewport/boathouse/boathouse_ext_tele")
 @onready var boathouse_int_tele = get_node("SubViewportContainer/SubViewport/boathouse_int/boathouse_int_tele")
+@onready var heart_guy = get_node_or_null("SubViewportContainer/SubViewport/Tbtest/heart_guy")
+
+signal level_changed_flood
 
 func set_distortion(d_level: float, d_source: String) -> void:
 	if d_level > distortion:
@@ -58,14 +61,16 @@ func get_tele_node(node_name: String) -> Node:
 		return boathouse_int_tele
 	return null
 
-# func _ready():
-# 	_scene_change_flood()
+func _ready():
+	if heart_guy:
+		connect("level_changed_flood", heart_guy._on_level_changed_flood)
 
 func _scene_change_flood():
 	get_node("SubViewportContainer/SubViewport/Tbtest/WorldEnvironment").environment = load('res://Scenes/Dev/flood_env.tres')
 	get_node("SubViewportContainer/SubViewport/Tbtest/DirectionalLight3D").light_color = Color.LIGHT_CORAL
 	get_node("SubViewportContainer/SubViewport/Tbtest/DirectionalLight3D").light_energy = 0.5
 	get_node("SubViewportContainer/SubViewport/Tbtest/Flood").visible = true
+	level_changed_flood.emit()
 
 func play_sound(sound: AudioStreamWAV):
 	var audio_player: AudioStreamPlayer2D = AudioStreamPlayer2D.new()
