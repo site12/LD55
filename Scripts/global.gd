@@ -109,3 +109,17 @@ func interact_body():
 		await get_tree().create_timer(5).timeout
 		%Player.can_interact = true
 		%Player.can_walk = true
+
+
+func interact_mass():
+	var hud = %body_interact
+	if finger_intact&&!face_returned&&!necklace_returned&&!heart_returned:
+		%body_text.text = "YOU'RE IN A TERRIBLE CIRCUMSTANCE, AREN'T YOU?"
+		%body_anims.play("fade")
+		%Player.can_interact = false
+		%Player.can_walk = false
+		%interact.visible = false
+		%interact_cut.visible = false
+		await get_tree().create_timer(5).timeout
+		%Player.can_interact = true
+		%Player.can_walk = true

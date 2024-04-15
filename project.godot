@@ -13,7 +13,10 @@ config_version=5
 config/name="Walls that Talk"
 run/main_scene="res://Assets/body/face/face.fbx"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://Assets/icon.svg"
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/image="res://Site12Stan.png"
+boot_splash/use_filter=false
+config/icon="res://logo_aberration-square.png"
 
 [display]
 
