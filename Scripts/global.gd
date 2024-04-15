@@ -21,6 +21,7 @@ var distortion_source: String = ""
 @onready var boathouse_ext_tele = get_node("SubViewportContainer/SubViewport/boathouse/boathouse_ext_tele")
 @onready var boathouse_int_tele = get_node("SubViewportContainer/SubViewport/boathouse_int/boathouse_int_tele")
 @onready var heart_guy = get_node_or_null("SubViewportContainer/SubViewport/Tbtest/heart_guy")
+@onready var shadow = get_node_or_null("SubViewportContainer/SubViewport/Tbtest/shadow")
 @onready var mass_lights = get_node_or_null("SubViewportContainer/SubViewport/house_interior/basement_misc/Mass/light_pivot")
 
 signal level_changed_flood
@@ -41,6 +42,20 @@ func set_finger_intact(finger: bool) -> bool:
 	finger_intact = finger
 	return true
 
+func set_heartguy_active(state: bool) -> void:
+	if heart_guy:
+		heart_guy.active = state
+		heart_guy.visible = state
+		if state == true:
+			heart_guy.spawn()
+
+func set_shadow_active(state: bool) -> void:
+	if shadow:
+		shadow.active = state
+		shadow.visible = state
+		if state == true:
+			shadow.find_new_location()
+
 func get_finger_intact() -> bool:
 	return finger_intact
 
@@ -52,6 +67,9 @@ func get_tele_node(node_name: String) -> Node:
 		if body_interacted:
 			play_sound(load("res://Sounds/door_open.wav"))
 			get_node("SubViewportContainer/SubViewport/Tbtest/WorldEnvironment").environment.volumetric_fog_density = 0.1
+			# Just check that we got the node succesfully
+			set_heartguy_active(true)
+			set_shadow_active(true)
 			if face_returned&&necklace_returned:
 				_scene_change_flood()
 			player_indoors = false
@@ -63,14 +81,20 @@ func get_tele_node(node_name: String) -> Node:
 		play_sound(load("res://Sounds/door_open.wav"))
 		get_node("SubViewportContainer/SubViewport/Tbtest/WorldEnvironment").environment.volumetric_fog_density = 0.3
 		player_indoors = true
+		set_heartguy_active(false)
+		set_shadow_active(false)
 		return house_int_tele
 	if node_name == "boathouse_ext_tele":
 		play_sound(load("res://Sounds/door_open.wav"))
 		player_indoors = false
+		set_heartguy_active(true)
+		set_shadow_active(true)
 		return boathouse_ext_tele
 	if node_name == "boathouse_int_tele":
 		play_sound(load("res://Sounds/door_open.wav"))
 		player_indoors = true
+		set_heartguy_active(false)
+		set_shadow_active(false)
 		return boathouse_int_tele
 	return null
 

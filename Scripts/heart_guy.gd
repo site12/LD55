@@ -7,13 +7,14 @@ var fleeing: bool = false
 var last_spawn: Vector3 = Vector3.ZERO
 var speed: float = 10.0
 var speed_mutiplyer: float = 1.0
+var active: bool = false
 
 @onready var player = get_tree().root.get_node("CanvasLayer/SubViewportContainer/SubViewport/Tbtest/Player")
 @onready var spawn_point = player.get_node("Neck/heart_spawn")
 @onready var target = player.get_node("Neck/heart_target")
 
-func _ready() -> void:
-	spawn()
+# func _ready() -> void:
+# 	spawn()
 
 func spawn() -> void:
 	last_spawn = snapped(spawn_point.global_position, Vector3(0.1, 0.1, 0.1))
@@ -23,6 +24,7 @@ func _on_level_changed_flood():
 	speed_mutiplyer = 0.5
 
 func _process(delta) -> void:
+	if !active: return
 	# Check if entity is seen and run away
 	if !fleeing&&$VisibleOnScreenNotifier3D.is_on_screen():
 		if global_position.distance_to(player.global_position) < SEEN_DISTANCE:

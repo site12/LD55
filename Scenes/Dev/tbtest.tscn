@@ -1077,7 +1077,7 @@ mesh = SubResource("PlaneMesh_ousjl")
 surface_material_override/0 = SubResource("ShaderMaterial_almje")
 
 [node name="shadow" parent="SubViewportContainer/SubViewport/Tbtest" instance=ExtResource("11_s5gid")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.3086, 0, 16.0304)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.3086, 103.084, 16.0304)
 
 [node name="Trees_parent" type="Node3D" parent="SubViewportContainer/SubViewport/Tbtest"]
 
@@ -1714,6 +1714,7 @@ transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296
 [node name="decals" type="Node3D" parent="SubViewportContainer/SubViewport/Tbtest"]
 
 [node name="heart_guy" parent="SubViewportContainer/SubViewport/Tbtest" instance=ExtResource("15_m5sbm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 100, 0)
 
 [node name="house_interior" parent="SubViewportContainer/SubViewport" instance=ExtResource("15_jmvq6")]
 unique_name_in_owner = true
