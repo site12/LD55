@@ -1,4 +1,4 @@
-[gd_scene load_steps=107 format=3 uid="uid://dvxo50xpfvolu"]
+[gd_scene load_steps=109 format=3 uid="uid://dvxo50xpfvolu"]
 
 [ext_resource type="Texture2D" uid="uid://b57vwgs5ivuaj" path="res://Textures/plywood1_brown_128.jpg" id="1_kpca5"]
 [ext_resource type="Texture2D" uid="uid://b3bgmydhhdct7" path="res://Textures/plywood2_brown_128.png" id="2_map3m"]
@@ -29,6 +29,8 @@
 [ext_resource type="Texture2D" uid="uid://2nql3uch0220" path="res://Assets/mass/hell.png" id="26_7bqpo"]
 [ext_resource type="Texture2D" uid="uid://qsdgava67240" path="res://Assets/body/Pe8.png" id="26_ywv7p"]
 [ext_resource type="PackedScene" uid="uid://fxsorecdshl1" path="res://Scenes/Dev/candle.tscn" id="28_8wjm1"]
+[ext_resource type="PackedScene" uid="uid://cgt5bfb0b5qf6" path="res://Assets/body/face/face.tscn" id="29_mcb5a"]
+[ext_resource type="PackedScene" uid="uid://cubv87qg17r8q" path="res://Assets/body/necklace/necklace.tscn" id="30_jl2ba"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_bj51l"]
 
@@ -1646,6 +1648,14 @@ collision_layer = 257
 [node name="CollisionShape3D" type="CollisionShape3D" parent="woman2/body_collider"]
 transform = Transform3D(1, 0, -2.32831e-09, 0, 1, 0, 2.32831e-09, 0, 1, -9.21581, -3.0731, -2.36271)
 shape = SubResource("CylinderShape3D_unrr8")
+
+[node name="face" parent="woman2" instance=ExtResource("29_mcb5a")]
+transform = Transform3D(-38.7439, -34.0124, -140.862, 55.1551, 131.374, -46.8917, 134.003, -63.9067, -21.4265, -7.85991, -5.20978, 0.386967)
+visible = false
+
+[node name="necklace" parent="woman2" instance=ExtResource("30_jl2ba")]
+transform = Transform3D(-15.7461, 29.531, -247.75, 1.68041, 248.25, 29.4839, 249.498, 0.191736, -15.8343, -9.75008, -0.350405, -2.3264)
+visible = false
 
 [node name="candle" parent="." instance=ExtResource("28_8wjm1")]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -10.7085, 0.277058, -11.4583)
