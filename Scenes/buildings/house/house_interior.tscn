@@ -1,4 +1,4 @@
-[gd_scene load_steps=110 format=3 uid="uid://dvxo50xpfvolu"]
+[gd_scene load_steps=111 format=3 uid="uid://dvxo50xpfvolu"]
 
 [ext_resource type="Texture2D" uid="uid://b57vwgs5ivuaj" path="res://Textures/plywood1_brown_128.jpg" id="1_kpca5"]
 [ext_resource type="Texture2D" uid="uid://b3bgmydhhdct7" path="res://Textures/plywood2_brown_128.png" id="2_map3m"]
@@ -25,9 +25,9 @@
 [ext_resource type="PackedScene" uid="uid://ctljpljx8d3d" path="res://Assets/Can/can.tscn" id="23_yphja"]
 [ext_resource type="PackedScene" uid="uid://bdfj8ssgrgvbi" path="res://Assets/Kitchen Sink/kitchen_sink.tscn" id="25_cv564"]
 [ext_resource type="Script" path="res://Assets/mass/mass.gd" id="25_ky650"]
-[ext_resource type="Texture2D" uid="uid://c4ngnbtc4pppe" path="res://Textures/BLOOD.png" id="26_2dv7r"]
-[ext_resource type="Texture2D" uid="uid://dyred1ca4qhqd" path="res://Assets/mass/hell.png" id="26_7bqpo"]
-[ext_resource type="Texture2D" uid="uid://crs8o6qhf5uvt" path="res://Assets/body/Pe8.png" id="26_ywv7p"]
+[ext_resource type="Texture2D" uid="uid://bexla32aeahx1" path="res://Textures/BLOOD.png" id="26_2dv7r"]
+[ext_resource type="Texture2D" uid="uid://2nql3uch0220" path="res://Assets/mass/hell.png" id="26_7bqpo"]
+[ext_resource type="Texture2D" uid="uid://qsdgava67240" path="res://Assets/body/Pe8.png" id="26_ywv7p"]
 [ext_resource type="Material" uid="uid://cogi1rsonh2ud" path="res://Assets/mass_mat.tres" id="27_q804a"]
 [ext_resource type="PackedScene" uid="uid://fxsorecdshl1" path="res://Scenes/Dev/candle.tscn" id="28_8wjm1"]
 [ext_resource type="PackedScene" uid="uid://cgt5bfb0b5qf6" path="res://Assets/body/face/face.tscn" id="29_mcb5a"]
@@ -610,6 +610,9 @@ _data = {
 "RESET": SubResource("Animation_sxxxi"),
 "breateh": SubResource("Animation_pjy5b")
 }
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7cxxs"]
+size = Vector3(0.59668, 1, 0.5448)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3nahd"]
 resource_name = "Material.007"
@@ -1297,6 +1300,7 @@ transform = Transform3D(-0.182615, 0.812975, 0.552923, 0.472244, 0.565788, -0.67
 [node name="basement_misc" type="Node3D" parent="."]
 
 [node name="Mass" type="Node3D" parent="basement_misc"]
+unique_name_in_owner = true
 transform = Transform3D(-1.20731e-07, 1.11161, 3.53514e-15, -2.68562, -4.72464e-08, 0.534356, 0.645057, 1.13481e-08, 2.22473, -17.906, 1.50339, -10.048)
 script = ExtResource("25_ky650")
 
@@ -1338,31 +1342,43 @@ libraries = {
 
 [node name="light_pivot" type="Node3D" parent="basement_misc/Mass"]
 transform = Transform3D(1, -6.66134e-16, 0, 5.32907e-15, 1, 1.77636e-15, 2.98023e-08, 0, 1, 0, 0.346092, 0)
+visible = false
 
 [node name="OmniLight3D" type="OmniLight3D" parent="basement_misc/Mass/light_pivot"]
-transform = Transform3D(0.362056, -3.39728e-14, -2.98023e-08, 1.31006e-14, 0.899596, -2.57572e-14, 0, 1.77636e-15, 0.437062, -0.270288, 0.157261, -0.203081)
+transform = Transform3D(1, -3.61839e-14, -2.06096e-27, 3.61839e-14, 1, -1.97462e-15, 2.13241e-27, 1.97462e-15, 1, -0.270288, 0.157261, -0.203081)
 light_color = Color(1, 0, 0, 1)
 light_energy = 0.1
 light_volumetric_fog_energy = 0.1
 shadow_enabled = true
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="basement_misc/Mass/light_pivot"]
-transform = Transform3D(0.362056, -3.19744e-14, -4.47035e-08, 2.88658e-15, 0.899596, -2.66454e-14, 1.49012e-08, 2.22045e-15, 0.437062, 0.0203202, 0.157261, 0.33475)
+transform = Transform3D(1, -7.97275e-15, -4.11572e-08, 7.97275e-15, 1, -2.46828e-15, 4.11572e-08, 2.46828e-15, 1, 0.0203202, 0.157261, 0.33475)
 light_color = Color(1, 0, 0, 1)
 light_energy = 0.1
 shadow_enabled = true
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="basement_misc/Mass/light_pivot"]
-transform = Transform3D(0.362056, -3.38618e-14, -3.72529e-08, 9.76996e-15, 0.899596, -2.75335e-14, 7.45058e-09, 1.77636e-15, 0.437062, 0.238208, 0.157261, -0.141809)
+transform = Transform3D(1, -2.69847e-14, -2.05785e-08, 2.69847e-14, 1, -1.97462e-15, 2.05785e-08, 1.97462e-15, 1, 0.238208, 0.157261, -0.141809)
 light_color = Color(1, 0, 0, 1)
 light_energy = 0.1
 shadow_enabled = true
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="basement_misc/Mass/light_pivot"]
-transform = Transform3D(0.362056, -3.39728e-14, -2.98023e-08, 1.31006e-14, 0.899596, -2.57572e-14, 0, 1.77636e-15, 0.437062, -0.253612, 0.157261, 0.174595)
+transform = Transform3D(1, -3.61839e-14, -2.06096e-27, 3.61839e-14, 1, -1.97462e-15, 2.13241e-27, 1.97462e-15, 1, -0.253612, 0.157261, 0.174595)
 light_color = Color(1, 0, 0, 1)
 light_energy = 0.1
 shadow_enabled = true
+
+[node name="mass_collider" type="StaticBody3D" parent="basement_misc/Mass" groups=["interactables", "wall"]]
+unique_name_in_owner = true
+transform = Transform3D(1, -7.77156e-16, 0, 5.77316e-15, 1, 3.55271e-15, 2.98023e-08, 0, 1, 0, 0.369823, 0)
+collision_layer = 257
+
+[node name="mass_col" type="CollisionShape3D" parent="basement_misc/Mass/mass_collider"]
+unique_name_in_owner = true
+transform = Transform3D(0.965926, -3.70076e-09, 0.258819, -3.70075e-09, 1, 2.81103e-08, -0.258819, -2.81101e-08, 0.965926, 0.0142678, -0.333866, 0.0292163)
+shape = SubResource("BoxShape3D_7cxxs")
+disabled = true
 
 [node name="Decal" type="Decal" parent="basement_misc"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3445, 0, -10.0188)
