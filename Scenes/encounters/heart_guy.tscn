@@ -44,7 +44,7 @@ scale_amount_min = 0.1
 scale_amount_max = 2.0
 scale_amount_curve = SubResource("Curve_wb6m5")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." groups=["interactables"]]
+[node name="StaticBody3D" type="StaticBody3D" parent="." groups=["heart_guy", "interactables"]]
 collision_layer = 256
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]

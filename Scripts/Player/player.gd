@@ -62,6 +62,12 @@ func _unhandled_input(event: InputEvent) -> void:
 					global.interact_mass()
 				if collider.is_in_group("axe"):
 					global.interact_axe(self)
+				if collider.is_in_group("heart_guy"):
+					pickup_heart()
+				if collider.is_in_group("mannequin"):
+					pickup_necklace()
+				if collider.is_in_group("face"):
+					pickup_face()
 				
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		if event is InputEventMouseMotion and can_walk:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://crtuwqyesxf4p"]
+[gd_scene load_steps=11 format=3 uid="uid://crtuwqyesxf4p"]
 
 [ext_resource type="PackedScene" uid="uid://b5kb3cggvcjvu" path="res://Assets/Mannequin/mannequin_seperated.fbx" id="1_mbij5"]
 [ext_resource type="Texture2D" uid="uid://ts6usm827t31" path="res://Textures/psx/fabric_128.jpg" id="2_5l63t"]
@@ -80,6 +80,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_f64qu")
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_w4nec"]
+radius = 0.84712
+
 [node name="mannequin_seperated" instance=ExtResource("1_mbij5")]
 
 [node name="Mannequin" parent="." index="0"]
@@ -89,3 +92,25 @@ mesh = SubResource("ArrayMesh_0g8x0")
 [node name="Mannequin_001" parent="." index="1"]
 transform = Transform3D(100, 0, 0, 0, 100, 7.54979e-06, 0, -7.54979e-06, 100, -6.07297e-05, -0.246132, 3.30259e-05)
 mesh = SubResource("ArrayMesh_tolih")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="." index="2"]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+aabb = AABB(-0.5, -1, -0.5, 1, 2, 1)
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="." index="3"]
+transform = Transform3D(0.704064, 0, -0.710136, 0, 1, 0, 0.710136, 0, 0.704064, -0.999443, 0.00686005, 0.0219078)
+light_color = Color(1, 0.772549, 0.576471, 1)
+shadow_enabled = true
+omni_range = 10.3
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="." index="4"]
+transform = Transform3D(0.704064, 0, -0.710136, 0, 1, 0, 0.710136, 0, 0.704064, 0.790695, 0.381024, 1.17118)
+light_color = Color(1, 0.772549, 0.576471, 1)
+shadow_enabled = true
+omni_range = 10.3
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="5" groups=["interactables", "mannequin"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.73185, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+shape = SubResource("SphereShape3D_w4nec")
