@@ -9,7 +9,7 @@ const BOB_AMP = 0.08
 var t_bob = 0.0
 
 var holding_heart: bool = false
-var holding_face: bool = true
+var holding_face: bool = false
 var holding_necklace: bool = false
 
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
@@ -36,7 +36,6 @@ var can_walk = true
 func looking_at_mannequin() -> bool:
 	if mannequin:
 		if global_position.distance_to(mannequin.global_position) < 30:
-			print("looking")
 			return mannequin.get_node("VisibleOnScreenNotifier3D").is_on_screen()
 	return false
 

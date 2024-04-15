@@ -111,6 +111,7 @@ omni_range = 10.3
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="5" groups=["interactables", "mannequin"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.73185, 0)
+collision_layer = 256
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
 shape = SubResource("SphereShape3D_w4nec")

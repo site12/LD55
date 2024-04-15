@@ -64,9 +64,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 80)
 
 [node name="Player_Arms" parent="Neck" instance=ExtResource("3_aum46")]
 transform = Transform3D(-0.249574, 2.15368e-08, -0.0145827, 0.00170767, -0.24828, -0.0292262, -0.0144823, -0.029276, 0.247857, -0.489733, -0.387906, 0.221259)
+visible = false
 
 [node name="face" parent="Neck" instance=ExtResource("4_tmuc0")]
 transform = Transform3D(74.9518, 0.951084, -2.51497, 1.85248, 32.5797, 67.5287, 1.94883, -67.5475, 32.5353, -0.465539, -1.98355, 2.36974)
+visible = false
 
 [node name="heart" parent="Neck" instance=ExtResource("5_sconx")]
 transform = Transform3D(0.00224691, 0.00475685, -0.00337436, 0.000154374, 0.00356635, 0.00513029, 0.0058301, -0.00192771, 0.00116463, -0.544019, -0.278043, -0.911845)
