@@ -42,7 +42,7 @@ scale_amount_max = 2.0
 scale_amount_curve = SubResource("Curve_wb6m5")
 hue_variation_max = 1.0
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="." groups=["interactables"]]
 collision_layer = 256
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
