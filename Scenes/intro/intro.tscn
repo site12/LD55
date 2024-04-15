@@ -1,10 +1,10 @@
 [gd_scene load_steps=12 format=3 uid="uid://4fy8weqmy5tg"]
 
 [ext_resource type="Script" path="res://Scenes/intro/intro.gd" id="1_i1o8f"]
-[ext_resource type="FontFile" uid="uid://dwjkbrnw7o6se" path="res://Assets/fonts/Palatino/palr45w.ttf" id="1_t00uy"]
+[ext_resource type="FontFile" uid="uid://cmq6cvids1oje" path="res://Assets/fonts/Palatino/palr45w.ttf" id="1_t00uy"]
 [ext_resource type="Shader" path="res://Assets/vhs_shader_CI_version.gdshader" id="1_ukm6m"]
-[ext_resource type="AudioStream" uid="uid://crnq8n3fmxnep" path="res://Sounds/compressed/white_noise.wav" id="4_xcsry"]
-[ext_resource type="AudioStream" uid="uid://besjs02x4u386" path="res://Sounds/compressed/VHS_damage.wav" id="5_8gs30"]
+[ext_resource type="AudioStream" uid="uid://c3lobo4yk5nle" path="res://Sounds/compressed/white_noise.wav" id="4_xcsry"]
+[ext_resource type="AudioStream" uid="uid://bfq08tre8wov8" path="res://Sounds/compressed/VHS_damage.wav" id="5_8gs30"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_f8y43"]
 font = ExtResource("1_t00uy")

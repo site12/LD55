@@ -52,6 +52,7 @@ interactables=""
 doors=""
 body=""
 wall=""
+axe=""
 
 [input]
 
