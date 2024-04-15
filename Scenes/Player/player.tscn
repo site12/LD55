@@ -3,9 +3,9 @@
 [ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_dbbxc"]
 [ext_resource type="Shader" path="res://Assets/vhs_shader.gdshader" id="2_xuu3q"]
 [ext_resource type="Script" path="res://Scenes/Player/footsteps.gd" id="3_wiq1i"]
-[ext_resource type="AudioStream" uid="uid://wm8gk051q8p6" path="res://Sounds/footsteps/outside_walk.wav" id="4_fy2dr"]
-[ext_resource type="AudioStream" uid="uid://dt8dvll04wqfq" path="res://Sounds/footsteps/wood_walk.wav" id="5_k65rr"]
-[ext_resource type="AudioStream" uid="uid://3rvaysdoe0xe" path="res://Sounds/footsteps/concrete_walk.wav" id="6_732ls"]
+[ext_resource type="AudioStream" uid="uid://belp45vkt0qii" path="res://Sounds/footsteps/outside_walk.wav" id="4_fy2dr"]
+[ext_resource type="AudioStream" uid="uid://cma8r6b8ouf6k" path="res://Sounds/footsteps/wood_walk.wav" id="5_k65rr"]
+[ext_resource type="AudioStream" uid="uid://0q0n5wklycao" path="res://Sounds/footsteps/concrete_walk.wav" id="6_732ls"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_m8trs"]
 radius = 0.8
@@ -51,6 +51,12 @@ unique_name_in_owner = true
 target_position = Vector3(0, 0, -2)
 collision_mask = 256
 hit_from_inside = true
+
+[node name="heart_target" type="Node3D" parent="Neck"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 5)
+
+[node name="heart_spawn" type="Node3D" parent="Neck"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 80)
 
 [node name="footsteps" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0700037, 0)
