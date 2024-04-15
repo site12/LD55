@@ -1,13 +1,14 @@
-[gd_scene load_steps=88 format=3 uid="uid://0xk4g071t25n"]
+[gd_scene load_steps=89 format=3 uid="uid://0xk4g071t25n"]
 
-[ext_resource type="Texture2D" uid="uid://2ivsxj883nxa" path="res://Textures/logwall_128.png" id="1_id8xv"]
-[ext_resource type="Texture2D" uid="uid://s3myhn0l2lgy" path="res://Textures/metal-sheet_128.png" id="2_7jm1c"]
-[ext_resource type="Texture2D" uid="uid://4oi81k6l8j17" path="res://Textures/woodplanks_128.png" id="3_inyeu"]
-[ext_resource type="Texture2D" uid="uid://wk8f8i1v3uha" path="res://Textures/log_128x512.png" id="4_mloj6"]
+[ext_resource type="Texture2D" uid="uid://csxj3pedpecys" path="res://Textures/logwall_128.png" id="1_id8xv"]
+[ext_resource type="Texture2D" uid="uid://df6ujd8l6q1aa" path="res://Textures/metal-sheet_128.png" id="2_7jm1c"]
+[ext_resource type="Texture2D" uid="uid://dl7coc3cnvajh" path="res://Textures/woodplanks_128.png" id="3_inyeu"]
+[ext_resource type="Texture2D" uid="uid://dpfv5ybon63bg" path="res://Textures/log_128x512.png" id="4_mloj6"]
 [ext_resource type="Texture2D" uid="uid://drbr3nfi0l4m6" path="res://Textures/planks_128.jpg" id="5_1p6ui"]
 [ext_resource type="Texture2D" uid="uid://drnuw2gdm10mv" path="res://Textures/TCom_Wall_BlockConcrete4_2x2_512_albedo.png" id="6_v75tt"]
 [ext_resource type="Texture2D" uid="uid://b1nhnjxfstq8m" path="res://Textures/psx/rooftiles1_128.jpg" id="7_k6dak"]
 [ext_resource type="Shader" path="res://Assets/water.gdshader" id="8_6mrqb"]
+[ext_resource type="PackedScene" uid="uid://fxsorecdshl1" path="res://Scenes/Dev/candle.tscn" id="9_kjf1x"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_tpi07"]
 
@@ -873,6 +874,78 @@ mesh = SubResource("ArrayMesh_yhe6m")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="door2/door/entity_1_geometry_col"]
 shape = SubResource("ConcavePolygonShape3D_ety7o")
 
+[node name="door3" type="TBLoader" parent="."]
+map_resource = "res://Maps/boathouse_door.map"
+option_filter_nearest = true
+texture_path = "res://Textures"
+transform = Transform3D(0.749986, 0.00456831, 1.99678e-10, -4.13808e-23, -3.27835e-08, 0.75, 0.00456834, -0.749987, -3.27829e-08, -6.7132, 4.16842, -5.54422)
+
+[node name="Default Layer" type="Node3D" parent="door3"]
+
+[node name="entity_0_geometry" type="MeshInstance3D" parent="door3/Default Layer"]
+mesh = SubResource("ArrayMesh_7i7pp")
+
+[node name="entity_0_geometry_col" type="StaticBody3D" parent="door3/Default Layer"]
+
+[node name="door" type="Node3D" parent="door3"]
+transform = Transform3D(1, -2.98023e-08, -3.25963e-09, 0, 1, 4.19095e-09, 3.72529e-09, 9.31323e-10, 1, 0.795222, 1.608, 0.168936)
+
+[node name="entity_1_geometry" type="MeshInstance3D" parent="door3/door"]
+mesh = SubResource("ArrayMesh_yhe6m")
+
+[node name="entity_1_geometry_col" type="StaticBody3D" parent="door3/door"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="door3/door/entity_1_geometry_col"]
+shape = SubResource("ConcavePolygonShape3D_ety7o")
+
+[node name="door4" type="TBLoader" parent="."]
+map_resource = "res://Maps/boathouse_door.map"
+option_filter_nearest = true
+texture_path = "res://Textures"
+transform = Transform3D(0.75, 0, 2.98023e-08, 0, 0.75, 0, -2.98023e-08, 0, 0.75, -6.72452, 2.0312, -6.24121)
+
+[node name="Default Layer" type="Node3D" parent="door4"]
+
+[node name="entity_0_geometry" type="MeshInstance3D" parent="door4/Default Layer"]
+mesh = SubResource("ArrayMesh_7i7pp")
+
+[node name="entity_0_geometry_col" type="StaticBody3D" parent="door4/Default Layer"]
+
+[node name="door" type="Node3D" parent="door4"]
+transform = Transform3D(1, -2.98023e-08, -3.25963e-09, 0, 1, 4.19095e-09, 3.72529e-09, 9.31323e-10, 1, 0.795222, 1.608, 0.168936)
+
+[node name="entity_1_geometry" type="MeshInstance3D" parent="door4/door"]
+mesh = SubResource("ArrayMesh_yhe6m")
+
+[node name="entity_1_geometry_col" type="StaticBody3D" parent="door4/door"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="door4/door/entity_1_geometry_col"]
+shape = SubResource("ConcavePolygonShape3D_ety7o")
+
+[node name="door5" type="TBLoader" parent="."]
+map_resource = "res://Maps/boathouse_door.map"
+option_filter_nearest = true
+texture_path = "res://Textures"
+transform = Transform3D(-0.75, 0, -8.9407e-08, 0, 0.75, 0, 5.96046e-08, 0, -0.75, -5.59322, 2.0312, -7.28377)
+
+[node name="Default Layer" type="Node3D" parent="door5"]
+
+[node name="entity_0_geometry" type="MeshInstance3D" parent="door5/Default Layer"]
+mesh = SubResource("ArrayMesh_7i7pp")
+
+[node name="entity_0_geometry_col" type="StaticBody3D" parent="door5/Default Layer"]
+
+[node name="door" type="Node3D" parent="door5"]
+transform = Transform3D(1, -2.98023e-08, -3.25963e-09, 0, 1, 4.19095e-09, 3.72529e-09, 9.31323e-10, 1, 0.795222, 1.608, 0.168936)
+
+[node name="entity_1_geometry" type="MeshInstance3D" parent="door5/door"]
+mesh = SubResource("ArrayMesh_yhe6m")
+
+[node name="entity_1_geometry_col" type="StaticBody3D" parent="door5/door"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="door5/door/entity_1_geometry_col"]
+shape = SubResource("ConcavePolygonShape3D_ety7o")
+
 [node name="boathouse_int_door" type="StaticBody3D" parent="." groups=["doors", "interactables"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.71383, 4.61991, -4.64561)
 collision_layer = 256
@@ -900,3 +973,14 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.52464, 0)
 mesh = SubResource("PlaneMesh_53i56")
 surface_material_override/0 = SubResource("ShaderMaterial_k27qp")
+
+[node name="misc" type="Node3D" parent="."]
+
+[node name="candle" parent="." instance=ExtResource("9_kjf1x")]
+transform = Transform3D(-0.0749204, 0, 0.08892, 0, 0.104233, 0, -0.0875441, 0, -0.0760979, -5.62512, 4.43329, -5.92932)
+
+[node name="candle2" parent="." instance=ExtResource("9_kjf1x")]
+transform = Transform3D(-0.0749204, 0, 0.08892, 0, 0.104233, 0, -0.0875441, 0, -0.0760979, -6.05456, 4.43329, -7.40608)
+
+[node name="candle3" parent="." instance=ExtResource("9_kjf1x")]
+transform = Transform3D(-0.0749204, 0, 0.08892, 0, 0.104233, 0, -0.0875441, 0, -0.0760979, -6.57054, 4.43329, -6.1749)
