@@ -1869,9 +1869,8 @@ offset_bottom = 480.0
 mouse_filter = 2
 color = Color(1, 1, 1, 0)
 
-[node name="audio" type="Node2D" parent="." node_paths=PackedStringArray("locations")]
+[node name="audio" type="Node2D" parent="."]
 script = ExtResource("12_j7u1h")
-locations = [null]
 
 [node name="mannequin" type="Marker3D" parent="audio"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.3008, 0, -3.62946)
