@@ -38,27 +38,26 @@ func get_tele_node(node_name: String) -> Node:
 	# get the node to teleport to when going through doors
 	# we can also use this to handle scene transitions
 	if node_name == "house_ext_tele":
-		play_sound(preload("res://Sounds/door_open.wav"))
+		play_sound(load("res://Sounds/door_open.wav"))
 		get_node("SubViewportContainer/SubViewport/Tbtest/WorldEnvironment").environment.volumetric_fog_density = 0.1
 		return house_ext_tele
 	if node_name == "house_int_tele":
-		play_sound(preload("res://Sounds/door_open.wav"))
+		play_sound(load("res://Sounds/door_open.wav"))
 		get_node("SubViewportContainer/SubViewport/Tbtest/WorldEnvironment").environment.volumetric_fog_density = 0.3
 		return house_int_tele
 	if node_name == "boathouse_ext_tele":
-		play_sound(preload("res://Sounds/door_open.wav"))
+		play_sound(load("res://Sounds/door_open.wav"))
 		return boathouse_ext_tele
 	if node_name == "boathouse_int_tele":
-		play_sound(preload("res://Sounds/door_open.wav"))
+		play_sound(load("res://Sounds/door_open.wav"))
 		return boathouse_int_tele
 	return null
 
-
-func play_sound(sound:AudioStreamWAV):
-	var audio_player :AudioStreamPlayer2D = AudioStreamPlayer2D.new()
+func play_sound(sound: AudioStreamWAV):
+	var audio_player: AudioStreamPlayer2D = AudioStreamPlayer2D.new()
 	audio_player.stream = sound
 
-	audio_player.pitch_scale = randf_range(1,1.05)
+	audio_player.pitch_scale = randf_range(1, 1.05)
 	get_tree().get_root().add_child.call_deferred(audio_player)
 	await get_tree().create_timer(0.1).timeout
 	audio_player.play()
