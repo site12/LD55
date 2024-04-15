@@ -1,8 +1,11 @@
 extends CanvasLayer
 
-const D_MULTIPLY = 8.0
+const D_MULTIPLY: float = 8.0
 
-var finger_intact = true
+var finger_intact: bool = true
+var face_returned: bool = false
+var necklace_returned: bool = false
+var hear_returned: bool = false
 
 # Distortion var for shader; min = 1.0; max = 10.0
 var distortion: float = 1.0
@@ -40,6 +43,8 @@ func get_tele_node(node_name: String) -> Node:
 	if node_name == "house_ext_tele":
 		play_sound(load("res://Sounds/door_open.wav"))
 		get_node("SubViewportContainer/SubViewport/Tbtest/WorldEnvironment").environment.volumetric_fog_density = 0.1
+		if face_returned&&necklace_returned:
+			_scene_change_flood()
 		return house_ext_tele
 	if node_name == "house_int_tele":
 		play_sound(load("res://Sounds/door_open.wav"))
@@ -52,6 +57,15 @@ func get_tele_node(node_name: String) -> Node:
 		play_sound(load("res://Sounds/door_open.wav"))
 		return boathouse_int_tele
 	return null
+
+# func _ready():
+# 	_scene_change_flood()
+
+func _scene_change_flood():
+	get_node("SubViewportContainer/SubViewport/Tbtest/WorldEnvironment").environment = load('res://Scenes/Dev/flood_env.tres')
+	get_node("SubViewportContainer/SubViewport/Tbtest/DirectionalLight3D").light_color = Color.LIGHT_CORAL
+	get_node("SubViewportContainer/SubViewport/Tbtest/DirectionalLight3D").light_energy = 0.5
+	get_node("SubViewportContainer/SubViewport/Tbtest/Flood").visible = true
 
 func play_sound(sound: AudioStreamWAV):
 	var audio_player: AudioStreamPlayer2D = AudioStreamPlayer2D.new()

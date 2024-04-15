@@ -679,6 +679,7 @@ transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -
 light_color = Color(0.556863, 0.729412, 1, 1)
 light_energy = 0.09
 light_volumetric_fog_energy = 18.175
+light_angular_distance = 0.5
 shadow_enabled = true
 directional_shadow_blend_splits = true
 
@@ -940,6 +941,7 @@ surface_material_override/0 = SubResource("ShaderMaterial_geurf")
 
 [node name="Flood" type="Node3D" parent="SubViewportContainer/SubViewport/Tbtest"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4, 0)
+visible = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/Tbtest/Flood"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.52464, 0)
