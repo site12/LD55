@@ -57,7 +57,7 @@ func get_tele_node(node_name: String) -> Node:
 			player_indoors = false
 			return house_ext_tele
 		else:
-			# TODO play house locked sound
+			play_sound(load("res://Sounds/door_locked.wav"))
 			return null
 	if node_name == "house_int_tele":
 		play_sound(load("res://Sounds/door_open.wav"))
