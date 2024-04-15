@@ -171,4 +171,15 @@ func interact_axe(player):
 		%body_anims.play("fully_fade")
 		await get_tree().create_timer(0.5).timeout
 		%boathouse_int.begin_cutscene(player,%boathouse_cam)
+		await get_tree().create_timer(6.5).timeout
+		%body_anims.stop()
+		%body_anims.play("fully_fade")
+		await get_tree().create_timer(0.5).timeout
+		%Player.camera.current = true
+		%Player.can_interact = true
+		%Player.can_walk = true
+		finger_intact = false
+		
+
+		
 		
