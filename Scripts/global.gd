@@ -4,7 +4,7 @@ extends CanvasLayer
 
 var D_MULTIPLY: float = 10.0
 
-var body_interacted: bool = true
+var body_interacted: bool = false
 var finger_intact: bool = true
 var face_returned: bool = false
 var necklace_returned: bool = false
