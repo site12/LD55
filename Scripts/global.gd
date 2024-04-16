@@ -111,8 +111,6 @@ func get_tele_node(node_name: String) -> Node:
 			return boathouse_int_tele
 		else:
 			play_sound(load("res://Sounds/door_locked.wav"))
-			%body_anims.play("fully_fade")
-			await get_tree().create_timer(0.5).timeout
 			return null
 	return null
 
@@ -168,7 +166,7 @@ func interact_body():
 func interact_mass():
 	
 	## first interaction with mass, needs to set up whats going on
-	if finger_intact&&!face_returned&&!necklace_returned&&!heart_returned:
+	if !body_interacted&&!face_returned&&!necklace_returned&&!heart_returned:
 		body_interacted = true
 		%body_text.text = "YOU'RE IN DIRE STRAITS, AREN'T YOU?"
 		%body_anims.play("fade")
@@ -195,6 +193,7 @@ func interact_mass():
 		await get_tree().create_timer(5).timeout
 		%Player.can_interact = true
 		%Player.can_walk = true
+		return
 	
 	## if the player chooses to interact immediately after
 	if body_interacted && finger_intact&&!face_returned&&!necklace_returned&&!heart_returned:
@@ -223,6 +222,7 @@ func interact_mass():
 		await get_tree().create_timer(5).timeout
 		%Player.can_interact = true
 		%Player.can_walk = true
+		return
 	
 	## if the player returns after the boathouse
 	if body_interacted && !finger_intact&&!face_returned&&!necklace_returned&&!heart_returned:
@@ -251,6 +251,7 @@ func interact_mass():
 		await get_tree().create_timer(5).timeout
 		%Player.can_interact = true
 		%Player.can_walk = true
+		return
 	
 	## if the player returns after the mannequin
 	if body_interacted && !finger_intact&&!face_returned&&!necklace_returned&&!heart_returned:
@@ -279,6 +280,7 @@ func interact_mass():
 		await get_tree().create_timer(5).timeout
 		%Player.can_interact = true
 		%Player.can_walk = true
+		return
 
 ## if the player returns after the mannequin and boathouse
 	if body_interacted && !finger_intact&&face_returned&&necklace_returned&&!heart_returned:
@@ -303,6 +305,7 @@ func interact_mass():
 		await get_tree().create_timer(5).timeout
 		%Player.can_interact = true
 		%Player.can_walk = true
+		return
 
 func interact_axe(player):
 	if finger_intact&&!face_returned&&!heart_returned:

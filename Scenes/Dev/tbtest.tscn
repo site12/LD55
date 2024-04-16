@@ -919,7 +919,7 @@ shape = SubResource("ConcavePolygonShape3D_kll8o")
 
 [node name="Player" parent="SubViewportContainer/SubViewport/Tbtest" instance=ExtResource("3_vypwc")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 102.29, -7.6294e-06, 44.6131)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.1557, -2.26498e-05, 20.5289)
 
 [node name="house" parent="SubViewportContainer/SubViewport/Tbtest" instance=ExtResource("4_2kegp")]
 transform = Transform3D(0.625134, 0, 0.780518, 0, 1, 0, -0.780518, 0, 0.625134, -32.8434, 3.87295, 33.4311)

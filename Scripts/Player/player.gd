@@ -51,7 +51,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			var collider = %interactable_raycast.get_collider()
 			if collider.is_in_group("interactables"):
 				if collider.is_in_group("doors"):
-					var tele_node = global.get_tele_node(collider.get_meta("tele_loc"))
+					var tele_node = await global.get_tele_node(collider.get_meta("tele_loc"))
 					if tele_node:
 						position = tele_node.global_position
 				if collider.is_in_group("body"):
