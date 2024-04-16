@@ -19,7 +19,6 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var camera := $Neck/Camera3d
 # @onready var shader = get_tree().root.get_node("CanvasLayer/PostProcessing").get_material()
 @onready var mannequin = get_tree().root.get_node_or_null("CanvasLayer/SubViewportContainer/SubViewport/Tbtest/mannequin")
-@onready var bear = get_tree().root.get_node_or_null("CanvasLayer/SubViewportContainer/SubViewport/Tbtest/bear")
 @onready var shadow = get_tree().root.get_node_or_null("CanvasLayer/SubViewportContainer/SubViewport/Tbtest/shadow")
 @onready var heart_guy = get_tree().root.get_node_or_null("CanvasLayer/SubViewportContainer/SubViewport/Tbtest/heart_guy")
 @onready var arms = get_node("Neck/Player_Arms")
@@ -167,11 +166,13 @@ func on_item_returned():
 
 func pickup_heart():
 	get_node("Neck/heart").visible = true
+	heart_guy.active = false
 	arms.visible = true
 	holding_heart = true
 
 func pickup_necklace():
 	get_node("Neck/necklace").visible = true
+	mannequin.active = false
 	arms.visible = true
 	holding_necklace = true
 
