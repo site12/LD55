@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-const SPEED = 15.0
+const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
 #bob variables
@@ -34,8 +34,10 @@ var can_walk = true
 
 func looking_at_mannequin() -> bool:
 	if mannequin:
-		if global_position.distance_to(mannequin.global_position) < 30:
-			return mannequin.get_node("VisibleOnScreenNotifier3D").is_on_screen()
+		if mannequin.active:
+			if global_position.distance_to(mannequin.global_position) < 30:
+				return mannequin.get_node("VisibleOnScreenNotifier3D").is_on_screen()
+		else: return false
 	return false
 
 func can_move() -> bool:
@@ -74,7 +76,11 @@ func _unhandled_input(event: InputEvent) -> void:
 			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad( - 30), deg_to_rad(60))
 
 func _process(delta: float) -> void:
-	if mannequin: global.set_distortion(clamp(10.0 - global_position.distance_to(mannequin.global_position), 1.0, 10.0), "mannequin")
+	if mannequin:
+		if mannequin.active:
+			global.set_distortion(clamp(10.0 - global_position.distance_to(mannequin.global_position), 1.0, 10.0), "mannequin")
+		else:
+			global.set_distortion(1.0, "mannequin")
 	if heart_guy:
 		if heart_guy.active:
 			global.set_distortion(clamp(15.0 - global_position.distance_to(heart_guy.global_position), 1.0, 15.0), "heart_guy")
@@ -128,7 +134,7 @@ func _physics_process(delta: float) -> void:
 			velocity.z = move_toward(velocity.z, 0, SPEED)
 		
 		move_and_slide()
-	elif looking_at_mannequin():
+	elif looking_at_mannequin()&&mannequin.active:
 		var dist_to_man: float = global_position.distance_to(get_tree().root.get_node("CanvasLayer/SubViewportContainer/SubViewport/Tbtest/mannequin").global_position)
 		var backforce_multiplyer = remap(dist_to_man, 0, 30., 1., 0)
 		var input_dir := Input.get_vector("left", "right", "forward", "backward")

@@ -1,6 +1,6 @@
 extends Node3D
 
-var active = true
+var active = false
 
 func activate():
 	active = true
