@@ -1457,7 +1457,7 @@ tracks/15/keys = {
 tracks/16/type = "value"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("misc/box/StaticBody3D/CollisionShape3D:disabled")
+tracks/16/path = NodePath("misc/box/StaticBody3D/mask_coll:disabled")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
@@ -2711,7 +2711,8 @@ libraries = {
 [node name="StaticBody3D" type="StaticBody3D" parent="misc/box" groups=["face", "interactables"]]
 collision_layer = 256
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="misc/box/StaticBody3D"]
+[node name="mask_coll" type="CollisionShape3D" parent="misc/box/StaticBody3D"]
+unique_name_in_owner = true
 shape = SubResource("BoxShape3D_q5m0t")
 disabled = true
 

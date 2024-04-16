@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-const SPEED = 5.0
+const SPEED = 15.0
 const JUMP_VELOCITY = 4.5
 
 #bob variables
@@ -47,7 +47,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	if event.is_action_pressed("ui_cancel"):
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		get_tree().quit()
 	if event.is_action_pressed("interact")&&can_interact:
 		if %interactable_raycast.is_colliding():
 			var collider = %interactable_raycast.get_collider()
@@ -190,6 +190,7 @@ func pickup_face():
 	get_node("Neck/face").visible = true
 	arms.visible = true
 	holding_face = true
+	get_tree().get_root().get_node("CanvasLayer").get_node("%boathouse_int").get_node("%mask_coll").disabled = true
 
 func _on_level_changed_flood():
 	$Neck/heart_spawn.position.z = 30

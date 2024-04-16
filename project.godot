@@ -22,7 +22,7 @@ config/icon="res://logo_aberration-square.png"
 
 window/size/viewport_width=640
 window/size/viewport_height=480
-window/size/mode=2
+window/size/mode=3
 window/stretch/mode="viewport"
 
 [editor_plugins]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=124 format=3 uid="uid://dedorys0tphb2"]
+[gd_scene load_steps=126 format=3 uid="uid://dedorys0tphb2"]
 
 [ext_resource type="Script" path="res://Scripts/forest.gd" id="1_6cpro"]
 [ext_resource type="Texture2D" uid="uid://bxgkxs8171gbf" path="res://Textures/grass_128.jpg" id="1_ae00h"]
@@ -139,6 +139,11 @@ shader_parameter/beer_factor = 0.0
 shader_parameter/metallic = 0.6
 shader_parameter/specular = 0.5
 shader_parameter/roughness = 0.01
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ko6v0"]
+size = Vector3(192.722, 32.3638, 0.0786133)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5bw36"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_v8tbt"]
 
@@ -1775,6 +1780,47 @@ transform = Transform3D(-0.673296, 0, 0.739373, 0, 1, 0, -0.739373, 0, -0.673296
 
 [node name="heart_guy" parent="SubViewportContainer/SubViewport/Tbtest" instance=ExtResource("15_m5sbm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 100, 0)
+
+[node name="collisions" type="Node3D" parent="SubViewportContainer/SubViewport/Tbtest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.3773, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewportContainer/SubViewport/Tbtest/collisions"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/Tbtest/collisions/StaticBody3D"]
+transform = Transform3D(0.992778, 0, 0.119964, 0, 1, 0, -0.119964, 0, 0.992778, 18.9726, -3.78534, -72.9855)
+shape = SubResource("BoxShape3D_ko6v0")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/Tbtest/collisions/StaticBody3D"]
+transform = Transform3D(0.585708, 0, 0.810522, 0, 1, 0, -0.810522, 0, 0.585708, -70.0689, -9.72945, -34.303)
+shape = SubResource("BoxShape3D_ko6v0")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/Tbtest/collisions/StaticBody3D"]
+transform = Transform3D(0.27651, 0, 0.961011, 0, 1, 0, -0.961011, 0, 0.27651, -80.7126, -5.02313, 15.1292)
+shape = SubResource("BoxShape3D_ko6v0")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/Tbtest/collisions/StaticBody3D"]
+transform = Transform3D(-0.728407, 0, 0.685145, 0, 1, 0, -0.685145, 0, -0.728407, -60.3696, -5.49241, 78.6715)
+shape = SubResource("BoxShape3D_ko6v0")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/Tbtest/collisions/StaticBody3D"]
+transform = Transform3D(-0.998717, 0, -0.0506454, 0, 1, 0, 0.0506454, 0, -0.998717, 16.7756, -5.49241, 76.774)
+shape = SubResource("BoxShape3D_ko6v0")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/Tbtest/collisions/StaticBody3D"]
+transform = Transform3D(-0.703184, 0, -0.711008, 0, 1, 0, 0.711008, 0, -0.703184, 120.617, -7.51326, 56.9078)
+shape = SubResource("BoxShape3D_ko6v0")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/Tbtest/collisions/StaticBody3D"]
+transform = Transform3D(-0.0463567, 0, -0.998925, 0, 1, 0, 0.998925, 0, -0.0463567, 142.743, -7.51326, -13.2377)
+shape = SubResource("BoxShape3D_ko6v0")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/Tbtest/collisions/StaticBody3D"]
+transform = Transform3D(0.685145, 0, -0.728407, 0, 1, 0, 0.728407, 0, 0.685145, 149.539, -13.751, -19.6307)
+shape = SubResource("BoxShape3D_ko6v0")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/Tbtest/collisions/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -23.6096, 0)
+shape = SubResource("BoxShape3D_5bw36")
 
 [node name="house_interior" parent="SubViewportContainer/SubViewport" instance=ExtResource("15_jmvq6")]
 unique_name_in_owner = true

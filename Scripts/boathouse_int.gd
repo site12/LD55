@@ -3,6 +3,8 @@ extends Node3D
 @export var local_distortion = 1.0
 var cutscene_started = false
 
+@onready var face_coll = %mask_coll
+
 signal boathouse_distortion(d_amount)
 
 func begin_cutscene(player, boathouse_cam):
