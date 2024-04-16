@@ -70,6 +70,8 @@ func get_tele_node(node_name: String) -> Node:
 		# Lock player in house if they haven't interacted with body
 		if body_interacted:
 			play_sound(load("res://Sounds/door_open.wav"))
+			%body_anims.play("fully_fade")
+			await get_tree().create_timer(0.5).timeout
 			get_node("SubViewportContainer/SubViewport/Tbtest/WorldEnvironment").environment.volumetric_fog_density = 0.1
 			# Just check that we got the node succesfully
 			set_heartguy_active(true)
@@ -83,6 +85,8 @@ func get_tele_node(node_name: String) -> Node:
 			return null
 	if node_name == "house_int_tele":
 		play_sound(load("res://Sounds/door_open.wav"))
+		%body_anims.play("fully_fade")
+		await get_tree().create_timer(0.5).timeout
 		get_node("SubViewportContainer/SubViewport/Tbtest/WorldEnvironment").environment.volumetric_fog_density = 0.3
 		player_indoors = true
 		set_heartguy_active(false)
@@ -90,6 +94,8 @@ func get_tele_node(node_name: String) -> Node:
 		return house_int_tele
 	if node_name == "boathouse_ext_tele":
 		play_sound(load("res://Sounds/door_open.wav"))
+		%body_anims.play("fully_fade")
+		await get_tree().create_timer(0.5).timeout
 		player_indoors = false
 		set_heartguy_active(true)
 		set_shadow_active(true)
@@ -97,12 +103,16 @@ func get_tele_node(node_name: String) -> Node:
 	if node_name == "boathouse_int_tele":
 		if body_interacted:
 			play_sound(load("res://Sounds/door_open.wav"))
+			%body_anims.play("fully_fade")
+			await get_tree().create_timer(0.5).timeout
 			player_indoors = true
 			set_heartguy_active(false)
 			set_shadow_active(false)
 			return boathouse_int_tele
 		else:
 			play_sound(load("res://Sounds/door_locked.wav"))
+			%body_anims.play("fully_fade")
+			await get_tree().create_timer(0.5).timeout
 			return null
 	return null
 
@@ -156,6 +166,8 @@ func interact_body():
 		player.on_item_returned()
 
 func interact_mass():
+	
+	## first interaction with mass, needs to set up whats going on
 	if finger_intact&&!face_returned&&!necklace_returned&&!heart_returned:
 		body_interacted = true
 		%body_text.text = "YOU'RE IN DIRE STRAITS, AREN'T YOU?"
@@ -179,6 +191,114 @@ func interact_mass():
 		await get_tree().create_timer(5).timeout
 		%body_anims.stop()
 		%body_text.text = "AND WIN BACK HER HEART."
+		%body_anims.play("fade")
+		await get_tree().create_timer(5).timeout
+		%Player.can_interact = true
+		%Player.can_walk = true
+	
+	## if the player chooses to interact immediately after
+	if body_interacted && finger_intact&&!face_returned&&!necklace_returned&&!heart_returned:
+		%body_text.text = "THE ANSWERS YOU SEEK ARE NOT HERE."
+		%body_anims.play("fade")
+		%Player.can_interact = false
+		%Player.can_walk = false
+		%interact.visible = false
+		%interact_cut.visible = false
+		await get_tree().create_timer(5).timeout
+		%body_anims.stop()
+		%body_text.text = "YOU MUST STEAL BACK HER SMILE,"
+		%body_anims.play("fade")
+		await get_tree().create_timer(5).timeout
+		%body_anims.stop()
+		%body_text.text = "FIND THE METAL NOOSE,"
+		%body_anims.play("fade")
+		await get_tree().create_timer(5).timeout
+		%body_anims.stop()
+		%body_text.text = "AND WIN BACK HER HEART."
+		%body_anims.play("fade")
+		await get_tree().create_timer(5).timeout
+		%body_anims.stop()
+		%body_text.text = "RETURN WHEN YOU HAVE FOUND THEM."
+		%body_anims.play("fade")
+		await get_tree().create_timer(5).timeout
+		%Player.can_interact = true
+		%Player.can_walk = true
+	
+	## if the player returns after the boathouse
+	if body_interacted && !finger_intact&&!face_returned&&!necklace_returned&&!heart_returned:
+		%body_text.text = "HAS THE PATH FORWARD BECOME CLEAR?"
+		%body_anims.play("fade")
+		%Player.can_interact = false
+		%Player.can_walk = false
+		%interact.visible = false
+		%interact_cut.visible = false
+		await get_tree().create_timer(5).timeout
+		%body_anims.stop()
+		%body_text.text = "YOU HAVE RETURNED WITH HER SMILE."
+		%body_anims.play("fade")
+		await get_tree().create_timer(5).timeout
+		%body_anims.stop()
+		%body_text.text = "FIND THE METAL NOOSE,"
+		%body_anims.play("fade")
+		await get_tree().create_timer(5).timeout
+		%body_anims.stop()
+		%body_text.text = "TRAPPED IN TREES THAT DO NOT MOVE."
+		%body_anims.play("fade")
+		await get_tree().create_timer(5).timeout
+		%body_anims.stop()
+		%body_text.text = "RESIST THE URGE TO FIGHT THE CURRENT."
+		%body_anims.play("fade")
+		await get_tree().create_timer(5).timeout
+		%Player.can_interact = true
+		%Player.can_walk = true
+	
+	## if the player returns after the mannequin
+	if body_interacted && !finger_intact&&!face_returned&&!necklace_returned&&!heart_returned:
+		%body_text.text = "HAS THE PATH FORWARD BECOME CLEAR?"
+		%body_anims.play("fade")
+		%Player.can_interact = false
+		%Player.can_walk = false
+		%interact.visible = false
+		%interact_cut.visible = false
+		await get_tree().create_timer(5).timeout
+		%body_anims.stop()
+		%body_text.text = "YOU HAVE RETURNED WITH THE NOOSE."
+		%body_anims.play("fade")
+		await get_tree().create_timer(5).timeout
+		%body_anims.stop()
+		%body_text.text = "STEAL BACK HER SMILE,"
+		%body_anims.play("fade")
+		await get_tree().create_timer(5).timeout
+		%body_anims.stop()
+		%body_text.text = "AND WIN BACK HER HEART,"
+		%body_anims.play("fade")
+		await get_tree().create_timer(5).timeout
+		%body_anims.stop()
+		%body_text.text = "AND SHE MAY BE YOURS AGAIN."
+		%body_anims.play("fade")
+		await get_tree().create_timer(5).timeout
+		%Player.can_interact = true
+		%Player.can_walk = true
+
+## if the player returns after the mannequin and boathouse
+	if body_interacted && !finger_intact&&face_returned&&necklace_returned&&!heart_returned:
+		%body_text.text = "YOU HAVE RETURNED WITH THE NOOSE."
+		%body_anims.play("fade")
+		%Player.can_interact = false
+		%Player.can_walk = false
+		%interact.visible = false
+		%interact_cut.visible = false
+		await get_tree().create_timer(5).timeout
+		%body_anims.stop()
+		%body_text.text = "AND TRADED FLESH FOR SMILE."
+		%body_anims.play("fade")
+		await get_tree().create_timer(5).timeout
+		%body_anims.stop()
+		%body_text.text = "DO YOU REMEMBER HER LAUGH?"
+		%body_anims.play("fade")
+		await get_tree().create_timer(5).timeout
+		%body_anims.stop()
+		%body_text.text = "YOU MAY HEAR IT SOON."
 		%body_anims.play("fade")
 		await get_tree().create_timer(5).timeout
 		%Player.can_interact = true
