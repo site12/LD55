@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-const SPEED = 5.0
+const SPEED = 15.0
 const JUMP_VELOCITY = 4.5
 
 #bob variables
@@ -75,7 +75,11 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _process(delta: float) -> void:
 	if mannequin: global.set_distortion(clamp(10.0 - global_position.distance_to(mannequin.global_position), 1.0, 10.0), "mannequin")
-	if heart_guy: global.set_distortion(clamp(15.0 - global_position.distance_to(heart_guy.global_position), 1.0, 15.0), "heart_guy")
+	if heart_guy:
+		if heart_guy.active:
+			global.set_distortion(clamp(15.0 - global_position.distance_to(heart_guy.global_position), 1.0, 15.0), "heart_guy")
+		else:
+			global.set_distortion(1.0, "heart_guy")
 	if shadow: global.set_distortion(
 		clamp(
 			(10.0 - global_position.distance_to(shadow.global_position)) *
@@ -166,7 +170,7 @@ func on_item_returned():
 
 func pickup_heart():
 	get_node("Neck/heart").visible = true
-	heart_guy.active = false
+	heart_guy.deactivate()
 	arms.visible = true
 	holding_heart = true
 
@@ -180,3 +184,6 @@ func pickup_face():
 	get_node("Neck/face").visible = true
 	arms.visible = true
 	holding_face = true
+
+func _on_level_changed_flood():
+	$Neck/heart_spawn.position.z = 30

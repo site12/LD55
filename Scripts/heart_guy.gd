@@ -1,13 +1,14 @@
 extends Node3D
 
-const SPEED_MAX: float = 5.0
-const SPEED_MIN: float = 2.0
+const SPEED_MAX: float = 10
+const SPEED_MIN: float = 5
 const SEEN_DISTANCE: float = 20.0
 var fleeing: bool = false
 var last_spawn: Vector3 = Vector3.ZERO
 var speed: float = 10.0
 var speed_mutiplyer: float = 1.0
 var active: bool = false
+var flooded: bool = false
 
 @onready var player = get_tree().root.get_node("CanvasLayer/SubViewportContainer/SubViewport/Tbtest/Player")
 @onready var spawn_point = player.get_node("Neck/heart_spawn")
@@ -22,6 +23,16 @@ func spawn() -> void:
 
 func _on_level_changed_flood():
 	speed_mutiplyer = 0.5
+	flooded = true
+
+func activate():
+	active = true
+	spawn()
+
+func deactivate():
+	active = false
+	$CPUParticles3D.emitting = false
+	$CPUParticles3D.speed_scale = 1
 
 func _process(delta) -> void:
 	if !active: return
@@ -41,7 +52,10 @@ func _process(delta) -> void:
 		position.x = move_toward(position.x, target.global_position.x, speed * delta)
 		position.z = move_toward(position.z, target.global_position.z, speed * delta)
 	else:
-		speed = SPEED_MAX
+		if !flooded:
+			speed = SPEED_MAX
+		else:
+			speed = remap(global_position.distance_to(player.global_position), 80.0, 5.0, SPEED_MAX, SPEED_MIN)
 		speed *= speed_mutiplyer
 		position.x = move_toward(position.x, last_spawn.x, speed * delta)
 		position.z = move_toward(position.z, last_spawn.z, speed * delta)

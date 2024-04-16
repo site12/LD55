@@ -123,6 +123,8 @@ func get_tele_node(node_name: String) -> Node:
 func _ready():
 	if heart_guy:
 		connect("level_changed_flood", heart_guy._on_level_changed_flood)
+	if player:
+		connect("level_changed_flood", player._on_level_changed_flood)
 	var boathouse = get_node_or_null("SubViewportContainer/SubViewport/boathouse_int")
 	if boathouse:
 		boathouse.boathouse_distortion.connect(_boathouse_distortion)
