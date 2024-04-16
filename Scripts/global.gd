@@ -5,7 +5,7 @@ extends CanvasLayer
 var D_MULTIPLY: float = 10.0
 
 var body_interacted: bool = false
-var finger_intact: bool = false
+var finger_intact: bool = true
 var face_returned: bool = false
 var necklace_returned: bool = false
 var heart_returned: bool = false
@@ -76,6 +76,7 @@ func get_tele_node(node_name: String) -> Node:
 	if node_name == "house_ext_tele":
 		# Lock player in house if they haven't interacted with body
 		if body_interacted:
+			
 			play_sound(load("res://Sounds/door_open.wav"))
 			%body_anims.play("fully_fade")
 			await get_tree().create_timer(0.5).timeout

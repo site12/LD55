@@ -2,25 +2,32 @@ extends Node2D
 
 var tracks:Array[AudioStreamWAV] = [
 	load("res://Sounds/compressed/ambience (1).wav"),
-	load("res://Sounds/compressed/VHS_damage.wav")
+	load("res://Sounds/compressed/VHS_damage.wav"),
+	load("res://Sounds/compressed/water.wav")
 	]
 @export var locations:Array[Marker3D]
 @onready var player :CharacterBody3D = %Player
+@onready var global = get_tree().root.get_node("CanvasLayer")
 
 var track_objects = []
 
+var flooded = false
+
 func _ready():
-	
+	global.level_changed_flood.connect(flood)
 	for x in tracks:
 		play_sound(x)
 	
-
+func flood():
+	flooded = true
 
 func _process(delta):
 	for x in track_objects:
-		if x == track_objects[0]:
-			#x.volume_db = player.position.distance_to(locations[0].position)
-			pass
+		if x == track_objects[2]:
+			if flooded && !global.player_indoors:
+				x.volume_db = 0
+			else:
+				x.volume_db = -100
 		
 
 func play_sound(sound:AudioStreamWAV):

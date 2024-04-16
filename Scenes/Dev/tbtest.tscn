@@ -951,7 +951,7 @@ skeleton = NodePath("../..")
 
 [node name="mannequin" parent="SubViewportContainer/SubViewport/Tbtest" instance=ExtResource("7_0nwli")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.179, -0.699404, -5.222)
+transform = Transform3D(1.4689, 0, 0, 0, 1.44544, 0, 0, 0, 1.70586, 49.179, -0.699404, -5.222)
 
 [node name="floor_origin" type="Node3D" parent="SubViewportContainer/SubViewport/Tbtest"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.853, -0.84, 0)

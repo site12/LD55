@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cg3eacvgu84jj"]
+[gd_scene load_steps=16 format=3 uid="uid://cg3eacvgu84jj"]
 
 [ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_dbbxc"]
 [ext_resource type="Shader" path="res://Assets/vhs_shader.gdshader" id="2_xuu3q"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bd1kx4qaidru7" path="res://Assets/Heart/heart.tscn" id="5_sconx"]
 [ext_resource type="AudioStream" uid="uid://0q0n5wklycao" path="res://Sounds/footsteps/concrete_walk.wav" id="6_732ls"]
 [ext_resource type="PackedScene" uid="uid://cubv87qg17r8q" path="res://Assets/body/necklace/necklace.tscn" id="6_g8uu7"]
+[ext_resource type="AudioStream" uid="uid://d1hiwggd45844" path="res://Sounds/compressed/water_walk.wav" id="11_bqxp6"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_m8trs"]
 radius = 0.8
@@ -82,7 +83,7 @@ visible = false
 [node name="footsteps" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0700037, 0)
 script = ExtResource("3_wiq1i")
-footstep_sounds = Array[AudioStreamWAV]([ExtResource("4_fy2dr"), ExtResource("6_732ls"), ExtResource("5_k65rr")])
+footstep_sounds = Array[AudioStreamWAV]([ExtResource("4_fy2dr"), ExtResource("6_732ls"), ExtResource("5_k65rr"), ExtResource("11_bqxp6")])
 
 [node name="footstep_raycast" type="RayCast3D" parent="footsteps"]
 unique_name_in_owner = true
