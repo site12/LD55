@@ -64,6 +64,9 @@ func set_shadow_active(state: bool) -> void:
 func get_finger_intact() -> bool:
 	return finger_intact
 
+func _boathouse_distortion(d_amount):
+	set_distortion(d_amount, "boathouse")
+
 func get_tele_node(node_name: String) -> Node:
 	# get the node to teleport to when going through doors
 	# we can also use this to handle scene transitions
@@ -120,6 +123,9 @@ func get_tele_node(node_name: String) -> Node:
 func _ready():
 	if heart_guy:
 		connect("level_changed_flood", heart_guy._on_level_changed_flood)
+	var boathouse = get_node_or_null("SubViewportContainer/SubViewport/boathouse_int")
+	if boathouse:
+		boathouse.boathouse_distortion.connect(_boathouse_distortion)
 
 func _scene_change_flood():
 	get_node("SubViewportContainer/SubViewport/Tbtest/WorldEnvironment").environment = load('res://Scenes/Dev/flood_env.tres')
