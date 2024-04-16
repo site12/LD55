@@ -4,7 +4,7 @@ extends CanvasLayer
 
 const D_MULTIPLY: float = 8.0
 
-var body_interacted: bool = false
+var body_interacted: bool = true
 var finger_intact: bool = true
 var face_returned: bool = false
 var necklace_returned: bool = false
@@ -101,7 +101,7 @@ func get_tele_node(node_name: String) -> Node:
 		player_indoors = false
 		set_heartguy_active(true)
 		set_shadow_active(true)
-		player.pickup_face()
+		# player.pickup_face()
 		return boathouse_ext_tele
 	if node_name == "boathouse_int_tele":
 		if body_interacted:

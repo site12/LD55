@@ -1,4 +1,4 @@
-[gd_scene load_steps=126 format=3 uid="uid://0xk4g071t25n"]
+[gd_scene load_steps=127 format=3 uid="uid://0xk4g071t25n"]
 
 [ext_resource type="Script" path="res://Scripts/boathouse_int.gd" id="1_enuk6"]
 [ext_resource type="Texture2D" uid="uid://2ivsxj883nxa" path="res://Textures/logwall_128.png" id="1_id8xv"]
@@ -1053,6 +1053,9 @@ _data = {
 "Take 001": SubResource("Animation_t25vs")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_q5m0t"]
+size = Vector3(0.16, 0.185, 0.17)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2qtdk"]
 resource_name = "HandMaterial"
 transparency = 4
@@ -1450,6 +1453,18 @@ tracks/15/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(-2.43559, 0, 0)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("misc/box/StaticBody3D/CollisionShape3D:disabled")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 6.8, 7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, true, false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fic7m"]
@@ -2680,6 +2695,14 @@ libraries = {
 "": SubResource("AnimationLibrary_rr7x8")
 }
 
+[node name="StaticBody3D" type="StaticBody3D" parent="misc/box" groups=["face", "interactables"]]
+collision_layer = 256
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="misc/box/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_q5m0t")
+disabled = true
+
 [node name="finger" type="Node3D" parent="misc"]
 transform = Transform3D(0.0457827, 0, 0.0889041, 0, 0.1, 0, -0.0889041, 0, 0.0457827, -5.87078, 4.35901, -6.54361)
 
@@ -2700,7 +2723,7 @@ libraries = {
 
 [node name="ambient" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("14_h7l5p")
-volume_db = -50.0
+volume_db = -35.7143
 autoplay = true
 
 [node name="swing" type="AudioStreamPlayer3D" parent="."]
