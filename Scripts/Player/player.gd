@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-const SPEED = 5.0
+const SPEED = 15.0
 const JUMP_VELOCITY = 4.5
 
 #bob variables
@@ -171,7 +171,7 @@ func on_item_returned():
 	get_node("Neck/face").visible = false
 	arms.visible = false
 	holding_heart = false
-	holding_face = true
+	holding_face = false
 	holding_necklace = false
 
 func pickup_heart():

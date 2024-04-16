@@ -6,9 +6,9 @@ var D_MULTIPLY: float = 10.0
 
 var body_interacted: bool = false
 var finger_intact: bool = true
-var face_returned: bool = true
-var necklace_returned: bool = true
-var heart_returned: bool = true
+var face_returned: bool = false
+var necklace_returned: bool = false
+var heart_returned: bool = false
 
 var player_indoors: bool = false
 
@@ -101,14 +101,18 @@ func get_tele_node(node_name: String) -> Node:
 		set_shadow_active(false)
 		return house_int_tele
 	if node_name == "boathouse_ext_tele":
-		play_sound(load("res://Sounds/door_open.wav"))
-		%body_anims.play("fully_fade")
-		await get_tree().create_timer(0.5).timeout
-		player_indoors = false
-		set_heartguy_active(true)
-		set_shadow_active(true)
-		# player.pickup_face()
-		return boathouse_ext_tele
+		if player.holding_face:
+			play_sound(load("res://Sounds/door_open.wav"))
+			%body_anims.play("fully_fade")
+			await get_tree().create_timer(0.5).timeout
+			player_indoors = false
+			set_heartguy_active(true)
+			set_shadow_active(true)
+			# player.pickup_face()
+			return boathouse_ext_tele
+		else:
+			play_sound(load("res://Sounds/door_locked.wav"))
+			return null
 	if node_name == "boathouse_int_tele":
 		if body_interacted:
 			play_sound(load("res://Sounds/door_open.wav"))
@@ -179,7 +183,6 @@ func interact_body():
 	elif player.holding_heart:
 		heart_returned = true
 		player.on_item_returned()
-	if heart_returned&&necklace_returned&&face_returned:
 		%body_text.text = "She can talk now."
 		%body_anims.play("fade")
 		%Player.can_interact = false
@@ -187,7 +190,7 @@ func interact_body():
 		%interact.visible = false
 		%interact_cut.visible = false
 		
-		%house_interior.begin_cutscene(player,%endgame_cam)
+		%house_interior.begin_cutscene(player, %endgame_cam)
 
 func interact_mass():
 	
