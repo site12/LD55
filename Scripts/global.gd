@@ -23,6 +23,7 @@ var distortion_source: String = ""
 @onready var boathouse_ext_tele = get_node("SubViewportContainer/SubViewport/boathouse/boathouse_ext_tele")
 @onready var boathouse_int_tele = get_node("SubViewportContainer/SubViewport/boathouse_int/boathouse_int_tele")
 @onready var heart_guy = get_node_or_null("SubViewportContainer/SubViewport/Tbtest/heart_guy")
+@onready var mannequin = get_node_or_null("SubViewportContainer/SubViewport/Tbtest/mannequin")
 @onready var shadow = get_node_or_null("SubViewportContainer/SubViewport/Tbtest/shadow")
 @onready var mass_lights = get_node_or_null("SubViewportContainer/SubViewport/house_interior/basement_misc/Mass/light_pivot")
 @onready var player = get_node_or_null("SubViewportContainer/SubViewport/Tbtest/Player")
@@ -76,6 +77,7 @@ func get_tele_node(node_name: String) -> Node:
 			# Just check that we got the node succesfully
 			set_heartguy_active(true)
 			set_shadow_active(true)
+			mannequin.activate()
 			if face_returned&&necklace_returned:
 				_scene_change_flood()
 			player_indoors = false
@@ -99,6 +101,7 @@ func get_tele_node(node_name: String) -> Node:
 		player_indoors = false
 		set_heartguy_active(true)
 		set_shadow_active(true)
+		player.pickup_face()
 		return boathouse_ext_tele
 	if node_name == "boathouse_int_tele":
 		if body_interacted:
@@ -196,7 +199,7 @@ func interact_mass():
 		return
 	
 	## if the player chooses to interact immediately after
-	if body_interacted && finger_intact&&!face_returned&&!necklace_returned&&!heart_returned:
+	if body_interacted&&finger_intact&&!face_returned&&!necklace_returned&&!heart_returned:
 		%body_text.text = "THE ANSWERS YOU SEEK ARE NOT HERE."
 		%body_anims.play("fade")
 		%Player.can_interact = false
@@ -225,7 +228,7 @@ func interact_mass():
 		return
 	
 	## if the player returns after the boathouse
-	if body_interacted && !finger_intact&&!face_returned&&!necklace_returned&&!heart_returned:
+	if body_interacted&&!finger_intact&&!face_returned&&!necklace_returned&&!heart_returned:
 		%body_text.text = "HAS THE PATH FORWARD BECOME CLEAR?"
 		%body_anims.play("fade")
 		%Player.can_interact = false
@@ -254,7 +257,7 @@ func interact_mass():
 		return
 	
 	## if the player returns after the mannequin
-	if body_interacted && !finger_intact&&!face_returned&&!necklace_returned&&!heart_returned:
+	if body_interacted&&!finger_intact&&!face_returned&&!necklace_returned&&!heart_returned:
 		%body_text.text = "HAS THE PATH FORWARD BECOME CLEAR?"
 		%body_anims.play("fade")
 		%Player.can_interact = false
@@ -283,7 +286,7 @@ func interact_mass():
 		return
 
 ## if the player returns after the mannequin and boathouse
-	if body_interacted && !finger_intact&&face_returned&&necklace_returned&&!heart_returned:
+	if body_interacted&&!finger_intact&&face_returned&&necklace_returned&&!heart_returned:
 		%body_text.text = "YOU HAVE RETURNED WITH THE NOOSE."
 		%body_anims.play("fade")
 		%Player.can_interact = false
@@ -314,7 +317,7 @@ func interact_axe(player):
 		%Player.can_interact = false
 		%body_anims.play("fully_fade")
 		await get_tree().create_timer(0.5).timeout
-		%boathouse_int.begin_cutscene(player,%boathouse_cam)
+		%boathouse_int.begin_cutscene(player, %boathouse_cam)
 		await get_tree().create_timer(6.5).timeout
 		%body_anims.stop()
 		%body_anims.play("fully_fade")
@@ -323,7 +326,3 @@ func interact_axe(player):
 		%Player.can_interact = true
 		%Player.can_walk = true
 		finger_intact = false
-		
-
-		
-		

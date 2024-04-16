@@ -172,7 +172,7 @@ func pickup_heart():
 
 func pickup_necklace():
 	get_node("Neck/necklace").visible = true
-	mannequin.active = false
+	mannequin.deactivate()
 	arms.visible = true
 	holding_necklace = true
 
