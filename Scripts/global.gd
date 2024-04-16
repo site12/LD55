@@ -2,7 +2,7 @@
 
 extends CanvasLayer
 
-const D_MULTIPLY: float = 8.0
+var D_MULTIPLY: float = 10.0
 
 var body_interacted: bool = true
 var finger_intact: bool = true
