@@ -2105,6 +2105,10 @@ transform = Transform3D(-0.650204, 0, -0.75976, 0, 1, 0, 0.75976, 0, -0.650204, 
 unique_name_in_owner = true
 transform = Transform3D(0.775242, 0.311056, -0.549767, -1.49012e-08, 0.870347, 0.492439, 0.631664, -0.381759, 0.67473, 48.8303, 262.486, -1.57734)
 
+[node name="endgame_cam" type="Camera3D" parent="SubViewportContainer/SubViewport/cutscene_cams"]
+unique_name_in_owner = true
+transform = Transform3D(0.416846, -0.0055011, -0.90896, -0.00384404, 0.999962, -0.0078146, 0.908969, 0.00675187, 0.41681, -14.2098, -21.6812, -8.32606)
+
 [node name="body_interact" type="Control" parent="SubViewportContainer/SubViewport"]
 unique_name_in_owner = true
 layout_mode = 3

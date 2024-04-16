@@ -2,13 +2,13 @@
 
 extends CanvasLayer
 
-const D_MULTIPLY: float = 8.0
+var D_MULTIPLY: float = 10.0
 
 var body_interacted: bool = true
 var finger_intact: bool = true
-var face_returned: bool = false
-var necklace_returned: bool = false
-var heart_returned: bool = false
+var face_returned: bool = true
+var necklace_returned: bool = true
+var heart_returned: bool = true
 
 var player_indoors: bool = false
 
@@ -66,6 +66,9 @@ func get_finger_intact() -> bool:
 
 func _boathouse_distortion(d_amount):
 	set_distortion(d_amount, "boathouse")
+
+func _endgame_distortion(d_amount):
+	set_distortion(d_amount, "endgame")
 
 func get_tele_node(node_name: String) -> Node:
 	# get the node to teleport to when going through doors
@@ -126,8 +129,11 @@ func _ready():
 	if player:
 		connect("level_changed_flood", player._on_level_changed_flood)
 	var boathouse = get_node_or_null("SubViewportContainer/SubViewport/boathouse_int")
+	var endgame = get_node_or_null("SubViewportContainer/SubViewport/house_interior")
 	if boathouse:
 		boathouse.boathouse_distortion.connect(_boathouse_distortion)
+	if endgame:
+		endgame.endgame_distortion.connect(_endgame_distortion)
 
 func _scene_change_flood():
 	get_node("SubViewportContainer/SubViewport/Tbtest/WorldEnvironment").environment = load('res://Scenes/Dev/flood_env.tres')
@@ -173,6 +179,15 @@ func interact_body():
 	elif player.holding_heart:
 		heart_returned = true
 		player.on_item_returned()
+	if heart_returned&&necklace_returned&&face_returned:
+		%body_text.text = "She can talk now."
+		%body_anims.play("fade")
+		%Player.can_interact = false
+		%Player.can_walk = false
+		%interact.visible = false
+		%interact_cut.visible = false
+		
+		%house_interior.begin_cutscene(player,%endgame_cam)
 
 func interact_mass():
 	
