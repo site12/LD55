@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwhtdeibkm7d3"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_lbylk"]
+resource_local_to_scene = true
+
+[node name="polaroid" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+
+[node name="image" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 19.0
+offset_top = 18.0
+offset_right = 294.0
+offset_bottom = 245.0
+texture = SubResource("ImageTexture_lbylk")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="border" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 314.0
+offset_bottom = 318.0
+
+[node name="shadow" type="ColorRect" parent="."]
+auto_translate_mode = 1
+z_index = -1
+layout_mode = 0
+offset_left = -13.0
+offset_top = 7.0
+offset_right = 308.0
+offset_bottom = 333.0
+color = Color(0, 0, 0, 0.47451)

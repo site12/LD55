@@ -11,6 +11,7 @@ var necklace_returned: bool = false
 var heart_returned: bool = false
 
 var player_indoors: bool = false
+var photo_layer = 0
 
 # Distortion var for shader; min = 1.0; max = 10.0
 var distortion: float = 1.0
@@ -28,8 +29,20 @@ var distortion_source: String = ""
 @onready var mass_lights = get_node_or_null("SubViewportContainer/SubViewport/house_interior/basement_misc/Mass/light_pivot")
 @onready var player = get_node_or_null("SubViewportContainer/SubViewport/Tbtest/Player")
 
+@onready var photo = preload ("res://photo.tscn")
+
 signal level_changed_flood
 signal item_returned
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_select"):
+		var new_photo = photo.instantiate()
+		var image = get_node("SubViewportContainer/SubViewport").get_texture().get_image()
+		new_photo.get_node("image").get_texture().set_image(image)
+		new_photo.position = Vector2(randi_range(0, 500), randi_range(0, 300))
+		new_photo.z_index = photo_layer
+		photo_layer += 1
+		add_child(new_photo)
 
 func set_distortion(d_level: float, d_source: String) -> void:
 	if d_level > distortion:
@@ -129,6 +142,7 @@ func get_tele_node(node_name: String) -> Node:
 	return null
 
 func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	if heart_guy:
 		connect("level_changed_flood", heart_guy._on_level_changed_flood)
 	if player:

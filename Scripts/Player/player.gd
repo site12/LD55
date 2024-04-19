@@ -44,8 +44,8 @@ func can_move() -> bool:
 	return !looking_at_mannequin()
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton:
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	# if event is InputEventMouseButton:
+	# 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().quit()
 	if event.is_action_pressed("interact")&&can_interact:
